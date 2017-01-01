@@ -18,3 +18,8 @@ hs_err_pid*
 
 /build/
 /classes/
+/user-service.iml
+user-service.iml
+user-service.ipr
+user-service.iws
+.gradle/

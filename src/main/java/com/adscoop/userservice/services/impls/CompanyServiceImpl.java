@@ -22,7 +22,11 @@ ConnectionSource connectionSource;
 
     @Override
     public void save(Company companyNode) throws IOException {
-        connectionSource.session().save(companyNode);
+        try {
+            connectionSource.session().save(companyNode);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -30,10 +34,12 @@ ConnectionSource connectionSource;
     public Company findByUser(String id, String companyname) throws IOException {
 
 
-      return connectionSource.session().queryForObject(Company.class,"match (u:UserNode)-[:USER_HAS_COMPANY]->(c:Company ) where c.companyname='"+ companyname  +"' and u.token='" + id  + "'  return c", Collections.EMPTY_MAP);
-
-
-
+        try {
+            return connectionSource.session().queryForObject(Company.class,"match (u:UserNode)-[:USER_HAS_COMPANY]->(c:Company ) where c.companyname='"+ companyname  +"' and u.token='" + id  + "'  return c", Collections.EMPTY_MAP);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
 
     }
 

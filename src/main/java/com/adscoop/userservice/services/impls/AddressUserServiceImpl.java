@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * Created by thokle on 01/09/2016.
@@ -32,36 +33,64 @@ private ConnectionSource connectionSource;
     public Observable<Map<String, Object>> findByCypher(String cypherQuery) throws IOException {
 
 
-        return Observable.from(connectionSource.session().query(cypherQuery,Collections.EMPTY_MAP));
+        try {
+            return Observable.from(connectionSource.session().query(cypherQuery,Collections.EMPTY_MAP));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override
     public Iterable<AddressNode> findAll() throws  IOException{
-        return connectionSource.session().loadAll(AddressNode.class,DEPTH_ENTITY);
-
+        try {
+            return connectionSource.session().loadAll(AddressNode.class,DEPTH_ENTITY);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override
     public AddressNode findbyId(Long id) throws IOException {
-        return connectionSource.session().load(AddressNode.class,id);
+        try {
+            connectionSource.session().load(AddressNode.class,id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override
     public void delete(AddressNode entity) throws  IOException{
-    connectionSource.session().delete(entity);
+        try {
+            connectionSource.session().delete(entity);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
-    public AddressNode saveOrUpdate(AddressNode entity) throws IOException{
-         connectionSource.session().save(entity);
-        return findbyId(entity.getId());
+    public Optional<AddressNode> saveOrUpdate(AddressNode entity) throws IOException{
+        try {
+            connectionSource.session().save(entity);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return  Optional.of(findbyId(entity.getId()));
     }
 
 
     @Override
-    public AddressNode  findByUser(String cypher) throws IOException {
-        Map<String, String> paramaters = new HashMap();
-        paramaters.put("id",cypher);
-        return connectionSource.session().queryForObject(AddressNode.class,"match (a)-[:ADDRESS_BELONGS_TO_COMPANY]->(c)-[:COMPANY_BELONGS_TO_USER]->(u) where u.id='"+cypher+ "' return a as AddressNode",paramaters);
+    public Optional<AddressNode>  findByUser(String cypher) throws IOException {
+
+        try {
+            return Optional
+                    .of(connectionSource.session().queryForObject(AddressNode.class,"match (a)-[:ADDRESS_BELONGS_TO_COMPANY]->(c)-[:COMPANY_BELONGS_TO_USER]->(u) where u.id='"+cypher+ "' return a as AddressNode",Collections.EMPTY_MAP));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return Optional.empty();
     }
 }

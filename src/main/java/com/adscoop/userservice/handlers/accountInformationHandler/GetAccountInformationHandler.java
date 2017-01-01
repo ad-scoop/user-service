@@ -27,7 +27,7 @@ public class GetAccountInformationHandler implements Handler {
         Long id = Long.valueOf(ctx.getRequest().getHeaders().get("userid"));
         if(id !=null){
             UserNode userNode = userNodeService.findbyId(id);
-            ctx.render(json(userNode));
+            ctx.render(json(userNode.getAccountInformations()));
 
         }
 

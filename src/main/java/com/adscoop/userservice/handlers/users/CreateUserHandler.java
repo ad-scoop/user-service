@@ -49,8 +49,8 @@ public class CreateUserHandler implements Handler {
             });
 
             UserNode saved =    userNodeService.saveOrUpdate(userNode);
-            ctx.getResponse().getHeaders().add("userid",saved.getId()).add("token",saved.getToken());
-            ctx.render(json(saved, UserNode.class));
+            ctx.getResponse().getHeaders().add("token",saved.getToken());
+            ctx.render(json(userNode, UserNode.class));
 
         });
 

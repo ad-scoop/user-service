@@ -30,7 +30,7 @@ public class AuthHandler implements Handler {
         String token = ctx.getRequest().getHeaders().get("token");
         String username = ctx.getRequest().getHeaders().get("username");
 
-        if ((token != null) && (username != null)) {
+         if ((token != null) && (username != null)) {
 
             Optional<String> res = authorazationService.tokenExist(username, token);
             if (res.isPresent()) {
@@ -38,6 +38,9 @@ public class AuthHandler implements Handler {
             } else {
                 ctx.redirect(LoginHandler.class);
             }
+
+        } else {
+            ctx.render("missing token or password");
 
         }
     }

@@ -3,11 +3,13 @@ package com.adscoop.userservice.congfig;
 
 import com.adscoop.userservice.handlers.accountInformationHandler.GetAccountInformationHandler;
 import com.adscoop.userservice.handlers.address.CreateAddressHandler;
+import com.adscoop.userservice.handlers.address.DeleteAddressHandler;
 import com.adscoop.userservice.handlers.address.GetAdderessHandler;
 import com.adscoop.userservice.handlers.auth.AuthHandler;
 import com.adscoop.userservice.handlers.auth.LoginHandler;
 import com.adscoop.userservice.handlers.company.CreateCompanyHandler;
 import com.adscoop.userservice.handlers.credit.CreateCreditHandler;
+import com.adscoop.userservice.handlers.credit.DeleteCreditCardHandler;
 import com.adscoop.userservice.handlers.credit.GetCreditHandler;
 import com.adscoop.userservice.handlers.users.CreateUserHandler;
 import com.adscoop.userservice.handlers.users.GetUserHandler;
@@ -50,5 +52,7 @@ public class BinderModule extends AbstractModule{
         bind(GetAccountInformationHandler.class).asEagerSingleton();
         bind(AuthHandler.class).asEagerSingleton();
         bind(LoginHandler.class).asEagerSingleton();
+        bind(DeleteAddressHandler.class).asEagerSingleton();
+        bind(DeleteCreditCardHandler.class).asEagerSingleton();
     }
 }

@@ -8,6 +8,8 @@ import com.adscoop.userservice.services.impls.AddressUserServiceImpl;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
 
+import java.util.Optional;
+
 import static ratpack.jackson.Jackson.json;
 
 /**
@@ -26,7 +28,7 @@ public class GetAdderessHandler implements Handler {
     @Override
     public void handle(Context ctx) throws Exception {
         String cypher = ctx.getRequest().getHeaders().get("userid");
-         AddressNode addressNode =  addressUserService.findByUser(cypher);
-        ctx.render(json(addressNode));
+         Optional<AddressNode> addressNode =  addressUserService.findByUser(cypher);
+        ctx.render(json(addressNode.get()));
     }
 }

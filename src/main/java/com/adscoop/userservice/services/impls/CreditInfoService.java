@@ -31,4 +31,6 @@ public interface CreditInfoService {
     CreditInfo findByUserId(Long id) throws  Exception;
 
 
+    CreditInfo findByUserToken(String token);
+
 }

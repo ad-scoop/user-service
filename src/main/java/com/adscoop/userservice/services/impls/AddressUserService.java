@@ -7,6 +7,7 @@ import rx.Observable;
 
 import java.io.IOException;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * Created by thokle on 01/09/2016.
@@ -21,8 +22,8 @@ public interface AddressUserService  {
 
     void delete(AddressNode entity) throws  IOException;
 
-    AddressNode saveOrUpdate(AddressNode entity) throws  IOException;
+    Optional<AddressNode> saveOrUpdate(AddressNode entity) throws  IOException;
 
-    AddressNode findByUser(String cypher) throws  IOException;
+    Optional<AddressNode> findByUser(String cypher) throws  IOException;
 
 }

@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * Created by thokle on 01/09/2016.
@@ -18,7 +19,7 @@ public interface IUser {
    Iterable<Map<String ,Object>> getUsersByDomainName(String s) throws IOException;
 
 
-   Result findByUserNameAndPassword(String username, String password) throws  IOException;
+   Optional<UserNode> findByUserNameAndPassword(String username, String password) throws  IOException;
 
    Observable<UserNode> getAllUsersNodes() throws  IOException;
 
@@ -34,4 +35,7 @@ public interface IUser {
 
 
    UserNode findByToken(String token) throws  IOException;
+
+
+
 }
