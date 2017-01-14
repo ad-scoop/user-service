@@ -33,6 +33,7 @@ public class CreateUserHandler implements Handler {
     @Override
     public void handle(Context ctx) throws Exception {
 
+       // if(ctx.getRequest().getBody().then( typedData -> );)
         ctx.parse(fromJson(UserNode.class)).then(as -> {
 
             final UserNode userNode  = new UserNode();

@@ -4,8 +4,6 @@
       <root url="jar://$MAVEN_REPOSITORY$/com/adscoop/service-common/1.0-SNAPSHOT/service-common-1.0-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/com/adscoop/service-common/1.0-SNAPSHOT/service-common-1.0-SNAPSHOT.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>

@@ -1,47 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AccountInformationServiceImpl.java" mnemonic="7" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="83f45ae2-d2a9-4bd8-8827-57390716ebeb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_adscoop_authorazation_service_1_0_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_voodoodyne_jackson_jsog_jackson_jsog_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_httpcomponents_httpclient_4_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_httpcomponents_httpcore_4_4_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_logging_log4j_log4j_api_2_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_logging_log4j_log4j_core_2_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_logging_log4j_log4j_slf4j_impl_2_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_neo4j_neo4j_ogm_http_driver_2_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/Config.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/StartUserService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/congfig/UserModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/accountInformationHandler/DeleteAccountInformation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/DeleteAddressHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/company/DeleteCompanyHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/credit/DeleteCreditCardHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/DeleteUserHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AccountInformationService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AccountInformationServiceImpl.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/StartUserService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/LibraryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/TestHarness.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_adscoop_service_common_1_0_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_adscoop_service_common_1_0_SNAPSHOT.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/user-service_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/user-service_main.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/user-service_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/user-service_test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/StartUserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/StartUserService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/congfig/BinderModule.java" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/congfig/BinderModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/accountInformationHandler/GetAccountInformationHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/accountInformationHandler/GetAccountInformationHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/accountInformationHandler/UpdateAccountInformationHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/accountInformationHandler/UpdateAccountInformationHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/GetAdderessHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/GetAdderessHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/UpdateAddressHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/UpdateAddressHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/auth/AuthHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/auth/AuthHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/auth/LoginHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/auth/LoginHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/company/GetCompanyHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/company/GetCompanyHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/CreateUserHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/CreateUserHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AddressUserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AddressUserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AddressUserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AddressUserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/CompanyServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/CompanyServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/CreditInfoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/CreditInfoService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/CreditInfoServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/CreditInfoServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/IUser.java" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/IUser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/UpdateUserHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/UpdateUserHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/UserNodeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/UserNodeServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ratpack/ratpack.properties" afterPath="$PROJECT_DIR$/src/ratpack/ratpack.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ratpack/ratpack.yaml" afterPath="$PROJECT_DIR$/src/ratpack/ratpack.yaml" />
     </list>
     <ignored path="user-service.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -174,11 +151,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StartUserService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StartUserService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/StartUserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="48" column="97" lean-forward="false" selection-start-line="48" selection-start-column="97" selection-end-line="48" selection-end-column="97" />
+            <state relative-caret-position="647">
+              <caret line="63" column="123" lean-forward="false" selection-start-line="63" selection-start-column="123" selection-end-line="63" selection-end-column="123" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -186,38 +163,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddressUserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AddressUserServiceImpl.java">
+      <file leaf-file-name="DefaultExecController.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-core/1.4.3/9bc650ef00ae67b247c5fb50fa1ea47a54d5d0ec/ratpack-core-1.4.3-sources.jar!/ratpack/exec/internal/DefaultExecController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-              <folding>
-                <element signature="e#675#676#0" expanded="false" />
-                <element signature="e#731#732#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="288">
+              <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdateAddressHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/UpdateAddressHandler.java">
+      <file leaf-file-name="Config.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/adscoop/service-common/1.0-SNAPSHOT/service-common-1.0-SNAPSHOT.jar!/com/adscoop/services/neo4j/connection/Config.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="48" column="62" lean-forward="false" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
+            <state relative-caret-position="210">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetAdderessHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/GetAdderessHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#451#452#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -226,60 +188,75 @@
       <file leaf-file-name="ConnectionSource.class" pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/com/adscoop/service-common/1.0-SNAPSHOT/service-common-1.0-SNAPSHOT.jar!/com/adscoop/services/neo4j/connection/ConnectionSource.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="14" column="182" lean-forward="false" selection-start-line="14" selection-start-column="182" selection-end-line="14" selection-end-column="182" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateUserHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/CreateUserHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="50" column="54" lean-forward="false" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddressUserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AddressUserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+            <state relative-caret-position="360">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#1045#1046#0" expanded="true" />
+                <element signature="e#1101#1102#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreditInfoServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/CreditInfoServiceImpl.java">
+      <file leaf-file-name="ratpack.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ratpack/ratpack.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserNodeServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserNodeServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/UserNodeServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="883">
-              <caret line="127" column="21" lean-forward="false" selection-start-line="127" selection-start-column="21" selection-end-line="127" selection-end-column="21" />
+            <state relative-caret-position="460">
+              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServiceCommonConfig.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/adscoop/service-common/1.0-SNAPSHOT/service-common-1.0-SNAPSHOT.jar!/com/adscoop/services/neo4j/connection/ServiceCommonConfig.class">
+      <file leaf-file-name="AuthorazationService.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/adscoop/authorazation-service/1.0-SNAPSHOT/authorazation-service-1.0-SNAPSHOT.jar!/com/adscoop/com/adscoop/services/AuthorazationService.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+            <state relative-caret-position="3">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="e#481#482#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/auth/AuthHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BinderModule.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/congfig/BinderModule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="65" column="49" lean-forward="false" selection-start-line="65" selection-start-column="49" selection-end-line="65" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -295,6 +272,7 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Tag Library Descriptor" />
       </list>
     </option>
   </component>
@@ -514,7 +492,7 @@
     <option name="modificationStamps">
       <map>
         <entry key="$USER_HOME$/Downloads/neo4j-ratpack-master" value="1387855934000" />
-        <entry key="$PROJECT_DIR$" value="2955371990000" />
+        <entry key="$PROJECT_DIR$" value="2955805632000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -684,12 +662,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/kleistit/userservice/handlers/accountInformationHandler/GetAccountInformationHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kleistit/userservice/handlers/credit/UpdateCreditHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kleistit/userservice/congfig/BinderModule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kleistit/userservice/services/impls/UserNodeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kleistit/userservice/services/impls/CreditInfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kleistit/userservice/services/impls/AddressUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kleistit/userservice/services/impls/CompanyServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/CompanyService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/Services.java" />
@@ -699,7 +671,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/credit/CreateCreditHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/credit/GetCreditHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/credit/UpdateCreditHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/UpdateUserHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/CreditCardHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/GetUserHandler.java" />
@@ -708,9 +679,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/StartUserService.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/AddressHandlerChain.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/auth/AuthHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/DeleteAddressHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/congfig/BinderModule.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/company/DeleteCompanyHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/DeleteUserHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/CreditInfoService.java" />
@@ -720,21 +689,30 @@
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/accountInformationHandler/DeleteAccountInformation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/company/GetCompanyHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/congfig/UserModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/auth/LoginHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/credit/DeleteCreditCardHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/IUser.java" />
         <option value="$PROJECT_DIR$/src/test/java/LibraryTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/CreateUserHandler.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/CompanyServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AccountInformationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AddressUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AddressUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/UpdateAddressHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/GetAdderessHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/StartUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/CreditInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/CreateUserHandler.java" />
+        <option value="$MAVEN_REPOSITORY$/com/adscoop/service-common/1.0-SNAPSHOT/service-common-1.0-SNAPSHOT.jar!/com/adscoop/services/neo4j/connection/ServiceCommonConfig.class" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AccountInformationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/UpdateUserHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/UserChain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/auth/LoginHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j2.tld" />
+        <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/congfig/DataBaseConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/UserNodeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/ratpack/ratpack.properties" />
+        <option value="$PROJECT_DIR$/src/ratpack/ratpack.yaml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/congfig/BinderModule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/auth/AuthHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/adscoop/userservice/StartUserService.java" />
       </list>
     </option>
   </component>
@@ -766,7 +744,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -793,7 +772,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="ratpack" />
               <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -885,6 +864,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="userservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="congfig" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user-service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user-service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="gradle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -917,8 +926,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -936,6 +944,9 @@
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ratpack" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.kleistit.userservice.congfig" />
       <recent name="com.kleistit.userservice" />
@@ -1443,8 +1454,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.StartUserService (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Gradle.user-service [build]" />
-        <item index="2" class="java.lang.String" itemvalue="Application.StartUserService" />
+        <item index="1" class="java.lang.String" itemvalue="Application.StartUserService" />
+        <item index="2" class="java.lang.String" itemvalue="Gradle.user-service [build]" />
         <item index="3" class="java.lang.String" itemvalue="Gradle.user-service [buildDependents]" />
         <item index="4" class="java.lang.String" itemvalue="Groovy.build" />
       </list>
@@ -1542,7 +1553,11 @@
       <workItem from="1483124832849" duration="301000" />
       <workItem from="1483125188535" duration="5796000" />
       <workItem from="1483132728921" duration="360000" />
-      <workItem from="1483187607410" duration="2956000" />
+      <workItem from="1483187607410" duration="8278000" />
+      <workItem from="1483475259848" duration="13911000" />
+      <workItem from="1483988467375" duration="4571000" />
+      <workItem from="1484064225456" duration="2342000" />
+      <workItem from="1484235801691" duration="15413000" />
     </task>
     <servers />
   </component>
@@ -1552,11 +1567,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="372336000" />
+    <option name="totallyTimeSpent" value="413895000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1566,7 +1581,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296119" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40973452" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1575,11 +1590,11 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6026549" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20884956" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Graph Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19140838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4539823" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24866879" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.023961661" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Graph Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3686636" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12992546" sideWeight="0.4967742" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1605,7 +1620,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296119" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40973452" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1620,7 +1635,7 @@
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12992546" sideWeight="0.5032258" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Graph Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19140838" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4539823" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24866879" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2518637" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Graph Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3686636" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32642487" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12992546" sideWeight="0.4967742" order="10" side_tool="false" content_ui="tabs" />
@@ -1645,127 +1660,103 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/com/addscoope/service-common/1.0-SNAPSHOT/service-common-1.0-SNAPSHOT.jar!/com/adscoop/services/neo4j/connection/ServiceCommonConfig.class</url>
           <line>11</line>
           <properties />
           <option name="timeStamp" value="46" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/UpdateAddressHandler.java</url>
           <line>34</line>
           <properties />
           <option name="timeStamp" value="62" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AddressUserServiceImpl.java</url>
           <line>87</line>
           <properties />
           <option name="timeStamp" value="65" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/UpdateAddressHandler.java</url>
           <line>33</line>
           <properties />
           <option name="timeStamp" value="72" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/CreateUserHandler.java</url>
-          <line>35</line>
+          <line>36</line>
           <properties />
           <option name="timeStamp" value="76" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/GetUserHandler.java</url>
           <line>41</line>
           <properties />
           <option name="timeStamp" value="79" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/UserNodeServiceImpl.java</url>
-          <line>75</line>
+          <line>77</line>
           <properties />
           <option name="timeStamp" value="81" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/CreateAddressHandler.java</url>
           <line>40</line>
           <properties />
           <option name="timeStamp" value="83" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/CreateAddressHandler.java</url>
           <line>36</line>
           <properties />
           <option name="timeStamp" value="85" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/credit/CreateCreditHandler.java</url>
           <line>43</line>
           <properties />
           <option name="timeStamp" value="88" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/CompanyServiceImpl.java</url>
           <line>36</line>
           <properties />
           <option name="timeStamp" value="90" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/CreateAddressHandler.java</url>
           <line>39</line>
           <properties />
           <option name="timeStamp" value="91" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/CreateUserHandler.java</url>
-          <line>41</line>
+          <line>42</line>
           <properties />
           <option name="timeStamp" value="93" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/auth/AuthHandler.java</url>
-          <line>32</line>
+          <line>36</line>
           <properties />
           <option name="timeStamp" value="97" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/auth/LoginHandler.java</url>
-          <line>30</line>
-          <properties />
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/CreateUserHandler.java</url>
-          <line>52</line>
+          <line>53</line>
           <properties />
           <option name="timeStamp" value="100" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/UserNodeServiceImpl.java</url>
-          <line>116</line>
-          <properties />
-          <option name="timeStamp" value="101" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/UserNodeServiceImpl.java</url>
-          <line>98</line>
+          <line>100</line>
           <properties />
           <option name="timeStamp" value="103" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/UserNodeServiceImpl.java</url>
-          <line>117</line>
-          <properties />
-          <option name="timeStamp" value="105" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/com/adscoop/service-common/1.0-SNAPSHOT/service-common-1.0-SNAPSHOT.jar!/com/adscoop/services/neo4j/connection/ConnectionSource.class</url>
-          <line>31</line>
-          <properties />
-          <option name="timeStamp" value="107" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/GetAdderessHandler.java</url>
           <line>31</line>
           <properties />
@@ -1775,287 +1766,49 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/UserNodeServiceImpl.java</url>
           <line>119</line>
           <properties />
-          <option name="timeStamp" value="114" />
+          <option name="timeStamp" value="128" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/com/adscoop/service-common/1.0-SNAPSHOT/service-common-1.0-SNAPSHOT.jar!/com/adscoop/services/neo4j/connection/ConnectionSource.class</url>
-          <line>23</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/UserNodeServiceImpl.java</url>
+          <line>120</line>
           <properties />
-          <option name="timeStamp" value="116" />
+          <option name="timeStamp" value="133" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/com/adscoop/service-common/1.0-SNAPSHOT/service-common-1.0-SNAPSHOT.jar!/com/adscoop/services/neo4j/connection/ConnectionSource.class</url>
-          <line>27</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/auth/AuthHandler.java</url>
+          <line>38</line>
           <properties />
-          <option name="timeStamp" value="117" />
+          <option name="timeStamp" value="135" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/adscoop/service-common/1.0-SNAPSHOT/service-common-1.0-SNAPSHOT.jar!/com/adscoop/services/neo4j/connection/ServiceCommonConfigModule.class</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/adscoop/authorazation-service/1.0-SNAPSHOT/authorazation-service-1.0-SNAPSHOT.jar!/com/adscoop/com/adscoop/services/AuthorazationService.class</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="145" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="118" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="148" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="cypher" />
-      </configuration>
-    </watches-manager>
+    <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/AddressHandlerChain.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-core/1.4.3/9bc650ef00ae67b247c5fb50fa1ea47a54d5d0ec/ratpack-core-1.4.3-sources.jar!/ratpack/render/internal/DefaultRenderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/auth/AuthHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="32" column="1" lean-forward="false" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/congfig/DataBaseConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/company/DeleteCompanyHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/DeleteAddressHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/UpdateUserHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="40" column="51" lean-forward="false" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/GetUserHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/CreditInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="33" column="45" lean-forward="false" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/credit/GetCreditHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/credit/UpdateCreditHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="32" column="26" lean-forward="false" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/CreateAddressHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/accountInformationHandler/CreateAccountInformationHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="20" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/accountInformationHandler/GetAccountInformationHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="29" column="64" lean-forward="false" selection-start-line="29" selection-start-column="64" selection-end-line="29" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/accountInformationHandler/UpdateAccountInformationHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AccountInformationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/accountInformationHandler/DeleteAccountInformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/company/GetCompanyHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/ratpack.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/ratpack.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/congfig/UserModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/congfig/BinderModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="55" column="63" lean-forward="false" selection-start-line="55" selection-start-column="63" selection-end-line="55" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/credit/DeleteCreditCardHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/auth/LoginHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="66" lean-forward="true" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#583#584#0" expanded="false" />
-            <element signature="e#637#638#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/DeleteUserHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-core/1.4.3/9bc650ef00ae67b247c5fb50fa1ea47a54d5d0ec/ratpack-core-1.4.3-sources.jar!/ratpack/jackson/Jackson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5835">
-          <caret line="427" column="0" lean-forward="false" selection-start-line="427" selection-start-column="0" selection-end-line="427" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-core/1.4.3/9bc650ef00ae67b247c5fb50fa1ea47a54d5d0ec/ratpack-core-1.4.3-sources.jar!/ratpack/handling/internal/MethodHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-core/1.4.3/9bc650ef00ae67b247c5fb50fa1ea47a54d5d0ec/ratpack-core-1.4.3-sources.jar!/ratpack/path/internal/PathHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-core/1.4.3/9bc650ef00ae67b247c5fb50fa1ea47a54d5d0ec/ratpack-core-1.4.3-sources.jar!/ratpack/handling/internal/DefaultContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2580">
-          <caret line="261" column="0" lean-forward="false" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-core/1.4.3/9bc650ef00ae67b247c5fb50fa1ea47a54d5d0ec/ratpack-core-1.4.3-sources.jar!/ratpack/exec/internal/DefaultPromise.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestHarness.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/LibraryTest.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-core/1.4.3/9bc650ef00ae67b247c5fb50fa1ea47a54d5d0ec/ratpack-core-1.4.3-sources.jar!/ratpack/exec/internal/DefaultExecution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2295">
-          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/IUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="744" column="0" lean-forward="false" selection-start-line="744" selection-start-column="0" selection-end-line="744" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="52" column="78" lean-forward="false" selection-start-line="52" selection-start-column="78" selection-end-line="52" selection-end-column="78" />
         </state>
       </provider>
     </entry>
@@ -2074,37 +1827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AccountInformationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AddressUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AddressUserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-          <folding>
-            <element signature="e#675#676#0" expanded="false" />
-            <element signature="e#731#732#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/UpdateAddressHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
@@ -2115,63 +1837,381 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AddressUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/IUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/CreditInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45">
+          <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject/guice/4.1.0/3f43f7c8743238f310246cfb13ba3e2e1aca6655/guice-4.1.0-sources.jar!/com/google/inject/internal/ProviderMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5220">
+          <caret line="403" column="0" lean-forward="false" selection-start-line="403" selection-start-column="0" selection-end-line="403" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject/guice/4.1.0/3f43f7c8743238f310246cfb13ba3e2e1aca6655/guice-4.1.0-sources.jar!/com/google/inject/internal/DefaultConstructionProxyFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject/guice/4.1.0/3f43f7c8743238f310246cfb13ba3e2e1aca6655/guice-4.1.0-sources.jar!/com/google/inject/internal/ConstructorInjector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/adscoop/service-common/1.0-SNAPSHOT/service-common-1.0-SNAPSHOT.jar!/com/adscoop/services/neo4j/connection/DataSourceConfig.class" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject/guice/4.1.0/3f43f7c8743238f310246cfb13ba3e2e1aca6655/guice-4.1.0-sources.jar!/com/google/inject/internal/MembersInjectorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/address/GetAdderessHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
+        <state relative-caret-position="367">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-core/1.4.3/9bc650ef00ae67b247c5fb50fa1ea47a54d5d0ec/ratpack-core-1.4.3-sources.jar!/ratpack/server/internal/DefaultRatpackServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2608">
+          <caret line="430" column="0" lean-forward="false" selection-start-line="430" selection-start-column="0" selection-end-line="430" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/adscoop/service-common/1.0-SNAPSHOT/service-common-1.0-SNAPSHOT.jar!/com/adscoop/services/neo4j/connection/ServiceCommonConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/CreateUserHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/StartUserService.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-ogm-bolt-driver/2.1.0/27ed917b3a9b62bdd9d706641d4286dce8665238/neo4j-ogm-bolt-driver-2.1.0-sources.jar!/org/neo4j/ogm/drivers/bolt/driver/BoltDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="48" column="97" lean-forward="false" selection-start-line="48" selection-start-column="97" selection-end-line="48" selection-end-column="97" />
+        <state relative-caret-position="435">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-ogm-api/2.1.0/a73e51c7190cf5aa4d892d4d5f29f5fa0f7919c9/neo4j-ogm-api-2.1.0-sources.jar!/org/neo4j/ogm/service/DriverService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-ogm-api/2.1.0/a73e51c7190cf5aa4d892d4d5f29f5fa0f7919c9/neo4j-ogm-api-2.1.0-sources.jar!/org/neo4j/ogm/service/Components.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.neo4j.driver/neo4j-java-driver/1.1.0/5c75992f609c2f7ebbda332dcffc40b56f8dccf0/neo4j-java-driver-1.1.0-sources.jar!/org/neo4j/driver/v1/GraphDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AddressUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="25" column="51" lean-forward="false" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#675#676#0" expanded="false" />
+            <element signature="e#731#732#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/AccountInformationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/adscoop/authorazation-service/1.0-SNAPSHOT/authorazation-service-1.0-SNAPSHOT.jar!/com/adscoop/com/adscoop/services/AuthConfigurableModule.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/UpdateUserHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="40" column="51" lean-forward="false" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/congfig/CardType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/UserChain.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Library.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="e#257#258#0" expanded="false" />
+            <element signature="e#284#285#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-ogm-core/2.1.0/851e11c438aad23faa4a3424f9d190431531b09f/neo4j-ogm-core-2.1.0-sources.jar!/org/neo4j/ogm/session/delegates/ExecuteQueriesDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9008#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2213#2214#0" expanded="false" />
+            <element signature="e#2256#2257#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/congfig/UserModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding>
+            <element signature="e#283#284#0" expanded="false" />
+            <element signature="e#323#324#0" expanded="false" />
+            <element signature="e#358#359#0" expanded="false" />
+            <element signature="e#389#390#0" expanded="false" />
+            <element signature="e#437#438#0" expanded="false" />
+            <element signature="e#477#478#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/auth/LoginHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="22" column="48" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="22" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-core/1.4.3/9bc650ef00ae67b247c5fb50fa1ea47a54d5d0ec/ratpack-core-1.4.3-sources.jar!/ratpack/func/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ratpack/.ratpack">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/congfig/DataBaseConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-ogm-api/2.1.0/a73e51c7190cf5aa4d892d4d5f29f5fa0f7919c9/neo4j-ogm-api-2.1.0-sources.jar!/org/neo4j/ogm/authentication/UsernamePasswordCredentials.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ratpack/log4j2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/adscoop/service-common/1.0-SNAPSHOT/service-common-1.0-SNAPSHOT.jar!/com/adscoop/services/neo4j/connection/ServiceCommonConfigModule.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ratpack/ratpack.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ratpack/ratpack.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/congfig/BinderModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="65" column="49" lean-forward="false" selection-start-line="65" selection-start-column="49" selection-end-line="65" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/auth/AuthHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/adscoop/service-common/1.0-SNAPSHOT/service-common-1.0-SNAPSHOT.jar!/com/adscoop/services/neo4j/connection/Config.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#451#452#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/adscoop/service-common/1.0-SNAPSHOT/service-common-1.0-SNAPSHOT.jar!/com/adscoop/services/neo4j/connection/ConnectionSource.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="14" column="182" lean-forward="false" selection-start-line="14" selection-start-column="182" selection-end-line="14" selection-end-column="182" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/CreditInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/handlers/users/CreateUserHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="50" column="54" lean-forward="false" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/adscoop/service-common/1.0-SNAPSHOT/service-common-1.0-SNAPSHOT.jar!/com/adscoop/services/neo4j/connection/ServiceCommonConfig.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="360">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#1045#1046#0" expanded="true" />
+            <element signature="e#1101#1102#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/services/impls/UserNodeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="883">
-          <caret line="127" column="21" lean-forward="false" selection-start-line="127" selection-start-column="21" selection-end-line="127" selection-end-column="21" />
+        <state relative-caret-position="460">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/adscoop/authorazation-service/1.0-SNAPSHOT/authorazation-service-1.0-SNAPSHOT.jar!/com/adscoop/com/adscoop/services/AuthorazationService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#481#482#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ratpack/ratpack-core/1.4.3/9bc650ef00ae67b247c5fb50fa1ea47a54d5d0ec/ratpack-core-1.4.3-sources.jar!/ratpack/exec/internal/DefaultExecController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adscoop/userservice/StartUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="63" column="123" lean-forward="false" selection-start-line="63" selection-start-column="123" selection-end-line="63" selection-end-column="123" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -39,8 +39,6 @@ public class UpdateUserHandler implements Handler {
             userNode.setPassword(as.get("password"));
 
             userNodeService.saveOrUpdate(userNode);
-
-
         });
 
 

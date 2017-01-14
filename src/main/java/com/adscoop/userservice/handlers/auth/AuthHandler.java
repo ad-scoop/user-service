@@ -1,8 +1,10 @@
 package com.adscoop.userservice.handlers.auth;
 
+import com.adscoop.com.adscoop.services.AuthConfigurableModule;
 import com.adscoop.com.adscoop.services.AuthorazationService;
 import com.adscoop.entiites.AuthEntity;
 import com.adscoop.entiites.UserNode;
+import com.adscoop.services.neo4j.connection.ConnectionSource;
 import com.google.inject.Inject;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
@@ -18,15 +20,17 @@ import static ratpack.jackson.Jackson.json;
  */
 public class AuthHandler implements Handler {
 
-    AuthorazationService authorazationService;
 
+    private AuthorazationService authorazationService;
     @Inject
-    public AuthHandler(AuthorazationService authorazationService) {
-        this.authorazationService = authorazationService;
+    public AuthHandler(AuthorazationService authorazationServiceau) {
+        this.authorazationService = authorazationServiceau;
     }
 
     @Override
     public void handle(Context ctx) throws Exception {
+
+
         String token = ctx.getRequest().getHeaders().get("token");
         String username = ctx.getRequest().getHeaders().get("username");
 
@@ -36,7 +40,7 @@ public class AuthHandler implements Handler {
             if (res.isPresent()) {
                 ctx.next();
             } else {
-                ctx.redirect(LoginHandler.class);
+
             }
 
         } else {
