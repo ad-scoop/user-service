@@ -4,13 +4,19 @@ package com.adscoop.userservice.congfig;
 import com.adscoop.com.adscoop.services.AuthConfigurableModule;
 import com.adscoop.com.adscoop.services.AuthorazationService;
 import com.adscoop.services.neo4j.connection.ConnectionSource;
+import com.adscoop.userservice.chains.*;
+import com.adscoop.userservice.handlers.accountInformationHandler.DeleteAccountInformation;
 import com.adscoop.userservice.handlers.accountInformationHandler.GetAccountInformationHandler;
+import com.adscoop.userservice.handlers.accountInformationHandler.UpdateAccountInformationHandler;
 import com.adscoop.userservice.handlers.address.CreateAddressHandler;
 import com.adscoop.userservice.handlers.address.DeleteAddressHandler;
 import com.adscoop.userservice.handlers.address.GetAdderessHandler;
 import com.adscoop.userservice.handlers.auth.AuthHandler;
 import com.adscoop.userservice.handlers.auth.LoginHandler;
 import com.adscoop.userservice.handlers.company.CreateCompanyHandler;
+import com.adscoop.userservice.handlers.company.DeleteCompanyHandler;
+import com.adscoop.userservice.handlers.company.GetCompanyHandler;
+import com.adscoop.userservice.handlers.company.UpdateCompanyHandler;
 import com.adscoop.userservice.handlers.credit.CreateCreditHandler;
 import com.adscoop.userservice.handlers.credit.DeleteCreditCardHandler;
 import com.adscoop.userservice.handlers.credit.GetCreditHandler;
@@ -65,6 +71,16 @@ public class BinderModule extends AbstractModule{
         bind(ConnectionSource.class).asEagerSingleton();
 bind(DeleteUserHandler.class).asEagerSingleton();
 bind(CreateUserHandler.class).asEagerSingleton();
+bind(DeleteCompanyHandler.class).asEagerSingleton();
+bind(UpdateCompanyHandler.class).asEagerSingleton();
+bind(GetCompanyHandler.class).asEagerSingleton();
+bind(DeleteAccountInformation.class).asEagerSingleton();
+bind(UpdateAccountInformationHandler.class).asEagerSingleton();
+bind(CreditChainHandler.class).asEagerSingleton();
+bind(AddressChainHandler.class).asEagerSingleton();
+bind(UserChainHandler.class).asEagerSingleton();
+bind(CompanyChainHandler.class).asEagerSingleton();
+bind(AccountChainHandler.class).asEagerSingleton();
     }
 
 
