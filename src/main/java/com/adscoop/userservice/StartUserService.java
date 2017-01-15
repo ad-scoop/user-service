@@ -11,26 +11,9 @@ import com.adscoop.services.neo4j.connection.*;
 import com.adscoop.userservice.chains.*;
 import com.adscoop.userservice.congfig.BinderModule;
 
-
-
-import com.adscoop.userservice.handlers.accountInformationHandler.CreateAccountInformationHandler;
-import com.adscoop.userservice.handlers.accountInformationHandler.DeleteAccountInformation;
-import com.adscoop.userservice.handlers.accountInformationHandler.GetAccountInformationHandler;
-import com.adscoop.userservice.handlers.accountInformationHandler.UpdateAccountInformationHandler;
-
-import com.adscoop.userservice.handlers.auth.AuthHandler;
-
 import com.adscoop.userservice.handlers.auth.LoginHandler;
-import com.adscoop.userservice.handlers.company.CreateCompanyHandler;
-import com.adscoop.userservice.handlers.company.DeleteCompanyHandler;
-import com.adscoop.userservice.handlers.company.GetCompanyHandler;
-import com.adscoop.userservice.handlers.company.UpdateCompanyHandler;
-
 import com.adscoop.userservice.handlers.users.CreateUserHandler;
-
-
 import ratpack.guice.Guice;
-
 import ratpack.rx.RxRatpack;
 import ratpack.server.BaseDir;
 import ratpack.server.RatpackServer;
