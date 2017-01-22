@@ -27,10 +27,10 @@ public class CreateCompanyHandler implements Handler {
 
     @Override
     public void handle(Context ctx) throws Exception {
-        Long userid = Long.valueOf(ctx.getRequest().getHeaders().get("userid"));
-        if(userid !=null) {
+        String token = String.valueOf(ctx.getRequest().getHeaders().get("token"));
+        if(token !=null) {
             ctx.parse(fromJson(Company.class)).then(companyNode -> {
-                UserNode userNode = userNodeService.findbyId(userid);
+                UserNode userNode = userNodeService.findByToken(token);
                 Company companyNode1 = new Company();
                 companyNode1.setCompanyname(companyNode.getCompanyname());
                 companyNode1.setCompanytype(companyNode.getCompanytype());
