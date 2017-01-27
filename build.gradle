@@ -34,9 +34,9 @@ dependencies {
 
     compile group: 'org.neo4j', name: 'neo4j-ogm-core', version: '2.1.0'
 
-    compile group: 'com.adscoop', name: 'adbanner-entites', version: '1.0+'
+    compile group: 'com.adscoop', name: 'adscoop-entites', version: '1.0+'
 
-	compile group: 'com.adscoop', name: 'service-common', version: '1.0-SNAPSHOT'
+	compile group: 'com.adscoop', name: 'service-common', version: '1.0+'
 	compile group: 'com.adscoop' , name: 'authorazation-service', version: '1.0+'
     compile group: 'com.xeiam', name: 'sundial', version: '2.0.1'
     compile group: 'commons-validator', name: 'commons-validator', version: '1.5.1'
