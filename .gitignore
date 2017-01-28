@@ -23,3 +23,7 @@ user-service.iml
 user-service.ipr
 user-service.iws
 .gradle/
+/bin/
+/.classpath
+/.project
+/.settings
