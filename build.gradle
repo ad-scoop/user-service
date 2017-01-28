@@ -1,5 +1,5 @@
 group 'com.adscoop'
-version '1.0.1'git
+version '1.0.1'
 
     apply plugin: "io.ratpack.ratpack-java"
 
@@ -45,6 +45,7 @@ dependencies {
 	compile group: 'com.adscoop' , name: 'authorazation-service', version: '1.0+'
     compile group: 'com.xeiam', name: 'sundial', version: '2.0.1'
     compile group: 'commons-validator', name: 'commons-validator', version: '1.5.1'
+    compile group: 'io.ratpack', name: 'ratpack-dropwizard-metrics', version: '1.4.4'
 }
 
 mainClassName =  "com.adscoop.userservice.StartUserService"
