@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="user-service:main" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="com.kleistit.adbanner" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+<module external.linked.project.id="user-service:main" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="com.adscoop" external.system.module.type="sourceSet" external.system.module.version="1.0.1" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/../../build/classes/main" />
     <exclude-output />
@@ -12,15 +12,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: io.ratpack:ratpack-core:1.4.3" level="project" />
-    <orderEntry type="library" name="Gradle: io.ratpack:ratpack-guice:1.4.3" level="project" />
     <orderEntry type="library" name="Gradle: io.ratpack:ratpack-rx:1.4.3" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.6.2" level="project" />
     <orderEntry type="library" name="Gradle: org.neo4j:neo4j-ogm-core:2.1.0" level="project" />
-    <orderEntry type="library" name="Gradle: com.adscoop:adbanner-entites:1.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: com.adscoop:service-common:1.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: com.adscoop:authorazation-service:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Gradle: com.adscoop:adscoop-entites:1.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.adscoop:service-common:1.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.adscoop:authorazation-service:1.0.1" level="project" />
     <orderEntry type="library" name="Gradle: com.xeiam:sundial:2.0.1" level="project" />
     <orderEntry type="library" name="Gradle: commons-validator:commons-validator:1.5.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.ratpack:ratpack-dropwizard-metrics:1.4.4" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-codec-http:4.1.5.Final" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-handler:4.1.5.Final" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-transport-native-epoll:linux-x86_64:4.1.5.Final" level="project" />
@@ -44,26 +44,27 @@
     <orderEntry type="library" name="Gradle: org.apache.commons:commons-lang3:3.4" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.commons:commons-collections4:4.1" level="project" />
     <orderEntry type="library" name="Gradle: com.e-movimento.tinytools:privilegedaccessor:1.2.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.neo4j:neo4j-ogm-bolt-driver:2.1.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-slf4j-impl:2.0.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.0.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-core:2.0.2" level="project" />
     <orderEntry type="library" name="Gradle: commons-beanutils:commons-beanutils:1.9.2" level="project" />
     <orderEntry type="library" name="Gradle: commons-digester:commons-digester:1.8.1" level="project" />
     <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" name="Gradle: commons-collections:commons-collections:3.2.2" level="project" />
+    <orderEntry type="library" name="Gradle: io.dropwizard.metrics:metrics-core:3.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.dropwizard.metrics:metrics-json:3.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.dropwizard.metrics:metrics-healthchecks:3.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.dropwizard.metrics:metrics-jvm:3.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.dropwizard.metrics:metrics-annotation:3.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.dropwizard.metrics:metrics-graphite:3.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.10" level="project" />
+    <orderEntry type="library" name="Gradle: io.ratpack:ratpack-core:1.4.4" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-codec:4.1.5.Final" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-buffer:4.1.5.Final" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-transport:4.1.5.Final" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-common:4.1.5.Final" level="project" />
-    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.7.0" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.7.5" level="project" />
-    <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.10" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-resolver:4.1.5.Final" level="project" />
+    <orderEntry type="library" name="Gradle: io.ratpack:ratpack-guice:1.4.4" level="project" />
     <orderEntry type="library" name="Gradle: javax.inject:javax.inject:1" level="project" />
     <orderEntry type="library" name="Gradle: aopalliance:aopalliance:1.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.neo4j.driver:neo4j-java-driver:1.1.0" level="project" />
-    <orderEntry type="library" name="Gradle: commons-io:commons-io:2.4" level="project" />
-    <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.7.0" level="project" />
   </component>
 </module>
