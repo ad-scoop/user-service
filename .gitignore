@@ -18,7 +18,7 @@ hs_err_pid*
 
 /build/
 /classes/
-/user-service.iml
+/user-service.im
 user-service.iml
 user-service.ipr
 user-service.iws
@@ -27,3 +27,5 @@ user-service.iws
 /.classpath
 /.project
 /.settings
+/.idea/
+/build/
