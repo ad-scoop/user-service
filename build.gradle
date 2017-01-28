@@ -1,4 +1,4 @@
-group 'com.kleistit.adbanner'
+group 'com.adscoop'
 version '1.0-SNAPSHOT'
 
 
@@ -59,4 +59,4 @@ compile group: 'com.adscoop' , name: 'authorazation-service', version: '1.0-SNAP
 
 }
 
-mainClassName =  "StartUserService"
+mainClassName =  "com.adscoop.userservice.StartUserService"
