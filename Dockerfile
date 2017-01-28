@@ -6,3 +6,5 @@ RUN unzip /usr/lib/adscoop/user-service.zip
 
 RUN rm /usr/lib/adscoop/user-service.zip
 
+RUN cd /usr/lib/adscoop/user-service/bin/
+RUN .\user-service
