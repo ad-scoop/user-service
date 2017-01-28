@@ -3,6 +3,7 @@ package com.adscoop.userservice.services.impls;
 import com.adscoop.entiites.Company;
 import com.adscoop.services.neo4j.connection.ConnectionSource;
 import com.google.inject.Inject;
+import org.neo4j.ogm.session.Session;
 
 
 import java.io.IOException;
@@ -14,16 +15,16 @@ import java.util.Map;
  */
 public class CompanyServiceImpl implements  CompanyService {
 
-ConnectionSource connectionSource;
+Session connectionSource;
     @Inject
-    public CompanyServiceImpl(ConnectionSource connectionSource) {
+    public CompanyServiceImpl(Session connectionSource) {
         this.connectionSource = connectionSource;
     }
 
     @Override
     public void save(Company companyNode) throws IOException {
         try {
-            connectionSource.session().save(companyNode);
+            connectionSource.save(companyNode);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -35,7 +36,7 @@ ConnectionSource connectionSource;
 
 
         try {
-            return connectionSource.session().queryForObject(Company.class,"match (u:UserNode)-[:USER_HAS_COMPANY]->(c:Company ) where c.companyname='"+ companyname  +"' and u.token='" + id  + "'  return c", Collections.EMPTY_MAP);
+            return connectionSource.queryForObject(Company.class,"match (u:UserNode)-[:USER_HAS_COMPANY]->(c:Company ) where c.companyname='"+ companyname  +"' and u.token='" + id  + "'  return c", Collections.EMPTY_MAP);
         } catch (Exception e) {
             e.printStackTrace();
         }

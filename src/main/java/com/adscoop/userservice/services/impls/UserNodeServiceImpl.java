@@ -32,10 +32,10 @@ public class UserNodeServiceImpl implements IUser{
     private static final int DEPTH_LIST = 0;
     private static final int DEPTH_ENTITY = 1;
     private static Logger logger = LoggerFactory.getLogger(UserNodeServiceImpl.class);
-    private ConnectionSource connectionSource;
+    private Session connectionSource;
 
     @Inject
-    public UserNodeServiceImpl(ConnectionSource connectionSource) {
+    public UserNodeServiceImpl(Session connectionSource) {
 
         this.connectionSource = connectionSource;
 
@@ -143,6 +143,6 @@ System.err.print(e);
 
         private Session session(){
 
-        return this.connectionSource.session();
+        return this.connectionSource;
         }
 }

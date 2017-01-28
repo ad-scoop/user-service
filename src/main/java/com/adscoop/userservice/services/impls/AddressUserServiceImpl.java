@@ -6,6 +6,7 @@ import com.adscoop.services.neo4j.connection.ConnectionSource;
 import com.google.inject.Inject;
 
 
+import org.neo4j.ogm.session.Session;
 import rx.Observable;
 
 import java.io.IOException;
@@ -18,13 +19,13 @@ import java.util.Optional;
  * Created by thokle on 01/09/2016.
  */
 public class AddressUserServiceImpl implements AddressUserService {
-private ConnectionSource connectionSource;
+private Session session;
     private static final int DEPTH_LIST = 0;
     private static final int DEPTH_ENTITY = 1;
 
     @Inject
-    public AddressUserServiceImpl(ConnectionSource connectionSource) {
-        this.connectionSource = connectionSource;
+    public AddressUserServiceImpl(Session connectionSource) {
+        this.session = connectionSource;
     }
 
 
@@ -34,7 +35,7 @@ private ConnectionSource connectionSource;
 
 
         try {
-            return Observable.from(connectionSource.session().query(cypherQuery,Collections.EMPTY_MAP));
+            return Observable.from(session.query(cypherQuery,Collections.EMPTY_MAP));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -44,7 +45,7 @@ private ConnectionSource connectionSource;
     @Override
     public Iterable<AddressNode> findAll() throws  IOException{
         try {
-            return connectionSource.session().loadAll(AddressNode.class,DEPTH_ENTITY);
+            return session.loadAll(AddressNode.class,DEPTH_ENTITY);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -54,7 +55,7 @@ private ConnectionSource connectionSource;
     @Override
     public AddressNode findbyId(Long id) throws IOException {
         try {
-            connectionSource.session().load(AddressNode.class,id);
+            session.load(AddressNode.class,id);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -64,7 +65,7 @@ private ConnectionSource connectionSource;
     @Override
     public void delete(AddressNode entity) throws  IOException{
         try {
-            connectionSource.session().delete(entity);
+            session.delete(entity);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -73,7 +74,7 @@ private ConnectionSource connectionSource;
     @Override
     public Optional<AddressNode> saveOrUpdate(AddressNode entity) throws IOException{
         try {
-            connectionSource.session().save(entity);
+            session.save(entity);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -87,7 +88,7 @@ private ConnectionSource connectionSource;
 
         try {
             return Optional
-                    .of(connectionSource.session().queryForObject(AddressNode.class,"match (a)-[:ADDRESS_BELONGS_TO_COMPANY]->(c)-[:COMPANY_BELONGS_TO_USER]->(u) where u.id='"+cypher+ "' return a as AddressNode",Collections.EMPTY_MAP));
+                    .of(session.queryForObject(AddressNode.class,"match (a)-[:ADDRESS_BELONGS_TO_COMPANY]->(c)-[:COMPANY_BELONGS_TO_USER]->(u) where u.id='"+cypher+ "' return a as AddressNode",Collections.EMPTY_MAP));
         } catch (Exception e) {
             e.printStackTrace();
         }
