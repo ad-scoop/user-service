@@ -1,18 +1,14 @@
 group 'com.adscoop'
 version '1.0.1'
 
-    apply plugin: "io.ratpack.ratpack-java"
-
-
-
-
 apply plugin: "io.ratpack.ratpack-java"
+apply plugin: 'application'
 apply plugin: "idea"
-apply plugin: 'java'
 apply plugin: 'maven'
+apply plugin: 'eclipse'
 
 buildscript {
-    repositories{
+    repositories{	
         jcenter()
         mavenCentral()
         mavenLocal()
@@ -48,4 +44,8 @@ dependencies {
     compile group: 'io.ratpack', name: 'ratpack-dropwizard-metrics', version: '1.4.4'
 }
 
-mainClassName =  "com.adscoop.userservice.StartUserService"
+distZip {
+    archiveName = baseName + ".zip"
+}
+
+mainClassName = "com.adscoop.userservice.StartUserService"
