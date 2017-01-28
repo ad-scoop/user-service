@@ -4,6 +4,8 @@
  *
  * @author thokle, @date 26-08-16 23:04
  */
+
+
 public class Library {
     public boolean someLibraryMethod() {
         return true;

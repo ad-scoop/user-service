@@ -30,7 +30,7 @@ public class StartUserService {
         RatpackServer.start(ratpackServerSpec -> ratpackServerSpec
                 .serverConfig(serverConfigBuilder -> serverConfigBuilder.baseDir(BaseDir.find())
                         .yaml("ratpack.yaml").require("/db", Config.class)
-                        .env().sysProps().port(8181)).registry(Guice.registry(bindingsSpec -> bindingsSpec.module(BinderModule.class).module(ServiceCommonConfigModule.class).module(AuthConfigurableModule.class)))
+                        .env().port(8181).build()).registry(Guice.registry(bindingsSpec -> bindingsSpec.module(BinderModule.class).module(ServiceCommonConfigModule.class).module(AuthConfigurableModule.class)))
                 .handlers(chain -> chain.prefix("user", UserChainHandler.class).prefix("address", AddressChainHandler.class).prefix("company", CompanyChainHandler.class).prefix("account", AccountChainHandler.class)
                         .prefix("credit", CreditChainHandler.class).prefix("/", chain1 -> chain1.post("create",CreateUserHandler.class).post("login",LoginHandler.class))));
 
