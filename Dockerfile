@@ -8,4 +8,4 @@ RUN apk add bash && apk add screen
 RUN cd /usr/lib/adscoop/ && unzip user-service.zip
 RUN rm /usr/lib/adscoop/user-service.zip
 
-RUN screen -dmS user-service /usr/lib/adscoop/user-service/bin/user-service
+EXPOSE 8181

@@ -13,12 +13,15 @@ import ratpack.handling.Chain;
  */
 public class CreditChainHandler implements Action<Chain> {
 
-@Override
-public void execute(Chain cre) throws Exception{
+	@Override
+	public void execute(Chain cre) throws Exception {
+		cre
+			.all(AuthHandler.class)
+			.post(CreateCreditHandler.class)
+			.delete(DeleteCreditCardHandler.class)
+			.put(UpdateCreditHandler.class)
+			.get(GetCreditHandler.class);
 
-     cre.all(AuthHandler.class).post(CreateCreditHandler.class).delete(DeleteCreditCardHandler.class).put(UpdateCreditHandler.class).get(GetCreditHandler.class);
-
-
-}
+	}
 
 }

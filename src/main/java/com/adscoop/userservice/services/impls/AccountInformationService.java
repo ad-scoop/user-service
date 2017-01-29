@@ -9,9 +9,6 @@ import java.util.Optional;
  */
 public interface AccountInformationService {
 
-
-Optional<AccountInformation> getByUserToken();
-
-
+	Optional<AccountInformation> getByUserToken();
 
 }
