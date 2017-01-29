@@ -1,7 +1,6 @@
 package com.adscoop.userservice.services.impls;
 
 import com.adscoop.entiites.UserNode;
-import com.adscoop.services.neo4j.connection.ConnectionSource;
 
 import com.google.inject.Inject;
 

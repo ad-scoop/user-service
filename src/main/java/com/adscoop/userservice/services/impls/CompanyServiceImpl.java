@@ -1,7 +1,7 @@
 package com.adscoop.userservice.services.impls;
 
 import com.adscoop.entiites.Company;
-import com.adscoop.services.neo4j.connection.ConnectionSource;
+
 import com.google.inject.Inject;
 import org.neo4j.ogm.session.Session;
 

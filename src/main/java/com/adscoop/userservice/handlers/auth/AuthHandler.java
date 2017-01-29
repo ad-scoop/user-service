@@ -1,19 +1,16 @@
 package com.adscoop.userservice.handlers.auth;
 
-import com.adscoop.com.adscoop.services.AuthConfigurableModule;
+
 import com.adscoop.com.adscoop.services.AuthorazationService;
-import com.adscoop.entiites.AuthEntity;
-import com.adscoop.entiites.UserNode;
-import com.adscoop.services.neo4j.connection.ConnectionSource;
+
 import com.google.inject.Inject;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
-import ratpack.handling.Handlers;
+
 
 import java.util.Optional;
 
-import static ratpack.jackson.Jackson.fromJson;
-import static ratpack.jackson.Jackson.json;
+;
 
 /**
  * Created by thokle on 08/12/2016.

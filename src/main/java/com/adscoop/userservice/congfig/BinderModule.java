@@ -1,9 +1,6 @@
 package com.adscoop.userservice.congfig;
 
 
-import com.adscoop.com.adscoop.services.AuthConfigurableModule;
-import com.adscoop.com.adscoop.services.AuthorazationService;
-import com.adscoop.services.neo4j.connection.ConnectionSource;
 import com.adscoop.userservice.chains.*;
 import com.adscoop.userservice.handlers.accountInformationHandler.DeleteAccountInformation;
 import com.adscoop.userservice.handlers.accountInformationHandler.GetAccountInformationHandler;
@@ -32,10 +29,7 @@ import com.adscoop.userservice.handlers.accountInformationHandler.CreateAccountI
 import com.adscoop.userservice.handlers.address.UpdateAddressHandler;
 import com.adscoop.userservice.handlers.credit.UpdateCreditHandler;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
-import com.google.inject.Injector;
-import org.neo4j.ogm.session.Session;
 
-import java.io.IOException;
 
 /**
  * Created by thokle on 29/08/2016.
@@ -68,7 +62,7 @@ public class BinderModule extends AbstractModule{
         bind(LoginHandler.class).asEagerSingleton();
         bind(DeleteAddressHandler.class).asEagerSingleton();
         bind(DeleteCreditCardHandler.class).asEagerSingleton();
-        bind(ConnectionSource.class).asEagerSingleton();
+
 bind(DeleteUserHandler.class).asEagerSingleton();
 bind(CreateUserHandler.class).asEagerSingleton();
 bind(DeleteCompanyHandler.class).asEagerSingleton();

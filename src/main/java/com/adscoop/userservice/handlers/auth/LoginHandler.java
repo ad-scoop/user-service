@@ -2,10 +2,9 @@ package com.adscoop.userservice.handlers.auth;
 
 import com.adscoop.com.adscoop.services.AuthConfigurableModule;
 import com.adscoop.com.adscoop.services.AuthorazationService;
-import com.adscoop.entiites.UserNode;
-import com.adscoop.services.neo4j.connection.ConnectionSource;
+
 import com.adscoop.userservice.congfig.UserModel;
-import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
+
 import com.google.inject.Inject;
 import org.neo4j.ogm.session.Session;
 import ratpack.handling.Context;
