@@ -5,13 +5,14 @@ package com.adscoop.userservice;
  */
 
 
-import com.adscoop.com.adscoop.services.AuthConfigurableModule;
+
 
 import com.adscoop.userservice.chains.*;
 import com.adscoop.userservice.congfig.BinderModule;
 
 import com.adscoop.userservice.handlers.auth.LoginHandler;
 import com.adscoop.userservice.handlers.users.CreateUserHandler;
+import com.adscoop.userservice.modules.AuthConfigurableModule;
 import com.adscoop.userservice.modules.Config;
 import com.adscoop.userservice.modules.ServiceCommonConfigModule;
 import ratpack.dropwizard.metrics.DropwizardMetricsModule;
@@ -19,6 +20,8 @@ import ratpack.guice.Guice;
 import ratpack.rx.RxRatpack;
 import ratpack.server.BaseDir;
 import ratpack.server.RatpackServer;
+
+
 
 /**
  * Created by thokle on 29/08/2016.

@@ -1,8 +1,8 @@
 package com.adscoop.userservice.handlers.auth;
 
 
-import com.adscoop.com.adscoop.services.AuthorazationService;
 
+import com.adscoop.userservice.modules.AuthorazationService;
 import com.google.inject.Inject;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;

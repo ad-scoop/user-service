@@ -1,10 +1,10 @@
 package com.adscoop.userservice.handlers.auth;
 
-import com.adscoop.com.adscoop.services.AuthConfigurableModule;
-import com.adscoop.com.adscoop.services.AuthorazationService;
+
 
 import com.adscoop.userservice.congfig.UserModel;
 
+import com.adscoop.userservice.modules.AuthorazationService;
 import com.google.inject.Inject;
 import org.neo4j.ogm.session.Session;
 import ratpack.handling.Context;
@@ -19,18 +19,17 @@ import static ratpack.jackson.Jackson.fromJson;
  */
 public class LoginHandler  implements Handler{
 
-    Session connectionSource;
-    AuthConfigurableModule authorazationService;
+      private AuthorazationService authorazationService;
 @Inject
-    public LoginHandler(Session connectionSource, AuthConfigurableModule authorazationService) {
-        this.connectionSource = connectionSource;
+    public LoginHandler(AuthorazationService authorazationService) {
+
         this.authorazationService = authorazationService;
     }
 
     @Override
     public void handle(Context ctx) throws Exception {
 
-     AuthorazationService authorazationService =    this.authorazationService.authorazationService(connectionSource);
+ 
 ctx.parse(fromJson(UserModel.class)).then( userModel ->  {
 
     Optional<String>  st = authorazationService.login(userModel.getUsername(),userModel.getPassword());
