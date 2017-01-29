@@ -29,7 +29,7 @@ public class LoginHandler  implements Handler{
     @Override
     public void handle(Context ctx) throws Exception {
 
- 
+
 ctx.parse(fromJson(UserModel.class)).then( userModel ->  {
 
     Optional<String>  st = authorazationService.login(userModel.getUsername(),userModel.getPassword());
