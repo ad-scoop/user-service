@@ -1,15 +1,14 @@
 package com.adscoop.userservice.handlers.address;
 
+import java.util.Optional;
+
 import com.adscoop.entiites.AddressNode;
+import com.adscoop.userservice.services.impls.AddressUserServiceImpl;
 import com.google.inject.Inject;
 
-import com.adscoop.userservice.services.impls.AddressUserServiceImpl;
-import javafx.beans.binding.IntegerBinding;
 import ratpack.form.Form;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
-
-import java.util.Optional;
 
 /**
  * Created by thokle on 10/09/2016.
