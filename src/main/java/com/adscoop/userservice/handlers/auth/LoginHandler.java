@@ -7,6 +7,7 @@ import com.adscoop.services.neo4j.connection.ConnectionSource;
 import com.adscoop.userservice.congfig.UserModel;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 import com.google.inject.Inject;
+import org.neo4j.ogm.session.Session;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
 
@@ -19,10 +20,10 @@ import static ratpack.jackson.Jackson.fromJson;
  */
 public class LoginHandler  implements Handler{
 
-    ConnectionSource connectionSource;
+    Session connectionSource;
     AuthConfigurableModule authorazationService;
 @Inject
-    public LoginHandler(ConnectionSource connectionSource, AuthConfigurableModule authorazationService) {
+    public LoginHandler(Session connectionSource, AuthConfigurableModule authorazationService) {
         this.connectionSource = connectionSource;
         this.authorazationService = authorazationService;
     }
@@ -30,7 +31,7 @@ public class LoginHandler  implements Handler{
     @Override
     public void handle(Context ctx) throws Exception {
 
-     AuthorazationService authorazationService =    this.authorazationService.authorazationService(connectionSource.session());
+     AuthorazationService authorazationService =    this.authorazationService.authorazationService(connectionSource);
 ctx.parse(fromJson(UserModel.class)).then( userModel ->  {
 
     Optional<String>  st = authorazationService.login(userModel.getUsername(),userModel.getPassword());
