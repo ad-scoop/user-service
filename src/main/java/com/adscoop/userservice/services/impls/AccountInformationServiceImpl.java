@@ -13,22 +13,22 @@ import java.util.Optional;
  */
 public class AccountInformationServiceImpl implements AccountInformationService {
 
-    private Session session;
+	private Session session;
 
+	@Inject
+	public AccountInformationServiceImpl(Session connectionSource) {
+		this.session = connectionSource;
+	}
 
-    @Inject
-    public AccountInformationServiceImpl(Session connectionSource) {
-        this.session = connectionSource;
-    }
+	@Override
+	public Optional<AccountInformation> getByUserToken() {
 
-    @Override
-    public Optional<AccountInformation> getByUserToken() {
-
-        try {
-            return Optional.of(session.queryForObject(AccountInformation.class,"match (c) where c.accountnr='1231' return c", Collections.EMPTY_MAP));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-return Optional.empty();
-    }
+		try {
+			return Optional.of(session.queryForObject(AccountInformation.class,
+					"match (c) where c.accountnr='1231' return c", Collections.EMPTY_MAP));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return Optional.empty();
+	}
 }

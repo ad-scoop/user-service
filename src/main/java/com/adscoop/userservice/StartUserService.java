@@ -34,20 +34,31 @@ public class StartUserService {
 
         RatpackServer.start(ratpackServerSpec -> ratpackServerSpec
                 .serverConfig(serverConfigBuilder -> serverConfigBuilder.baseDir(BaseDir.find())
-                        .yaml("ratpack.yaml").require("/db", Config.class).props("ratpack.properties").sysProps()
-                        .env().development(false).build()).registry(Guice.registry(bindingsSpec -> bindingsSpec.module(BinderModule.class).module(ServiceCommonConfigModule.class).module(AuthConfigurableModule.class).module(DropwizardMetricsModule.class, d -> {
+                        .yaml("ratpack.yaml")
+                        .require("/db", Config.class)
+                        .props("ratpack.properties").sysProps()
+                        .env()
+                        .development(false)
+                        .build())
+                .registry(Guice.registry(bindingsSpec -> bindingsSpec.module(BinderModule.class)
+                		.module(ServiceCommonConfigModule.class)
+                        .module(AuthConfigurableModule.class)
+                        .module(DropwizardMetricsModule.class, d -> {
                             d.console();
                             d.getSlf4j();
                             d.getGraphite();
                             d.getJmx();
 
                 })))
-                .handlers(chain -> chain.prefix("user", UserChainHandler.class).prefix("address", AddressChainHandler.class).prefix("company", CompanyChainHandler.class).prefix("account", AccountChainHandler.class)
-                        .prefix("credit", CreditChainHandler.class).prefix("/", chain1 -> chain1.post("create",CreateUserHandler.class).post("login",LoginHandler.class))));
-
-
-
-
-
-}
+                .handlers(chain -> 
+                	chain.prefix("user", UserChainHandler.class)
+                		.prefix("address", AddressChainHandler.class)
+                		.prefix("company", CompanyChainHandler.class)
+                		.prefix("account", AccountChainHandler.class)
+                        .prefix("credit", CreditChainHandler.class)
+                        .prefix("/", chain1 -> 
+                        	chain1.post("create", CreateUserHandler.class)
+                        		.post("login",LoginHandler.class))));
+    }	
+    
 }
