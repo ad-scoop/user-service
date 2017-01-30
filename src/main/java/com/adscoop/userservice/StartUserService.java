@@ -5,16 +5,15 @@ package com.adscoop.userservice;
  */
 
 
-
-
 import com.adscoop.userservice.chains.*;
 import com.adscoop.userservice.congfig.BinderModule;
-
 import com.adscoop.userservice.handlers.auth.LoginHandler;
+import com.adscoop.userservice.handlers.errorhandlers.UserServiceErrorHandler;
 import com.adscoop.userservice.handlers.users.CreateUserHandler;
 import com.adscoop.userservice.modules.AuthConfigurableModule;
 import com.adscoop.userservice.modules.Config;
 import com.adscoop.userservice.modules.ServiceCommonConfigModule;
+
 import ratpack.dropwizard.metrics.DropwizardMetricsModule;
 import ratpack.guice.Guice;
 import ratpack.rx.RxRatpack;
@@ -38,7 +37,7 @@ public class StartUserService {
                         .require("/db", Config.class)
                         .props("ratpack.properties").sysProps()
                         .env()
-                        .development(false)
+                        .development(true)
                         .build())
                 .registry(Guice.registry(bindingsSpec -> bindingsSpec.module(BinderModule.class)
                 		.module(ServiceCommonConfigModule.class)
@@ -58,7 +57,7 @@ public class StartUserService {
                         .prefix("credit", CreditChainHandler.class)
                         .prefix("/", chain1 -> 
                         	chain1.post("create", CreateUserHandler.class)
-                        		.post("login",LoginHandler.class))));
+                        		.post("login",LoginHandler.class)).get("", ctx -> ctx.render("welcome to index"))));
     }	
     
 }

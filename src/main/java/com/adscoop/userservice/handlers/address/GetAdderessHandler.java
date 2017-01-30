@@ -1,16 +1,16 @@
 package com.adscoop.userservice.handlers.address;
 
 
-import com.adscoop.entiites.AddressNode;
-import com.google.inject.Inject;
-
-import com.adscoop.userservice.services.impls.AddressUserServiceImpl;
-import ratpack.handling.Context;
-import ratpack.handling.Handler;
+import static ratpack.jackson.Jackson.json;
 
 import java.util.Optional;
 
-import static ratpack.jackson.Jackson.json;
+import com.adscoop.entiites.AddressNode;
+import com.adscoop.userservice.services.impls.AddressUserServiceImpl;
+import com.google.inject.Inject;
+
+import ratpack.handling.Context;
+import ratpack.handling.Handler;
 
 /**
  * Created by thokle on 10/09/2016.

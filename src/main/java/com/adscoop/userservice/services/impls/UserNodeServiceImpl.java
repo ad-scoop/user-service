@@ -1,23 +1,19 @@
 package com.adscoop.userservice.services.impls;
 
-import com.adscoop.entiites.UserNode;
-
-import com.google.inject.Inject;
-
-import org.neo4j.ogm.model.Result;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import rx.Observable;
-
 import java.io.IOException;
-
 import java.util.Collection;
 import java.util.Collections;
-
 import java.util.Map;
 import java.util.Optional;
+
 import org.neo4j.ogm.session.Session;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.adscoop.entiites.UserNode;
+import com.google.inject.Inject;
+
+import rx.Observable;
 
 /**
  * Created by thokle on 03/09/2016.

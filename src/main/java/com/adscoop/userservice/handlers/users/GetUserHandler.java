@@ -1,22 +1,18 @@
 package com.adscoop.userservice.handlers.users;
 
+import static ratpack.jackson.Jackson.json;
+
+import java.util.Collection;
+import java.util.stream.Collectors;
+
 import com.adscoop.entiites.UserNode;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.Inject;
 
-
 import io.netty.buffer.ByteBufAllocator;
-
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
-
-
-import java.util.Collection;
-import java.util.stream.Collectors;
-
-import static ratpack.jackson.Jackson.fromJson;
-import static ratpack.jackson.Jackson.json;
 
 
 public class GetUserHandler implements Handler {

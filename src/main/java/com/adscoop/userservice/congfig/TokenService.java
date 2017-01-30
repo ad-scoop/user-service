@@ -1,8 +1,8 @@
 package com.adscoop.userservice.congfig;
 
-import com.google.inject.Singleton;
-
 import java.util.UUID;
+
+import com.google.inject.Singleton;
 
 /**
  * Created by thokle on 11/09/2016.

@@ -1,9 +1,10 @@
 package com.adscoop.userservice.modules;
 
 
+import org.neo4j.ogm.session.Session;
+
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
-import org.neo4j.ogm.session.Session;
 
 /**
  * Created by thokle on 05/01/2017.

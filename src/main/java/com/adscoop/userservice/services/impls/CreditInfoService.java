@@ -1,10 +1,11 @@
 package com.adscoop.userservice.services.impls;
 
-import com.adscoop.entiites.CreditInfo;
-import rx.Observable;
-
 import java.io.IOException;
 import java.util.Map;
+
+import com.adscoop.entiites.CreditInfo;
+
+import rx.Observable;
 
 /**
  * Created by thokle on 03/09/2016.

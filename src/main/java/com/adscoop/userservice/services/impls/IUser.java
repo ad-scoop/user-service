@@ -1,15 +1,14 @@
 package com.adscoop.userservice.services.impls;
 
 
-import com.adscoop.entiites.UserNode;
-import org.neo4j.ogm.model.Result;
-import rx.Observable;
-
 import java.io.IOException;
 import java.util.Collection;
-import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+
+import com.adscoop.entiites.UserNode;
+
+import rx.Observable;
 
 /**
  * Created by thokle on 01/09/2016.

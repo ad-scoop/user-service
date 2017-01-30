@@ -2,12 +2,15 @@ package com.adscoop.userservice.congfig;
 
 
 import com.adscoop.userservice.chains.*;
+import com.adscoop.userservice.handlers.CreditCardHandler;
+import com.adscoop.userservice.handlers.accountInformationHandler.CreateAccountInformationHandler;
 import com.adscoop.userservice.handlers.accountInformationHandler.DeleteAccountInformation;
 import com.adscoop.userservice.handlers.accountInformationHandler.GetAccountInformationHandler;
 import com.adscoop.userservice.handlers.accountInformationHandler.UpdateAccountInformationHandler;
 import com.adscoop.userservice.handlers.address.CreateAddressHandler;
 import com.adscoop.userservice.handlers.address.DeleteAddressHandler;
 import com.adscoop.userservice.handlers.address.GetAdderessHandler;
+import com.adscoop.userservice.handlers.address.UpdateAddressHandler;
 import com.adscoop.userservice.handlers.auth.AuthHandler;
 import com.adscoop.userservice.handlers.auth.LoginHandler;
 import com.adscoop.userservice.handlers.company.CreateCompanyHandler;
@@ -17,18 +20,13 @@ import com.adscoop.userservice.handlers.company.UpdateCompanyHandler;
 import com.adscoop.userservice.handlers.credit.CreateCreditHandler;
 import com.adscoop.userservice.handlers.credit.DeleteCreditCardHandler;
 import com.adscoop.userservice.handlers.credit.GetCreditHandler;
+import com.adscoop.userservice.handlers.credit.UpdateCreditHandler;
 import com.adscoop.userservice.handlers.users.CreateUserHandler;
 import com.adscoop.userservice.handlers.users.DeleteUserHandler;
 import com.adscoop.userservice.handlers.users.GetUserHandler;
 import com.adscoop.userservice.handlers.users.UpdateUserHandler;
 import com.adscoop.userservice.services.impls.*;
 import com.google.inject.AbstractModule;
-
-import com.adscoop.userservice.handlers.CreditCardHandler;
-import com.adscoop.userservice.handlers.accountInformationHandler.CreateAccountInformationHandler;
-import com.adscoop.userservice.handlers.address.UpdateAddressHandler;
-import com.adscoop.userservice.handlers.credit.UpdateCreditHandler;
-import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 
 
 /**

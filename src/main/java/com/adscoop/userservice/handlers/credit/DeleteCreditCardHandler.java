@@ -1,10 +1,9 @@
 package com.adscoop.userservice.handlers.credit;
 
 import com.adscoop.entiites.CreditInfo;
-import com.adscoop.entiites.UserNode;
 import com.adscoop.userservice.services.impls.CreditInfoServiceImpl;
-import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 import com.google.inject.Inject;
+
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
 

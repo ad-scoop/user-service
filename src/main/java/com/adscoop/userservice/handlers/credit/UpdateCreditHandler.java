@@ -1,15 +1,14 @@
 package com.adscoop.userservice.handlers.credit;
 
+import static ratpack.jackson.Jackson.fromJson;
+
 import com.adscoop.entiites.CreditInfo;
 import com.adscoop.userservice.services.impls.CreditInfoServiceImpl;
 import com.google.inject.Inject;
 
 import ratpack.exec.ExecutionException;
-
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
-
-import static ratpack.jackson.Jackson.fromJson;
 
 
 /**

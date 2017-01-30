@@ -1,17 +1,15 @@
 package com.adscoop.userservice.handlers.users;
 
+import static ratpack.jackson.Jackson.fromJson;
+import static ratpack.jackson.Jackson.json;
+
 import com.adscoop.entiites.UserNode;
-import com.google.inject.Inject;
-
-
 import com.adscoop.userservice.congfig.TokenService;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
+import com.google.inject.Inject;
 
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
-
-import static ratpack.jackson.Jackson.fromJson;
-import static ratpack.jackson.Jackson.json;
 
 
 /**

@@ -4,6 +4,7 @@ import com.adscoop.userservice.handlers.auth.AuthHandler;
 import com.adscoop.userservice.handlers.users.DeleteUserHandler;
 import com.adscoop.userservice.handlers.users.GetUserHandler;
 import com.adscoop.userservice.handlers.users.UpdateUserHandler;
+
 import ratpack.func.Action;
 import ratpack.handling.Chain;
 

@@ -3,6 +3,7 @@ package com.adscoop.userservice.handlers.users;
 import com.adscoop.entiites.UserNode;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 import com.google.inject.Inject;
+
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
 

@@ -1,13 +1,13 @@
 package com.adscoop.userservice.services.impls;
 
 
-
-import com.adscoop.entiites.AddressNode;
-import rx.Observable;
-
 import java.io.IOException;
 import java.util.Map;
 import java.util.Optional;
+
+import com.adscoop.entiites.AddressNode;
+
+import rx.Observable;
 
 /**
  * Created by thokle on 01/09/2016.

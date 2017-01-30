@@ -1,13 +1,13 @@
 package com.adscoop.userservice.handlers.credit;
 
+import static ratpack.jackson.Jackson.json;
+
 import com.adscoop.entiites.UserNode;
+import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 import com.google.inject.Inject;
 
-import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
-
-import static ratpack.jackson.Jackson.json;
 
 /**
  * Created by thokle on 10/09/2016.

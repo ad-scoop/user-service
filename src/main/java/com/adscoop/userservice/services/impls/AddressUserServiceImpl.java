@@ -1,26 +1,25 @@
 package com.adscoop.userservice.services.impls;
 
-import com.adscoop.entiites.AddressNode;
-
-import com.google.inject.Inject;
-
-import org.neo4j.ogm.session.Session;
-import rx.Observable;
-
 import java.io.IOException;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+
+import org.neo4j.ogm.session.Session;
+
+import com.adscoop.entiites.AddressNode;
+import com.google.inject.Inject;
+
+import rx.Observable;
 
 /**
  * Created by thokle on 01/09/2016.
  */
 public class AddressUserServiceImpl implements AddressUserService {
 	
-	private Session session;
 	private static final int DEPTH_LIST = 0;
 	private static final int DEPTH_ENTITY = 1;
+	private Session session;
 
 	@Inject
 	public AddressUserServiceImpl(Session connectionSource) {

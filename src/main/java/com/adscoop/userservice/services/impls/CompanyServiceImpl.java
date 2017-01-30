@@ -1,14 +1,13 @@
 package com.adscoop.userservice.services.impls;
 
-import com.adscoop.entiites.Company;
-
-import com.google.inject.Inject;
-import org.neo4j.ogm.session.Session;
-
-
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Map;
+
+import org.neo4j.ogm.session.Session;
+
+import com.adscoop.entiites.Company;
+import com.google.inject.Inject;
 
 /**
  * Created by thokle on 31/10/2016.

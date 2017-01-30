@@ -1,12 +1,10 @@
 package com.adscoop.userservice.services.impls;
 
 
-import org.neo4j.ogm.cypher.query.CypherQuery;
-import ratpack.exec.Promise;
-import rx.Observable;
-import rx.Scheduler;
+import java.util.List;
+import java.util.Map;
 
-import java.util.*;
+import rx.Observable;
 
 /**
  * Created by thokle on 31/08/2016.

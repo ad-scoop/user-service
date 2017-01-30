@@ -1,26 +1,25 @@
 package com.adscoop.userservice.handlers.auth;
 
 
-
-import com.adscoop.userservice.congfig.UserModel;
-
-import com.adscoop.userservice.modules.AuthorazationService;
-import com.google.inject.Inject;
-import org.neo4j.ogm.session.Session;
-import ratpack.handling.Context;
-import ratpack.handling.Handler;
+import static ratpack.jackson.Jackson.fromJson;
 
 import java.util.Optional;
 
-import static ratpack.jackson.Jackson.fromJson;
+import com.adscoop.userservice.congfig.UserModel;
+import com.adscoop.userservice.modules.AuthorazationService;
+import com.google.inject.Inject;
+
+import ratpack.handling.Context;
+import ratpack.handling.Handler;
 
 /**
  * Created by thokle on 12/12/2016.
  */
-public class LoginHandler  implements Handler{
+public class LoginHandler implements Handler {
 
-      private AuthorazationService authorazationService;
-@Inject
+    private AuthorazationService authorazationService;
+
+    @Inject
     public LoginHandler(AuthorazationService authorazationService) {
 
         this.authorazationService = authorazationService;
@@ -30,24 +29,21 @@ public class LoginHandler  implements Handler{
     public void handle(Context ctx) throws Exception {
 
 
-ctx.parse(fromJson(UserModel.class)).then( userModel ->  {
+        ctx.parse(fromJson(UserModel.class)).then(userModel -> {
 
-    Optional<String>  st = authorazationService.login(userModel.getUsername(),userModel.getPassword());
+            Optional<String> st = authorazationService.login(userModel.getUsername(), userModel.getPassword());
 
-    if(st.isPresent()){
-        ctx.getResponse().getHeaders().add("user-token",st.get());
-        ctx.render(st.get());
+            if (st.isPresent()) {
+                ctx.getResponse().getHeaders().add("user-token", st.get());
+                ctx.render(st.get());
 
-    }else
-    {
-        ctx.render("not working");
+            } else {
+                ctx.render("not working");
 
-    }
-
+            }
 
 
-
-});
+        });
 
 
     }

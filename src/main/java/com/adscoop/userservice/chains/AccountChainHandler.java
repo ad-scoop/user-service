@@ -5,6 +5,7 @@ import com.adscoop.userservice.handlers.accountInformationHandler.DeleteAccountI
 import com.adscoop.userservice.handlers.accountInformationHandler.GetAccountInformationHandler;
 import com.adscoop.userservice.handlers.accountInformationHandler.UpdateAccountInformationHandler;
 import com.adscoop.userservice.handlers.auth.AuthHandler;
+
 import ratpack.func.Action;
 import ratpack.handling.Chain;
 

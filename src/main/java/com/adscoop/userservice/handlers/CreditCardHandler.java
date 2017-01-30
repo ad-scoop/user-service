@@ -1,5 +1,8 @@
 package com.adscoop.userservice.handlers;
 
+import static ratpack.jackson.Jackson.fromJson;
+import static ratpack.jackson.Jackson.json;
+
 import com.adscoop.entiites.CreditInfo;
 import com.adscoop.userservice.services.impls.CreditInfoServiceImpl;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
@@ -7,9 +10,6 @@ import com.google.inject.Inject;
 
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
-
-import static ratpack.jackson.Jackson.fromJson;
-import static ratpack.jackson.Jackson.json;
 
 
 /**

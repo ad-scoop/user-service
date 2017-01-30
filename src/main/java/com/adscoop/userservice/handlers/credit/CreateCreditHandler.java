@@ -1,17 +1,18 @@
 package com.adscoop.userservice.handlers.credit;
 
+import static ratpack.jackson.Jackson.fromJson;
+import static ratpack.jackson.Jackson.json;
+
+import org.apache.commons.validator.routines.CreditCardValidator;
+
 import com.adscoop.entiites.CreditInfo;
 import com.adscoop.entiites.UserNode;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 import com.google.inject.Inject;
 
-import org.apache.commons.validator.routines.CreditCardValidator;
 import ratpack.exec.ExecutionException;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
-
-import static ratpack.jackson.Jackson.fromJson;
-import static ratpack.jackson.Jackson.json;
 
 /**
  * Created by thokle on 10/09/2016.
