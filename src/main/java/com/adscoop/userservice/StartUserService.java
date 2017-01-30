@@ -55,9 +55,8 @@ public class StartUserService {
                 		.prefix("address", AddressChainHandler.class)
                 		.prefix("company", CompanyChainHandler.class)
                 		.prefix("account", AccountChainHandler.class)
-                        .prefix("credit", CreditChainHandler.class)
-                        .prefix("/", chain1 -> 
-                        	chain1.post("create", CreateUserHandler.class)
+                        .prefix("credit", CreditChainHandler.class).prefix("createuser",chain1 ->
+                        	chain1.post("", CreateUserHandler.class)
                         		.post("login",LoginHandler.class)).get("", ctx -> ctx.render("welcome to index"))));
     }	
     
