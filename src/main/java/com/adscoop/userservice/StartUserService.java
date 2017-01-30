@@ -15,6 +15,7 @@ import com.adscoop.userservice.modules.Config;
 import com.adscoop.userservice.modules.ServiceCommonConfigModule;
 
 import ratpack.dropwizard.metrics.DropwizardMetricsModule;
+import ratpack.func.Action;
 import ratpack.guice.Guice;
 import ratpack.rx.RxRatpack;
 import ratpack.server.BaseDir;
@@ -36,7 +37,7 @@ public class StartUserService {
                         .yaml("ratpack.yaml")
                         .require("/db", Config.class)
                         .props("ratpack.properties").sysProps()
-                        .env()
+                        .env().onError(Action.throwException())
                         .development(true)
                         .build())
                 .registry(Guice.registry(bindingsSpec -> bindingsSpec.module(BinderModule.class)
