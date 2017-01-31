@@ -42,7 +42,7 @@ public class LoginHandler implements Handler {
                 ctx.render(json(st.get()));
 
             } else {
-                ctx.render("not working");
+                ctx.render("Invalid username or password");
 
             }
 

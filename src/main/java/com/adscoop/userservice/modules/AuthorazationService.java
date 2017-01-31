@@ -40,10 +40,10 @@ public class AuthorazationService {
     }
 
 
-    public Optional<UserNode> tokenExist(String username, String token) throws Exception {
+    public Optional<UserNode> tokenExist(String username, String token)  {
 Optional<UserNode> userNode = Optional.empty();
 
-        userNode = Optional.of(session.queryForObject(UserNode.class, "match (u) where u.username='" + username + "' and u.token= '" + token + "' return u", (Map<String, ?>) Collections.EMPTY_SET));
+        userNode = Optional.ofNullable(session.queryForObject(UserNode.class, "match (u) where u.username='" + username + "' and u.token= '" + token + "' return u", (Map<String, ?>) Collections.EMPTY_SET));
 
         return userNode;
     }
