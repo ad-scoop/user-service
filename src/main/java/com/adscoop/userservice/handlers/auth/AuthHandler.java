@@ -3,11 +3,13 @@ package com.adscoop.userservice.handlers.auth;
 
 import java.util.Optional;
 
+import com.adscoop.entiites.UserNode;
 import com.adscoop.userservice.modules.AuthorazationService;
 import com.google.inject.Inject;
 
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
+import ratpack.http.Status;
 
 ;
 
@@ -31,12 +33,16 @@ public class AuthHandler implements Handler {
         String username = ctx.getRequest().getHeaders().get("username");
 
          if ((token != null) && (username != null)) {
+            try {
+                Optional<UserNode> res = authorazationService.tokenExist(username, token);
+                if(res.isPresent()){
+                    ctx.next();
+                } else {
+                    ctx.getResponse().status(405).send("No Access");
+                }
 
-            Optional<String> res = authorazationService.tokenExist(username, token);
-            if (res.isPresent()) {
-                ctx.next();
-            } else {
-
+            } catch (Exception e){
+                ctx.getResponse().status(405).send();
             }
 
         } else {

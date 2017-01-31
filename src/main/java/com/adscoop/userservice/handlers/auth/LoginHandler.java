@@ -2,13 +2,16 @@ package com.adscoop.userservice.handlers.auth;
 
 
 import static ratpack.jackson.Jackson.fromJson;
+import static ratpack.jackson.Jackson.json;
 
 import java.util.Optional;
 
+import com.adscoop.entiites.UserNode;
 import com.adscoop.userservice.congfig.UserModel;
 import com.adscoop.userservice.modules.AuthorazationService;
 import com.google.inject.Inject;
 
+import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
 
@@ -31,11 +34,12 @@ public class LoginHandler implements Handler {
 
         ctx.parse(fromJson(UserModel.class)).then(userModel -> {
 
-            Optional<String> st = authorazationService.login(userModel.getUsername(), userModel.getPassword());
+            Optional<UserNode> st = authorazationService.login(userModel.getUsername(), userModel.getPassword());
 
             if (st.isPresent()) {
-                ctx.getResponse().getHeaders().add("user-token", st.get());
-                ctx.render(st.get());
+
+                ctx.getResponse().getHeaders().add("usertoken", st.get().getToken());
+                ctx.render(json(st.get()));
 
             } else {
                 ctx.render("not working");

@@ -2,7 +2,9 @@ package com.adscoop.userservice.modules;
 
 
 import java.util.Collections;
+import java.util.Map;
 import java.util.Optional;
+
 
 import org.neo4j.ogm.session.Session;
 
@@ -26,36 +28,24 @@ public class AuthorazationService {
 
 
 
-    public Optional<String> login(String username, String password){
+    public Optional<UserNode> login(String username, String password) throws Exception{
         String res = null;
 
         try {
             UserNode userNode =  session.queryForObject(UserNode.class," match (u) where u.username='"+username+"' and  u.password='"+password +"'   return u",Collections.EMPTY_MAP);
+        return  Optional.of(userNode);
 
-            res =  userNode.getToken();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }   return Optional.of(res);
-    }
-
-
-    public Optional<String> tokenExist(String username, String token){
-
-        String res = null;
-        try {
-
-            UserNode userNode = session.queryForObject(UserNode.class,"match (u) where u.username='"+username+ "' and u.token= '"+token +"' return u", Collections.EMPTY_MAP);
-            if(userNode != null){
-res = userNode.getToken();
-            }
-
-            userNode.getToken();
-        }catch (Exception e){
-            e.toString();
+        } catch (Exception e) {throw new Exception(e.getMessage());
         }
-        return Optional.of(res);
     }
 
 
+    public Optional<UserNode> tokenExist(String username, String token) throws Exception {
+Optional<UserNode> userNode = Optional.empty();
+
+        userNode = Optional.of(session.queryForObject(UserNode.class, "match (u) where u.username='" + username + "' and u.token= '" + token + "' return u", (Map<String, ?>) Collections.EMPTY_SET));
+
+        return userNode;
+    }
 
 }
