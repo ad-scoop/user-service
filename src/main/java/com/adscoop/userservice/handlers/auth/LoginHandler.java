@@ -11,7 +11,6 @@ import com.adscoop.userservice.congfig.UserModel;
 import com.adscoop.userservice.modules.AuthorazationService;
 import com.google.inject.Inject;
 
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
 

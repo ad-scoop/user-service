@@ -34,9 +34,8 @@ public class GetUserHandler implements Handler {
 
     @Override
     public void handle(Context ctx) throws Exception {
-        this.byteBufAllocator = ctx.get(ByteBufAllocator.class);
-        objectMapper = ctx.get(ObjectMapper.class);
 
+        if(ctx.getRequest().getMethod().isGet()) {
         String path = ctx.getPathTokens().toString();
 
         if (path.equals("id")) {
@@ -53,8 +52,12 @@ public class GetUserHandler implements Handler {
 
             ctx.render(json(userNodes.stream().collect(Collectors.toList())));
 
+        }
 
 
+         } else {
+
+            ctx.next();
         }
 
 

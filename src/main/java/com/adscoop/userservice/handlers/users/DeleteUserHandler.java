@@ -24,7 +24,7 @@ public class DeleteUserHandler implements Handler
     @Override
     public void handle(Context ctx) throws Exception {
         String token = ctx.getRequest().getHeaders().get("token");
-
+       if(ctx.getRequest().getMethod().isDelete()){
         UserNode userNode = userNodeService.findByToken(token);
 
         if(userNode !=null){
@@ -34,7 +34,10 @@ public class DeleteUserHandler implements Handler
             } catch (Exception e){
 
             }
-        }
+        }}else {
+
+           ctx.next();
+       }
 
     }
 }

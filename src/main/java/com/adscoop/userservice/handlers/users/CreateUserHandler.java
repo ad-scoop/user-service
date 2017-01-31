@@ -31,27 +31,32 @@ public class CreateUserHandler implements Handler {
     @Override
     public void handle(Context ctx) throws Exception {
 
-       // if(ctx.getRequest().getBody().then( typedData -> );)
-        ctx.parse(fromJson(UserNode.class)).then(as -> {
 
-            final UserNode userNode  = new UserNode();
+        if(ctx.getRequest().getMethod().isPost()) {
+            ctx.parse(fromJson(UserNode.class)).then(as -> {
 
-            userNode.setFirstname(as.getFirstname());
-            userNode.setLastname(as.getLastname());
-            userNode.setToken(generateToken.generateToken());
-            userNode.setMiddlename(as.getMiddlename());
-            userNode.setUsername(as.getUsername());
-            userNode.setPassword(as.getPassword());
-            userNode.setEmail(as.getEmail());
-            as.getLabels().stream().forEach( la -> {
-                userNode.getLabels().add(la);
+                final UserNode userNode = new UserNode();
+
+                userNode.setFirstname(as.getFirstname());
+                userNode.setLastname(as.getLastname());
+                userNode.setToken(generateToken.generateToken());
+                userNode.setMiddlename(as.getMiddlename());
+                userNode.setUsername(as.getUsername());
+                userNode.setPassword(as.getPassword());
+                userNode.setEmail(as.getEmail());
+                as.getLabels().stream().forEach(la -> {
+                    userNode.getLabels().add(la);
+                });
+
+                UserNode saved = userNodeService.saveOrUpdate(userNode);
+                ctx.getResponse().getHeaders().add("token", saved.getToken());
+                ctx.render(json(userNode, UserNode.class));
+
             });
 
-            UserNode saved =    userNodeService.saveOrUpdate(userNode);
-            ctx.getResponse().getHeaders().add("token",saved.getToken());
-            ctx.render(json(userNode, UserNode.class));
-
-        });
+        } else {
+            ctx.next();
+        }
 
 
 

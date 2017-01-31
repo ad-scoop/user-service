@@ -28,22 +28,19 @@ public class AuthorazationService {
 
 
 
-    public Optional<UserNode> login(String username, String password) throws Exception{
+    public Optional<UserNode> login(String username, String password) {
         String res = null;
 
-        try {
-            UserNode userNode =  session.queryForObject(UserNode.class," match (u) where u.username='"+username+"' and  u.password='"+password +"'   return u",Collections.EMPTY_MAP);
-        return  Optional.of(userNode);
+            UserNode userNode =  session.queryForObject(UserNode.class," match (u) where u.email='"+username+"' and  u.password='"+password +"'   return u",Collections.EMPTY_MAP);
+        return  Optional.ofNullable(userNode);
 
-        } catch (Exception e) {throw new Exception(e.getMessage());
-        }
     }
 
 
     public Optional<UserNode> tokenExist(String username, String token)  {
 Optional<UserNode> userNode = Optional.empty();
 
-        userNode = Optional.ofNullable(session.queryForObject(UserNode.class, "match (u) where u.username='" + username + "' and u.token= '" + token + "' return u", (Map<String, ?>) Collections.EMPTY_SET));
+        userNode = Optional.ofNullable(session.queryForObject(UserNode.class, "match (u) where u.email='" + username + "' and u.token= '" + token + "' return u", (Map<String, ?>) Collections.EMPTY_SET));
 
         return userNode;
     }
