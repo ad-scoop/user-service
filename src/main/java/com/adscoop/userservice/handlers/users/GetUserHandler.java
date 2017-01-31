@@ -20,8 +20,6 @@ public class GetUserHandler implements Handler {
 
     private UserNodeServiceImpl userNodeService;
 
-
-
     private ByteBufAllocator byteBufAllocator;
     private ObjectMapper objectMapper;
 
