@@ -1,10 +1,8 @@
 package com.adscoop.userservice.modules;
 
-
 import java.util.Collections;
 import java.util.Map;
 import java.util.Optional;
-
 
 import org.neo4j.ogm.session.Session;
 
@@ -16,33 +14,28 @@ import com.google.inject.Inject;
  */
 public class AuthorazationService {
 
-    private Session session;
+	private Session session;
 
+	@Inject
+	public AuthorazationService(Session session) {
+		this.session = session;
 
+	}
 
-    @Inject
-    public AuthorazationService(Session  session){
-       this.session = session;
+	public Optional<UserNode> login(String email, String password) {
+		UserNode userNode = session.queryForObject(UserNode.class,
+				" match (u) where u.email='" + email + "' and  u.password='" + password + "' return u",
+				Collections.emptyMap());
+		return Optional.ofNullable(userNode);
 
-    }
+	}
 
-
-
-    public Optional<UserNode> login(String username, String password) {
-        String res = null;
-
-            UserNode userNode =  session.queryForObject(UserNode.class," match (u) where u.email='"+username+"' and  u.password='"+password +"'   return u",Collections.EMPTY_MAP);
-        return  Optional.ofNullable(userNode);
-
-    }
-
-
-    public Optional<UserNode> tokenExist(String username, String token)  {
-Optional<UserNode> userNode = Optional.empty();
-
-        userNode = Optional.ofNullable(session.queryForObject(UserNode.class, "match (u) where u.email='" + username + "' and u.token= '" + token + "' return u", (Map<String, ?>) Collections.EMPTY_SET));
-
-        return userNode;
-    }
+	public Optional<UserNode> tokenExist(String email, String token) {
+		Optional<UserNode> userNode = Optional.empty();
+		userNode = Optional.ofNullable(session.queryForObject(UserNode.class,
+				"match (u) where u.email='" + email + "' and u.token= '" + token + "' return u",
+				Collections.emptyMap()));
+		return userNode;
+	}
 
 }

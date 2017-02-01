@@ -7,10 +7,8 @@ import java.util.stream.Collectors;
 
 import com.adscoop.entiites.UserNode;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.Inject;
 
-import io.netty.buffer.ByteBufAllocator;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
 
