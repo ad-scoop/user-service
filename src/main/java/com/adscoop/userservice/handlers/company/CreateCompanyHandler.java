@@ -11,6 +11,8 @@ import com.google.inject.Inject;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
 
+import java.util.Optional;
+
 /**
  * Created by thokle on 18/10/2016.
  */
@@ -28,7 +30,7 @@ public class CreateCompanyHandler implements Handler {
         String token = String.valueOf(ctx.getRequest().getHeaders().get("token"));
         if(token !=null) {
             ctx.parse(fromJson(Company.class)).then(companyNode -> {
-                UserNode userNode = userNodeService.findByToken(token);
+                Optional<UserNode> userNode = userNodeService.findByUserToken(token);
                 Company companyNode1 = new Company();
                 companyNode1.setCompanyname(companyNode.getCompanyname());
                 companyNode1.setCompanytype(companyNode.getCompanytype());
@@ -39,8 +41,8 @@ public class CreateCompanyHandler implements Handler {
 
                 });
 
-                userNode.setCompanyNode(companyNode1);
-                userNodeService.saveOrUpdate(userNode);
+                userNode.get().setCompanyNode(companyNode1);
+                userNodeService.saveOrUpdate(userNode.get());
                 ctx.render(json(companyNode1));
             });
 

@@ -19,28 +19,26 @@ public class AuthorazationService {
     private Session session;
 
 
-
     @Inject
-    public AuthorazationService(Session  session){
-       this.session = session;
+    public AuthorazationService(Session session) {
+        this.session = session;
 
     }
-
 
 
     public Optional<UserNode> login(String username, String password) {
         String res = null;
 
-            UserNode userNode =  session.queryForObject(UserNode.class," match (u) where u.email='"+username+"' and  u.password='"+password +"'   return u",Collections.EMPTY_MAP);
-        return  Optional.ofNullable(userNode);
+        UserNode userNode = session.queryForObject(UserNode.class, " match (u) where u.email='" + username + "' and  u.password='" + password + "'   return u", Collections.EMPTY_MAP);
+        return Optional.ofNullable(userNode);
 
     }
 
 
-    public Optional<UserNode> tokenExist(String username, String token)  {
-Optional<UserNode> userNode = Optional.empty();
+    public Optional<UserNode> tokenExist(String token) {
+        Optional<UserNode> userNode = Optional.empty();
 
-        userNode = Optional.ofNullable(session.queryForObject(UserNode.class, "match (u) where u.email='" + username + "' and u.token= '" + token + "' return u", (Map<String, ?>) Collections.EMPTY_SET));
+        userNode = Optional.ofNullable(session.queryForObject(UserNode.class, "match (u) where  u.token='"+token+"' return u",Collections.EMPTY_MAP));
 
         return userNode;
     }

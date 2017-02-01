@@ -33,8 +33,8 @@ public interface IUser {
    UserNode saveOrUpdate(UserNode entity) throws  IOException;
 
 
-   UserNode findByToken(String token) throws  IOException;
+   boolean doesUserExist(String email);
 
-
+  Optional<UserNode> findByUserToken(String token);
 
 }

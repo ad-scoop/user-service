@@ -30,11 +30,11 @@ public class AuthHandler implements Handler {
 
 
         String token = ctx.getRequest().getHeaders().get("token");
-        String username = ctx.getRequest().getHeaders().get("username");
 
-         if ((token != null) && (username != null)) {
+
+         if (token != null) {
             try {
-                Optional<UserNode> res = authorazationService.tokenExist(username, token);
+                Optional<UserNode> res = authorazationService.tokenExist(token);
                 if(res.isPresent()){
                     ctx.next();
                 } else {
@@ -42,7 +42,7 @@ public class AuthHandler implements Handler {
                 }
 
             } catch (Exception e){
-                ctx.getResponse().status(405).send();
+                ctx.getResponse().status(405).send("No user with token exist");
             }
 
         } else {
