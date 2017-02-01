@@ -16,7 +16,6 @@ import io.netty.buffer.ByteBufAllocator;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
 
-
 public class GetUserHandler implements Handler {
 
 
@@ -47,7 +46,4 @@ public class GetUserHandler implements Handler {
 
     }
 
-
 }
-
-

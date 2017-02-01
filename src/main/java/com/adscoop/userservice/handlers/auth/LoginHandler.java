@@ -29,25 +29,14 @@ public class LoginHandler implements Handler {
 
     @Override
     public void handle(Context ctx) throws Exception {
-
-
         ctx.parse(fromJson(UserModel.class)).then(userModel -> {
-
-            Optional<UserNode> st = authorazationService.login(userModel.getUsername(), userModel.getPassword());
-
+            Optional<UserNode> st = authorazationService.login(userModel.getEmail(), userModel.getPassword());
             if (st.isPresent()) {
-
                 ctx.getResponse().getHeaders().add("usertoken", st.get().getToken());
                 ctx.render(json(st.get()));
-
             } else {
                 ctx.render("Invalid username or password");
-
             }
-
-
         });
-
-
     }
 }
