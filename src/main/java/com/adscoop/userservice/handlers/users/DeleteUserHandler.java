@@ -7,6 +7,8 @@ import com.google.inject.Inject;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
 
+import java.util.Optional;
+
 /**
  * Created by thokle on 25/12/2016.
  */
@@ -23,21 +25,21 @@ public class DeleteUserHandler implements Handler
 
     @Override
     public void handle(Context ctx) throws Exception {
+if(ctx.getRequest().getMethod().isDelete()){
         String token = ctx.getRequest().getHeaders().get("token");
-       if(ctx.getRequest().getMethod().isDelete()){
-        UserNode userNode = userNodeService.findByToken(token);
 
-        if(userNode !=null){
+        Optional<UserNode> userNode = userNodeService.findByUserToken(token);
+
+        if(userNode.isPresent()){
 
             try {
-                userNodeService.delete(userNode);
+                userNodeService.delete(userNode.get());
             } catch (Exception e){
 
             }
-        }}else {
-
-           ctx.next();
-       }
-
+        }
     }
+    ctx.next();
+    }
+
 }

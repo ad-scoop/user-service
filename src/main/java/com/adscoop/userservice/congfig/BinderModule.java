@@ -2,6 +2,7 @@ package com.adscoop.userservice.congfig;
 
 
 import com.adscoop.userservice.chains.*;
+import com.adscoop.userservice.handlers.CORSHandler;
 import com.adscoop.userservice.handlers.CreditCardHandler;
 import com.adscoop.userservice.handlers.accountInformationHandler.CreateAccountInformationHandler;
 import com.adscoop.userservice.handlers.accountInformationHandler.DeleteAccountInformation;
@@ -73,6 +74,7 @@ bind(AddressChainHandler.class).asEagerSingleton();
 bind(UserChainHandler.class).asEagerSingleton();
 bind(CompanyChainHandler.class).asEagerSingleton();
 bind(AccountChainHandler.class).asEagerSingleton();
+bind(CORSHandler.class).asEagerSingleton();
     }
 
 

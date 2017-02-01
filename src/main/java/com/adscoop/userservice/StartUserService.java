@@ -19,6 +19,7 @@ import com.adscoop.userservice.modules.ServiceCommonConfigModule;
 import ratpack.dropwizard.metrics.DropwizardMetricsModule;
 import ratpack.func.Action;
 import ratpack.guice.Guice;
+import ratpack.handling.Context;
 import ratpack.rx.RxRatpack;
 import ratpack.server.BaseDir;
 import ratpack.server.RatpackServer;
@@ -54,14 +55,14 @@ public class StartUserService {
                 })))
                 .handlers(chain -> 
                 	chain
-                		.all(new CORSHandler())
+                		.all(CORSHandler.class)
                 		.prefix("useradmin", UserChainHandler.class)
                 		.prefix("address", AddressChainHandler.class)
                 		.prefix("company", CompanyChainHandler.class)
                 		.prefix("account", AccountChainHandler.class)
                         .prefix("credit", CreditChainHandler.class)
                         .prefix("user",chain1 ->
-                        	chain1
+                        	chain1.all(CORSHandler.class)
                         		.post("create", CreateUserHandler.class)
                         		.post("login",LoginHandler.class))
                         		.get("", ctx -> ctx.render("welcome to index"))));

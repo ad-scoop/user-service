@@ -32,9 +32,11 @@ public class CreateUserHandler implements Handler {
     public void handle(Context ctx) throws Exception {
 
 
-        if(ctx.getRequest().getMethod().isPost()) {
+        if (ctx.getRequest().getMethod().isPost()) {
             ctx.parse(fromJson(UserNode.class)).then(as -> {
-
+                if (userNodeService.doesUserExist(as.getEmail())) {
+                    ctx.getResponse().send("application/json", "{\"exist\":\"user with email already exist \"}");
+                }
                 final UserNode userNode = new UserNode();
 
                 userNode.setFirstname(as.getFirstname());
@@ -54,11 +56,11 @@ public class CreateUserHandler implements Handler {
 
             });
 
-        } else {
-            ctx.next();
         }
-
-
-
+ctx.next();
     }
+
+
+
+
 }

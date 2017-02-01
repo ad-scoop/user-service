@@ -23,8 +23,8 @@ public class UpdateUserHandler implements Handler {
 
     @Override
     public void handle(Context ctx) throws Exception {
-        if (ctx.getRequest().getMethod().isPut()) {
 
+if(ctx.getRequest().getMethod().isPut()){
             ctx.parse(Form.class).then(as -> {
                 ObjectMapper objectMapper = ctx.get(ObjectMapper.class);
 
@@ -41,10 +41,10 @@ public class UpdateUserHandler implements Handler {
             });
 
 
-        } else {
 
-            ctx.next();
-        }
 
     }
+    ctx.next();
+    }
+
 }

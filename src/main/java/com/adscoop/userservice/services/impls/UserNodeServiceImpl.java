@@ -24,12 +24,12 @@ public class UserNodeServiceImpl implements IUser {
 	private static final int DEPTH_LIST = 0;
 	private static final int DEPTH_ENTITY = 1;
 	private static Logger logger = LoggerFactory.getLogger(UserNodeServiceImpl.class);
-	private Session connectionSource;
+	private Session session;
 
 	@Inject
 	public UserNodeServiceImpl(Session connectionSource) {
 
-		this.connectionSource = connectionSource;
+		this.session = connectionSource;
 
 	}
 
@@ -41,7 +41,7 @@ public class UserNodeServiceImpl implements IUser {
 	@Override
 	public Optional<UserNode> findByUserNameAndPassword(String username, String password) throws IOException {
 		try {
-			return Optional.of(session().queryForObject(UserNode.class, "match (a:UserNode) where a.username='"
+			return Optional.of(session.queryForObject(UserNode.class, "match (a:UserNode) where a.username='"
 					+ username + "' and  a.password='" + password + "' return a", Collections.EMPTY_MAP));
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -53,7 +53,7 @@ public class UserNodeServiceImpl implements IUser {
 	@Override
 	public Observable<Map<String, Object>> findByCypher(String cypherQuery) throws IOException {
 		try {
-			return Observable.from(session().query(cypherQuery, Collections.EMPTY_MAP)).create(as -> {
+			return Observable.from(session.query(cypherQuery, Collections.EMPTY_MAP)).create(as -> {
 
 			});
 		} catch (Exception e) {
@@ -67,7 +67,7 @@ public class UserNodeServiceImpl implements IUser {
 	@Override
 	public Collection<UserNode> findAll() throws IOException {
 		try {
-			return session().loadAll(UserNode.class, DEPTH_LIST);
+			return session.loadAll(UserNode.class, DEPTH_LIST);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -77,7 +77,7 @@ public class UserNodeServiceImpl implements IUser {
 	@Override
 	public Observable<UserNode> getAllUsersNodes() throws IOException {
 		try {
-			return Observable.from(session().loadAll(UserNode.class, DEPTH_LIST));
+			return Observable.from(session.loadAll(UserNode.class, DEPTH_LIST));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -87,7 +87,7 @@ public class UserNodeServiceImpl implements IUser {
 	@Override
 	public UserNode findbyId(Long id) throws IOException {
 		try {
-			return session().load(UserNode.class, id);
+			return session.load(UserNode.class, id);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -97,7 +97,7 @@ public class UserNodeServiceImpl implements IUser {
 	@Override
 	public void delete(UserNode entity) throws IOException {
 		try {
-			this.session().delete(entity);
+			this.session.delete(entity);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -105,9 +105,9 @@ public class UserNodeServiceImpl implements IUser {
 
 	@Override
 	public UserNode saveOrUpdate(UserNode entity) throws IOException {
-		// logger.debug(connectionSource.session().getTransaction().status().name());
+		// logger.debug(session.session().getTransaction().status().name());
 		try {
-			session().save(entity, DEPTH_ENTITY);
+			session.save(entity, DEPTH_ENTITY);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -117,19 +117,22 @@ public class UserNodeServiceImpl implements IUser {
 		return entity;
 	}
 
+
+
+
 	@Override
-	public UserNode findByToken(String token) throws IOException {
-		try {
-			return session().queryForObject(UserNode.class, "MATCH (n:UserNode) where n.token='" + token + "' RETURN n",
-					Collections.EMPTY_MAP);
-		} catch (Exception e) {
-			e.printStackTrace();
+	public boolean doesUserExist(String email) {
+
+		Optional<UserNode> node = Optional.ofNullable(session.queryForObject(UserNode.class, "match (u {email: '"+email+"' } )return u  ", Collections.EMPTY_MAP));
+		if(node.isPresent()){
+			return true;
 		}
-		return null;
+		return false;
+
 	}
 
-	private Session session() {
-
-		return this.connectionSource;
+	@Override
+	public Optional<UserNode> findByUserToken(String token) {
+		return Optional.ofNullable(session.queryForObject(UserNode.class, "match (u) where u.token='"+token+ "' return u",Collections.EMPTY_MAP));
 	}
 }

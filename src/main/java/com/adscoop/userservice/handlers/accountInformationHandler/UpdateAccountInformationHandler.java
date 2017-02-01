@@ -8,6 +8,8 @@ import com.google.inject.Inject;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
 
+import java.util.Optional;
+
 /**
  * Created by thokle on 22/11/2016.
  */
@@ -24,8 +26,8 @@ public class UpdateAccountInformationHandler implements Handler {
     @Override
     public void handle(Context ctx) throws Exception {
         if(ctx.getRequest().getHeaders().get("token") !=null){
-            UserNode  userNode =  userNodeService.findByToken(ctx.getRequest().getHeaders().get("token"));
-            if(userNode !=null){
+            Optional<UserNode>  userNode =  userNodeService.findByUserToken(ctx.getRequest().getHeaders().get("token"));
+            if(userNode.isPresent()){
                 ctx.parse(AccountInformation.class).then(accountInformation ->  {
                     AccountInformation accountInformation1 = new AccountInformation();
 
