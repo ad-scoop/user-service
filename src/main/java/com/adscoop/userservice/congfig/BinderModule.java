@@ -3,7 +3,6 @@ package com.adscoop.userservice.congfig;
 
 import com.adscoop.userservice.chains.*;
 import com.adscoop.userservice.handlers.CORSHandler;
-import com.adscoop.userservice.handlers.CreditCardHandler;
 import com.adscoop.userservice.handlers.accountInformationHandler.CreateAccountInformationHandler;
 import com.adscoop.userservice.handlers.accountInformationHandler.DeleteAccountInformation;
 import com.adscoop.userservice.handlers.accountInformationHandler.GetAccountInformationHandler;
@@ -37,8 +36,6 @@ public class BinderModule extends AbstractModule{
     @Override
     protected void configure() {
 
-
-        bind(CreditCardHandler.class).asEagerSingleton();
         bind(IUser.class).to(UserNodeServiceImpl.class).asEagerSingleton();
         bind(AddressUserService.class).to(AddressUserServiceImpl.class).asEagerSingleton();
         bind(CreditInfoService.class).to(CreditInfoServiceImpl.class).asEagerSingleton();
@@ -62,19 +59,19 @@ public class BinderModule extends AbstractModule{
         bind(DeleteAddressHandler.class).asEagerSingleton();
         bind(DeleteCreditCardHandler.class).asEagerSingleton();
 
-bind(DeleteUserHandler.class).asEagerSingleton();
-bind(CreateUserHandler.class).asEagerSingleton();
-bind(DeleteCompanyHandler.class).asEagerSingleton();
-bind(UpdateCompanyHandler.class).asEagerSingleton();
-bind(GetCompanyHandler.class).asEagerSingleton();
-bind(DeleteAccountInformation.class).asEagerSingleton();
-bind(UpdateAccountInformationHandler.class).asEagerSingleton();
-bind(CreditChainHandler.class).asEagerSingleton();
-bind(AddressChainHandler.class).asEagerSingleton();
-bind(UserChainHandler.class).asEagerSingleton();
-bind(CompanyChainHandler.class).asEagerSingleton();
-bind(AccountChainHandler.class).asEagerSingleton();
-bind(CORSHandler.class).asEagerSingleton();
+        bind(DeleteUserHandler.class).asEagerSingleton();
+        bind(CreateUserHandler.class).asEagerSingleton();
+        bind(DeleteCompanyHandler.class).asEagerSingleton();
+        bind(UpdateCompanyHandler.class).asEagerSingleton();
+        bind(GetCompanyHandler.class).asEagerSingleton();
+        bind(DeleteAccountInformation.class).asEagerSingleton();
+        bind(UpdateAccountInformationHandler.class).asEagerSingleton();
+        bind(CreditChainHandler.class).asEagerSingleton();
+        bind(AddressChainHandler.class).asEagerSingleton();
+        bind(UserChainHandler.class).asEagerSingleton();
+        bind(CompanyChainHandler.class).asEagerSingleton();
+        bind(AccountChainHandler.class).asEagerSingleton();
+        bind(CORSHandler.class).asEagerSingleton();
     }
 
 
