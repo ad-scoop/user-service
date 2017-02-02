@@ -32,7 +32,7 @@ public class CreateCreditHandler implements Handler {
 	@Override
 	public void handle(Context ctx) throws Exception {
 		Long id = Long.valueOf(ctx.getRequest().getHeaders().get("userid"));
-
+if(ctx.getRequest().getMethod().isPost()){
 		if (id != null) {
 			ctx.parse(fromJson(CreditInfo.class)).then(creditInfo -> {
 				try {
@@ -59,5 +59,8 @@ public class CreateCreditHandler implements Handler {
 			});
 		}
 
+	}else {
+	ctx.next();
+}
 	}
 }

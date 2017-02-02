@@ -21,4 +21,6 @@ public interface CompanyService {
 
     Map<String,String> getAllForUser(long id);
 
+    void delete(Company company);
+
 }

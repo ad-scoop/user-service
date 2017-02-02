@@ -27,6 +27,7 @@ public class UpdateCreditHandler implements Handler {
     @Override
     public void handle(Context ctx) throws Exception {
 
+        if(ctx.getRequest().getMethod().isPut()){
         Long userid = Long.valueOf(ctx.getRequest().getHeaders().get("userid"));
 
         ctx.parse(fromJson(CreditInfo.class)).then(creditInfo -> {
@@ -47,5 +48,8 @@ public class UpdateCreditHandler implements Handler {
             }
 
         });
-    }
+    } else {
+            ctx.next();
+
+        }}
 }

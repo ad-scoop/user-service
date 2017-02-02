@@ -3,6 +3,8 @@ package com.adscoop.userservice.handlers.address;
 import static ratpack.jackson.Jackson.fromJson;
 import static ratpack.jackson.Jackson.json;
 
+import java.util.Optional;
+
 import com.adscoop.userservice.entites.AddressNode;
 import com.adscoop.userservice.entites.Company;
 import com.adscoop.userservice.entites.UserNode;
@@ -33,12 +35,12 @@ public class CreateAddressHandler implements Handler {
 
         if(ctx.getRequest().getMethod().isPost()){
         ctx.parse(fromJson(AddressNode.class)).then(adr -> {
-            Long userid = Long.valueOf(ctx.getRequest().getHeaders().get("userid"));
+
             String companyName = ctx.getPathTokens().get("companyname");
 
-            if (userid != null && companyName != null) {
-                UserNode userNode = userNodeService.findbyId(userid);
-                Company companyNode = companyService.findByUser(userNode.getToken(), companyName);
+            if (companyName != null) {
+
+                Company companyNode = companyService.findByUser(ctx.getRequest().getHeaders().get("token"), companyName);
 
                 AddressNode addressNode = new AddressNode();
                 addressNode.setCountry(adr.getCountry());
@@ -60,6 +62,34 @@ public class CreateAddressHandler implements Handler {
 
                 companyService.save(companyNode);
                 ctx.render(json(addressNode));
+
+            } else
+            {
+                Optional<UserNode> userNode = userNodeService.findByUserToken(ctx.getRequest().getHeaders().get("token"));
+                if(userNode.isPresent()){
+                    AddressNode addressNode = new AddressNode();
+                    addressNode.setCountry(adr.getCountry());
+                    addressNode.setCity(adr.getCity());
+                    adr.getLabels().stream().filter(a -> a != null).forEach(la -> {
+                        addressNode.setLabel(la);
+
+                    });
+                    addressNode.setFloor(adr.getFloor());
+                    addressNode.setRegion(adr.getRegion());
+                    addressNode.setSite(adr.getSite());
+                    addressNode.setStreetname(addressNode.getStreetname());
+                    addressNode.setStreetNumber(addressNode.getStreetNumber());
+                    addressNode.setZipcode(adr.getZipcode());
+                    addressNode.setFloor(adr.getFloor());
+
+
+
+
+                   userNode.get().addAddress(addressNode);
+                    ctx.render(json(addressNode));
+
+
+                }
 
             }
 

@@ -61,7 +61,10 @@ return null;
     @Override
     public void delete(CreditInfo entity) throws IOException {
         try {
-            connectionSource.delete(entity);
+            if(connectionSource.detachNodeEntity(entity.getId())){
+                connectionSource.delete(entity);
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -52,4 +52,12 @@ Session connectionSource;
     public Map<String, String> getAllForUser(long id) {
         return null;
     }
+
+    @Override
+    public void delete(Company company) {
+        if(connectionSource.detachNodeEntity(company.getId())){
+            connectionSource.delete(company);
+
+        }
+    }
 }

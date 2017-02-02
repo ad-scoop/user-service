@@ -97,7 +97,9 @@ public class UserNodeServiceImpl implements IUser {
 	@Override
 	public void delete(UserNode entity) throws IOException {
 		try {
-			this.session.delete(entity);
+			if(session.detachNodeEntity(entity.getId())) {
+				this.session.delete(entity);
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
