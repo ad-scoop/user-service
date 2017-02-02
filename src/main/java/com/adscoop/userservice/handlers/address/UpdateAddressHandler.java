@@ -2,7 +2,7 @@ package com.adscoop.userservice.handlers.address;
 
 import java.util.Optional;
 
-import com.adscoop.entiites.AddressNode;
+import com.adscoop.userservice.entites.AddressNode;
 import com.adscoop.userservice.services.impls.AddressUserServiceImpl;
 import com.google.inject.Inject;
 

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Optional;
 
-import com.adscoop.entiites.AddressNode;
+import com.adscoop.userservice.entites.AddressNode;
 
 import rx.Observable;
 

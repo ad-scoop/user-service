@@ -2,7 +2,7 @@ package com.adscoop.userservice.handlers.credit;
 
 import static ratpack.jackson.Jackson.json;
 
-import com.adscoop.entiites.UserNode;
+import com.adscoop.userservice.entites.UserNode;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 import com.google.inject.Inject;
 

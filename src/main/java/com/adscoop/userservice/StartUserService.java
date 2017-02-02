@@ -3,11 +3,8 @@ package com.adscoop.userservice;
 /**
  * Created by thokle on 18/12/2016.
  */
-import com.adscoop.userservice.chains.AccountChainHandler;
-import com.adscoop.userservice.chains.AddressChainHandler;
-import com.adscoop.userservice.chains.CompanyChainHandler;
-import com.adscoop.userservice.chains.CreditChainHandler;
-import com.adscoop.userservice.chains.UserChainHandler;
+
+import com.adscoop.userservice.chains.*;
 import com.adscoop.userservice.congfig.BinderModule;
 import com.adscoop.userservice.handlers.CORSHandler;
 import com.adscoop.userservice.handlers.auth.LoginHandler;
@@ -19,7 +16,6 @@ import com.adscoop.userservice.modules.ServiceCommonConfigModule;
 import ratpack.dropwizard.metrics.DropwizardMetricsModule;
 import ratpack.func.Action;
 import ratpack.guice.Guice;
-import ratpack.handling.Context;
 import ratpack.rx.RxRatpack;
 import ratpack.server.BaseDir;
 import ratpack.server.RatpackServer;

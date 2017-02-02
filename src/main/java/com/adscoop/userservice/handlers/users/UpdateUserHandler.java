@@ -1,6 +1,6 @@
 package com.adscoop.userservice.handlers.users;
 
-import com.adscoop.entiites.UserNode;
+import com.adscoop.userservice.entites.UserNode;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.Inject;

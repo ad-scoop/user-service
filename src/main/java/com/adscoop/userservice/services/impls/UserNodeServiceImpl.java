@@ -10,7 +10,7 @@ import org.neo4j.ogm.session.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.adscoop.entiites.UserNode;
+import com.adscoop.userservice.entites.UserNode;
 import com.google.inject.Inject;
 
 import rx.Observable;

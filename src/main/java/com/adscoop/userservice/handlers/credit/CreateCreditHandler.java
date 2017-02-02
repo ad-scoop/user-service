@@ -5,8 +5,8 @@ import static ratpack.jackson.Jackson.json;
 
 import org.apache.commons.validator.routines.CreditCardValidator;
 
-import com.adscoop.entiites.CreditInfo;
-import com.adscoop.entiites.UserNode;
+import com.adscoop.userservice.entites.CreditInfo;
+import com.adscoop.userservice.entites.UserNode;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 import com.google.inject.Inject;
 

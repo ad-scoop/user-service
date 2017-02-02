@@ -1,7 +1,6 @@
 package com.adscoop.userservice.handlers.errorhandlers;
 
 import ratpack.error.ClientErrorHandler;
-import ratpack.error.internal.ErrorHandler;
 import ratpack.handling.Context;
 
 /**

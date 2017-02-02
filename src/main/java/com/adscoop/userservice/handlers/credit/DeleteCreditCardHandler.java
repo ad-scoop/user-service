@@ -1,6 +1,7 @@
 package com.adscoop.userservice.handlers.credit;
 
-import com.adscoop.entiites.CreditInfo;
+
+import com.adscoop.userservice.entites.CreditInfo;
 import com.adscoop.userservice.services.impls.CreditInfoServiceImpl;
 import com.google.inject.Inject;
 

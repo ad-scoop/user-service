@@ -3,9 +3,9 @@ package com.adscoop.userservice.handlers.address;
 import static ratpack.jackson.Jackson.fromJson;
 import static ratpack.jackson.Jackson.json;
 
-import com.adscoop.entiites.AddressNode;
-import com.adscoop.entiites.Company;
-import com.adscoop.entiites.UserNode;
+import com.adscoop.userservice.entites.AddressNode;
+import com.adscoop.userservice.entites.Company;
+import com.adscoop.userservice.entites.UserNode;
 import com.adscoop.userservice.services.impls.CompanyServiceImpl;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 import com.google.inject.Inject;
@@ -31,6 +31,7 @@ public class CreateAddressHandler implements Handler {
     @Override
     public void handle(Context ctx) throws Exception {
 
+        if(ctx.getRequest().getMethod().isPost()){
         ctx.parse(fromJson(AddressNode.class)).then(adr -> {
             Long userid = Long.valueOf(ctx.getRequest().getHeaders().get("userid"));
             String companyName = ctx.getPathTokens().get("companyname");
@@ -65,6 +66,10 @@ public class CreateAddressHandler implements Handler {
 
         });
 
+
+    }else  {
+            ctx.next();
+        }
 
     }
 

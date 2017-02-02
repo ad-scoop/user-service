@@ -1,13 +1,14 @@
 package com.adscoop.userservice.handlers.users;
 
-import com.adscoop.entiites.UserNode;
+
+import java.util.Optional;
+
+import com.adscoop.userservice.entites.UserNode;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 import com.google.inject.Inject;
 
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
-
-import java.util.Optional;
 
 /**
  * Created by thokle on 25/12/2016.

@@ -3,7 +3,6 @@ package com.adscoop.userservice.congfig;
 
 import com.adscoop.userservice.chains.*;
 import com.adscoop.userservice.handlers.CORSHandler;
-import com.adscoop.userservice.handlers.CreditCardHandler;
 import com.adscoop.userservice.handlers.accountInformationHandler.CreateAccountInformationHandler;
 import com.adscoop.userservice.handlers.accountInformationHandler.DeleteAccountInformation;
 import com.adscoop.userservice.handlers.accountInformationHandler.GetAccountInformationHandler;
@@ -38,7 +37,7 @@ public class BinderModule extends AbstractModule{
     protected void configure() {
 
 
-        bind(CreditCardHandler.class).asEagerSingleton();
+    
         bind(IUser.class).to(UserNodeServiceImpl.class).asEagerSingleton();
         bind(AddressUserService.class).to(AddressUserServiceImpl.class).asEagerSingleton();
         bind(CreditInfoService.class).to(CreditInfoServiceImpl.class).asEagerSingleton();

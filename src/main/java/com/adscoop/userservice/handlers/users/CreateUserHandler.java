@@ -3,8 +3,8 @@ package com.adscoop.userservice.handlers.users;
 import static ratpack.jackson.Jackson.fromJson;
 import static ratpack.jackson.Jackson.json;
 
-import com.adscoop.entiites.UserNode;
 import com.adscoop.userservice.congfig.TokenService;
+import com.adscoop.userservice.entites.UserNode;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 import com.google.inject.Inject;
 

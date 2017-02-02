@@ -6,7 +6,7 @@ import java.util.Map;
 
 import org.neo4j.ogm.session.Session;
 
-import com.adscoop.entiites.CreditInfo;
+import com.adscoop.userservice.entites.CreditInfo;
 import com.google.inject.Inject;
 
 import rx.Observable;

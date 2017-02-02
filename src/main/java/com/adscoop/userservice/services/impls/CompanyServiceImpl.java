@@ -6,7 +6,7 @@ import java.util.Map;
 
 import org.neo4j.ogm.session.Session;
 
-import com.adscoop.entiites.Company;
+import com.adscoop.userservice.entites.Company;
 import com.google.inject.Inject;
 
 /**

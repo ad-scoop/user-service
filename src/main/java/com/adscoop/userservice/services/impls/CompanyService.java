@@ -4,7 +4,9 @@ package com.adscoop.userservice.services.impls;
 import java.io.IOException;
 import java.util.Map;
 
-import com.adscoop.entiites.Company;
+import com.adscoop.userservice.entites.Company;
+
+
 
 /**
  * Created by thokle on 31/10/2016.

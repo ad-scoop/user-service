@@ -2,7 +2,9 @@ package com.adscoop.userservice.handlers.accountInformationHandler;
 
 import static ratpack.jackson.Jackson.json;
 
-import com.adscoop.entiites.UserNode;
+import java.util.Optional;
+
+import com.adscoop.userservice.entites.UserNode;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 import com.google.inject.Inject;
 
@@ -24,12 +26,17 @@ public class GetAccountInformationHandler implements Handler {
 
     @Override
     public void handle(Context ctx) throws Exception {
-        Long id = Long.valueOf(ctx.getRequest().getHeaders().get("userid"));
-        if(id !=null){
-            UserNode userNode = userNodeService.findbyId(id);
-            ctx.render(json(userNode.getAccountInformations()));
+        if (ctx.getRequest().getMethod().isGet()) {
+            String id = ctx.getRequest().getHeaders().get("token");
+            if (id != null) {
+                Optional<UserNode> userNode = userNodeService.findByUserToken(id);
+                if (userNode.isPresent()) {
+                    ctx.render(json(userNode.get().getAccountInformations()));
+                }
+            }
 
+        } else {
+            ctx.next();
         }
-
     }
 }
