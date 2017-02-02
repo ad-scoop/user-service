@@ -7,7 +7,7 @@ import java.util.Optional;
 
 import org.neo4j.ogm.session.Session;
 
-import com.adscoop.entiites.AddressNode;
+import com.adscoop.userservice.entites.AddressNode;
 import com.google.inject.Inject;
 
 import rx.Observable;
@@ -60,7 +60,10 @@ public class AddressUserServiceImpl implements AddressUserService {
 	@Override
 	public void delete(AddressNode entity) throws IOException {
 		try {
-			session.delete(entity);
+			if(session.detachNodeEntity(entity.getId())){
+				session.delete(entity);
+			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -1,6 +1,7 @@
 package com.adscoop.userservice.handlers.credit;
 
-import com.adscoop.entiites.CreditInfo;
+
+import com.adscoop.userservice.entites.CreditInfo;
 import com.adscoop.userservice.services.impls.CreditInfoServiceImpl;
 import com.google.inject.Inject;
 
@@ -22,13 +23,18 @@ public class DeleteCreditCardHandler implements Handler {
     @Override
     public void handle(Context ctx) throws Exception {
         String token = ctx.getRequest().getHeaders().get("token");
-        CreditInfo creditInfo = creditInfoService.findByUserToken(token);
-        if (creditInfo != null) {
-            try {
-                creditInfoService.delete(creditInfo);
-            }catch (Exception e){
+        if (ctx.getRequest().getMethod().isDelete()) {
+            CreditInfo creditInfo = creditInfoService.findByUserToken(token);
+            if (creditInfo != null) {
+                try {
+                    creditInfoService.delete(creditInfo);
+                } catch (Exception e) {
 
+                }
             }
+        } else {
+            ctx.next();
         }
+
     }
 }

@@ -41,7 +41,7 @@ dependencies {
     compile group: 'com.google.code.gson', name: 'gson', version: '2.6.2'
 
     compile group: 'org.neo4j', name: 'neo4j-ogm-core', version: '2.1.0'
-    compile group: 'com.adscoop', name: 'adscoop-entites', version: '1.0.1'
+
 
     compile group: 'org.neo4j', name: 'neo4j-ogm-bolt-driver', version: '2.1.0'
     compile group: 'org.neo4j', name: 'neo4j-ogm-api', version: '2.1.0'

@@ -10,7 +10,7 @@ import org.neo4j.ogm.session.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.adscoop.entiites.UserNode;
+import com.adscoop.userservice.entites.UserNode;
 import com.google.inject.Inject;
 
 import rx.Observable;
@@ -97,7 +97,9 @@ public class UserNodeServiceImpl implements IUser {
 	@Override
 	public void delete(UserNode entity) throws IOException {
 		try {
-			this.session.delete(entity);
+			if(session.detachNodeEntity(entity.getId())) {
+				this.session.delete(entity);
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

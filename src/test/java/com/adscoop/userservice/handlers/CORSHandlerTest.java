@@ -12,7 +12,6 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import ratpack.handling.Context;
 import ratpack.http.MutableHeaders;
-import ratpack.http.Request;
 import ratpack.http.Response;
 
 @RunWith(MockitoJUnitRunner.class)

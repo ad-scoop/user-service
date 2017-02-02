@@ -6,8 +6,8 @@ import static ratpack.jackson.Jackson.json;
 
 import java.util.Optional;
 
-import com.adscoop.entiites.UserNode;
 import com.adscoop.userservice.congfig.UserModel;
+import com.adscoop.userservice.entites.UserNode;
 import com.adscoop.userservice.modules.AuthorazationService;
 import com.google.inject.Inject;
 

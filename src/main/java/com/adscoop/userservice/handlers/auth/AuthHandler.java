@@ -3,13 +3,12 @@ package com.adscoop.userservice.handlers.auth;
 
 import java.util.Optional;
 
-import com.adscoop.entiites.UserNode;
+import com.adscoop.userservice.entites.UserNode;
 import com.adscoop.userservice.modules.AuthorazationService;
 import com.google.inject.Inject;
 
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
-import ratpack.http.Status;
 
 ;
 

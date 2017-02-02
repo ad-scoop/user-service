@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import org.neo4j.ogm.session.Session;
 
-import com.adscoop.entiites.AccountInformation;
+import com.adscoop.userservice.entites.AccountInformation;
 import com.google.inject.Inject;
 
 /**
@@ -21,14 +21,27 @@ public class AccountInformationServiceImpl implements AccountInformationService 
 	}
 
 	@Override
-	public Optional<AccountInformation> getByUserToken() {
+	public Optional<AccountInformation> getByUserToken(String token) {
 
 		try {
-			return Optional.of(session.queryForObject(AccountInformation.class,
-					"match (c) where c.accountnr='1231' return c", Collections.EMPTY_MAP));
+			return Optional.ofNullable(session.queryForObject(AccountInformation.class,
+					"match (a)<-[:HAS_ACCOUNT_INFORMATION]-(u) where u.token='"+token+"' return  a", Collections.EMPTY_MAP));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return Optional.empty();
+	}
+
+
+	@Override
+	public void delete(AccountInformation accountInformation) {
+		if(session.detachNodeEntity(accountInformation.getId())){
+		session.delete(accountInformation);
+	}
+	}
+
+	@Override
+	public void update(AccountInformation accountInformation) {
+		session.save(accountInformation);
 	}
 }

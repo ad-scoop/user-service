@@ -6,7 +6,7 @@ import java.util.Map;
 
 import org.neo4j.ogm.session.Session;
 
-import com.adscoop.entiites.CreditInfo;
+import com.adscoop.userservice.entites.CreditInfo;
 import com.google.inject.Inject;
 
 import rx.Observable;
@@ -61,7 +61,10 @@ return null;
     @Override
     public void delete(CreditInfo entity) throws IOException {
         try {
-            connectionSource.delete(entity);
+            if(connectionSource.detachNodeEntity(entity.getId())){
+                connectionSource.delete(entity);
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }

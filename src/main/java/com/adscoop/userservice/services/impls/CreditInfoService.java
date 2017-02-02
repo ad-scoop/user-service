@@ -3,7 +3,7 @@ package com.adscoop.userservice.services.impls;
 import java.io.IOException;
 import java.util.Map;
 
-import com.adscoop.entiites.CreditInfo;
+import com.adscoop.userservice.entites.CreditInfo;
 
 import rx.Observable;
 

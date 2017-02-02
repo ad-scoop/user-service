@@ -16,6 +16,6 @@ public class AddressChainHandler  implements Action<Chain>
          {
              @Override
              public void execute(Chain chain) throws Exception {
-                  chain.all(AuthHandler.class).post(CreateAddressHandler.class).delete(DeleteAddressHandler.class).put(UpdateAddressHandler.class).get(GetAdderessHandler.class);
+                  chain.all(AuthHandler.class).post(":companyname",CreateAddressHandler.class).delete(DeleteAddressHandler.class).put(UpdateAddressHandler.class).get(GetAdderessHandler.class);
              }
          }

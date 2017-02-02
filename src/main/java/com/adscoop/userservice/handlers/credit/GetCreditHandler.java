@@ -2,7 +2,7 @@ package com.adscoop.userservice.handlers.credit;
 
 import static ratpack.jackson.Jackson.json;
 
-import com.adscoop.entiites.UserNode;
+import com.adscoop.userservice.entites.UserNode;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 import com.google.inject.Inject;
 
@@ -23,9 +23,12 @@ public class GetCreditHandler implements Handler {
 
     @Override
     public void handle(Context ctx) throws Exception {
-        Long id = Long.valueOf(ctx.getRequest().getHeaders().get("userid"));
-        UserNode userNode  = userNodeService.findbyId(id);
-        ctx.render(json(userNode.getCreditInfos()));
-
+       if(ctx.getRequest().getMethod().isGet()) {
+           Long id = Long.valueOf(ctx.getRequest().getHeaders().get("userid"));
+           UserNode userNode = userNodeService.findbyId(id);
+           ctx.render(json(userNode.getCreditInfos()));
+       } else {
+           ctx.next();
+       }
     }
 }

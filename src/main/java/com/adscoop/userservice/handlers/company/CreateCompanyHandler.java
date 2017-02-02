@@ -3,15 +3,15 @@ package com.adscoop.userservice.handlers.company;
 import static ratpack.jackson.Jackson.fromJson;
 import static ratpack.jackson.Jackson.json;
 
-import com.adscoop.entiites.Company;
-import com.adscoop.entiites.UserNode;
+import java.util.Optional;
+
+import com.adscoop.userservice.entites.Company;
+import com.adscoop.userservice.entites.UserNode;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 import com.google.inject.Inject;
 
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
-
-import java.util.Optional;
 
 /**
  * Created by thokle on 18/10/2016.

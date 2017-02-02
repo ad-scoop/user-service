@@ -5,7 +5,7 @@ import static ratpack.jackson.Jackson.json;
 
 import java.util.Optional;
 
-import com.adscoop.entiites.AddressNode;
+import com.adscoop.userservice.entites.AddressNode;
 import com.adscoop.userservice.services.impls.AddressUserServiceImpl;
 import com.google.inject.Inject;
 

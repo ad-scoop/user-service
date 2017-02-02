@@ -2,13 +2,11 @@ package com.adscoop.userservice.modules;
 
 
 import java.util.Collections;
-import java.util.Map;
 import java.util.Optional;
-
 
 import org.neo4j.ogm.session.Session;
 
-import com.adscoop.entiites.UserNode;
+import com.adscoop.userservice.entites.UserNode;
 import com.google.inject.Inject;
 
 /**

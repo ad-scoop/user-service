@@ -6,7 +6,7 @@ import java.util.Map;
 
 import org.neo4j.ogm.session.Session;
 
-import com.adscoop.entiites.Company;
+import com.adscoop.userservice.entites.Company;
 import com.google.inject.Inject;
 
 /**
@@ -51,5 +51,13 @@ Session connectionSource;
     @Override
     public Map<String, String> getAllForUser(long id) {
         return null;
+    }
+
+    @Override
+    public void delete(Company company) {
+        if(connectionSource.detachNodeEntity(company.getId())){
+            connectionSource.delete(company);
+
+        }
     }
 }
