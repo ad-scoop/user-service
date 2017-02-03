@@ -10,6 +10,7 @@ import com.google.inject.Inject;
 
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
+import ratpack.rx.RxRatpack;
 
 
 /**
@@ -37,7 +38,7 @@ public class CreateUserHandler implements Handler {
                 if (userNodeService.doesUserExist(as.getEmail())) {
                     ctx.getResponse().send("application/json", "{\"exist\":\"user with email already exist \"}");
                 }
-                final UserNode userNode = new UserNode();
+                 UserNode userNode = new UserNode();
 
                 userNode.setFirstname(as.getFirstname());
                 userNode.setLastname(as.getLastname());
@@ -52,12 +53,15 @@ public class CreateUserHandler implements Handler {
 
                 UserNode saved = userNodeService.saveOrUpdate(userNode);
                 ctx.getResponse().getHeaders().add("token", saved.getToken());
-                ctx.render(json(userNode, UserNode.class));
+
+                ctx.render(json(saved, UserNode.class));
 
             });
 
+        } else {
+            ctx.next();
         }
-ctx.next();
+
     }
 
 

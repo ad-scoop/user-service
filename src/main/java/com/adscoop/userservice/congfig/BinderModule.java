@@ -1,6 +1,5 @@
 package com.adscoop.userservice.congfig;
 
-
 import com.adscoop.userservice.chains.*;
 import com.adscoop.userservice.handlers.CORSHandler;
 import com.adscoop.userservice.handlers.accountInformationHandler.CreateAccountInformationHandler;
@@ -28,10 +27,10 @@ import com.adscoop.userservice.handlers.users.UpdateUserHandler;
 import com.adscoop.userservice.services.impls.*;
 import com.google.inject.AbstractModule;
 
-
 /**
  * Created by thokle on 29/08/2016.
  */
+
 public class BinderModule extends AbstractModule{
     @Override
     protected void configure() {
@@ -73,8 +72,5 @@ public class BinderModule extends AbstractModule{
         bind(AccountChainHandler.class).asEagerSingleton();
         bind(CORSHandler.class).asEagerSingleton();
     }
-
-
-
 
 }
