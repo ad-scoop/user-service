@@ -32,35 +32,35 @@ public class CreateCreditHandler implements Handler {
 	@Override
 	public void handle(Context ctx) throws Exception {
 		Long id = Long.valueOf(ctx.getRequest().getHeaders().get("userid"));
-if(ctx.getRequest().getMethod().isPost()){
-		if (id != null) {
-			ctx.parse(fromJson(CreditInfo.class)).then(creditInfo -> {
-				try {
-					UserNode userNode = userNodeService.findbyId(id);
+		if(ctx.getRequest().getMethod().isPost()){
+			if (id != null) {
+				ctx.parse(fromJson(CreditInfo.class)).then(creditInfo -> {
+					try {
+						UserNode userNode = userNodeService.findbyId(id);
 
-					CreditInfo creditInfo1 = new CreditInfo();
-					creditInfo1.setCardHolderName(creditInfo.getCardHolderName());
-					if (creditCardValidator.isValid(creditInfo.getCardnumber())) {
-						creditInfo1.setCardnumber(creditInfo.getCardnumber());
-					} else {
-						ctx.getResponse().send("invalid credit card number");
+						CreditInfo creditInfo1 = new CreditInfo();
+						creditInfo1.setCardHolderName(creditInfo.getCardHolderName());
+						if (creditCardValidator.isValid(creditInfo.getCardnumber())) {
+							creditInfo1.setCardnumber(creditInfo.getCardnumber());
+						} else {
+							ctx.getResponse().send("invalid credit card number");
+						}
+						creditInfo1.setStartDate(creditInfo.getStartDate());
+						creditInfo1.setStartEndYear(creditInfo.getStartEndYear());
+						creditInfo1.setType(creditInfo.getType());
+
+						userNode.addCreditInfo(creditInfo1);
+						userNodeService.saveOrUpdate(userNode);
+						ctx.render(json(creditInfo1));
+					} catch (ExecutionException e) {
+						ctx.getResponse().getStatus().getMessage();
 					}
-					creditInfo1.setStartDate(creditInfo.getStartDate());
-					creditInfo1.setStartEndYear(creditInfo.getStartEndYear());
-					creditInfo1.setType(creditInfo.getType());
 
-					userNode.addCreditInfo(creditInfo1);
-					userNodeService.saveOrUpdate(userNode);
-					ctx.render(json(creditInfo1));
-				} catch (ExecutionException e) {
-					ctx.getResponse().getStatus().getMessage();
-				}
+				});
+			}
 
-			});
+		}else {
+			ctx.next();
 		}
-
-	}else {
-	ctx.next();
-}
 	}
 }

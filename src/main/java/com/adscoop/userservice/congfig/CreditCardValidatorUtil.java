@@ -5,18 +5,19 @@ import org.apache.commons.validator.routines.CreditCardValidator;
 /**
  * Created by thokle on 13/11/2016.
  */
+
 public class CreditCardValidatorUtil {
 
 
 
-    public boolean validateCart(String number){
-
-        CreditCardValidator creditCardValidator = new CreditCardValidator(CreditCardValidator.VISA);
+    public CreditCardValidator validateCart(String number, CardType cardType){
 
 
-        return creditCardValidator.isValid(number);
-
-
-
+        switch (cardType){
+            case MASTERCARD:
+                return  new CreditCardValidator(CreditCardValidator.MASTERCARD);
+            case DANKORT:
+                return new CreditCardValidator(CreditCardValidator.VISA);
+        }return new CreditCardValidator(CreditCardValidator.NONE);
     }
 }
