@@ -158,6 +158,9 @@ private List<String> labels = new ArrayList<>();
    this.footPrintInformationNodes.add(footPrintInformationNodes);
 }
 
+    public Set<FootPrintInformationNode> getFootPrintInformationNodes() {
+        return footPrintInformationNodes;
+    }
 
     public void setLabel(String label){
   this.labels.add(label);
@@ -200,13 +203,7 @@ private List<String> labels = new ArrayList<>();
         this.targetGroupses = targetGroupses;
     }
 
-    public Set<FootPrintInformationNode> getFootPrintInformationNodes() {
-        return footPrintInformationNodes;
-    }
 
-    public void setFootPrintInformationNodes(Set<FootPrintInformationNode> footPrintInformationNodes) {
-        this.footPrintInformationNodes = footPrintInformationNodes;
-    }
 
     public String getJavaScriptUrl() {
         return javaScriptUrl;
