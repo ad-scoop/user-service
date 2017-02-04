@@ -64,6 +64,12 @@ public class BinderModule extends AbstractModule{
 		bind(CompanyChainHandler.class).asEagerSingleton();
 		bind(AccountChainHandler.class).asEagerSingleton();
 		bind(CORSHandler.class).asEagerSingleton();
+		bind(AuthHandler.class).asEagerSingleton();
+		bind(DeleteAddressHandler.class).asEagerSingleton();
+		bind(CreateAccountInformationHandler.class).asEagerSingleton();
+		bind(GetAccountInformationHandler.class).asEagerSingleton();
+		bind(DeleteCreditCardHandler.class).asEagerSingleton();
+		bind(LoginHandler.class).asEagerSingleton();
 	}
 
 }
