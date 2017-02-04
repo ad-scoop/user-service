@@ -41,7 +41,6 @@ public class StartUserService {
                         .build())
                 .registry(Guice.registry(bindingsSpec -> bindingsSpec.module(BinderModule.class)
                 		.module(ServiceCommonConfigModule.class)
-                        .module(AuthConfigurableModule.class)
                         .module(DropwizardMetricsModule.class, d -> {
                             d.console();
                             d.getSlf4j();

@@ -3,6 +3,7 @@ package com.adscoop.userservice.handlers.users;
 import static ratpack.jackson.Jackson.fromJson;
 import static ratpack.jackson.Jackson.json;
 
+import com.adscoop.userservice.congfig.AEService;
 import com.adscoop.userservice.congfig.TokenService;
 import com.adscoop.userservice.entites.UserNode;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
@@ -20,10 +21,12 @@ public class CreateUserHandler implements Handler {
 
     private UserNodeServiceImpl userNodeService;
   private TokenService generateToken;
+  private AEService aeService;
     @Inject
-    public CreateUserHandler(UserNodeServiceImpl userNodeService, TokenService generateToken) {
+    public CreateUserHandler(UserNodeServiceImpl userNodeService, TokenService generateToken,AEService aeService) {
         this.userNodeService = userNodeService;
         this.generateToken = generateToken;
+        this.aeService = aeService;
     }
 
 
@@ -45,7 +48,7 @@ public class CreateUserHandler implements Handler {
                 userNode.setToken(generateToken.generateToken());
                 userNode.setMiddlename(as.getMiddlename());
                 userNode.setUsername(as.getUsername());
-                userNode.setPassword(as.getPassword());
+                userNode.setPassword(aeService.encrypt(as.getPassword()));
                 userNode.setEmail(as.getEmail());
                 as.getLabels().stream().forEach(la -> {
                     userNode.getLabels().add(la);

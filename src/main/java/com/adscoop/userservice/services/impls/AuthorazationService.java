@@ -1,4 +1,4 @@
-package com.adscoop.userservice.modules;
+package com.adscoop.userservice.services.impls;
 
 
 import java.util.Collections;
@@ -15,8 +15,8 @@ import javax.annotation.Resource;
 /**
  * Created by thokle on 04/12/2016.
  */
-@Resource()
-public class AuthorazationService {
+
+public class AuthorazationService implements IAuthorazationService {
 
     private Session session;
     private AEService aeService;
@@ -30,21 +30,29 @@ public class AuthorazationService {
     }
 
 
+    @Override
     public Optional<UserNode> login(String username, String password) {
         String res = null;
-        String decryptedPassword = aeService.decrypt(password, "thisIsAdScoopSecret");
-        UserNode userNode = session.queryForObject(UserNode.class, " match (u) where u.email='" + username + "' and  u.password='" + decryptedPassword + "'   return u", Collections.EMPTY_MAP);
-        return Optional.ofNullable(userNode);
+
+        Optional<UserNode> userNode = Optional.ofNullable(session.queryForObject(UserNode.class, " match (u) where u.email='" + username + "'  return u", Collections.EMPTY_MAP));
+        if (userNode.isPresent()) {
+            String encrypt = aeService.decrypt(userNode.get().getPassword());
+            if (encrypt.equals(password)) {
+                return Optional.ofNullable(userNode.get());
+            }
+        } else {
+            return Optional.empty();
+        }
+        return Optional.empty();
 
     }
 
-
+    @Override
     public Optional<UserNode> tokenExist(String token) {
         Optional<UserNode> userNode = Optional.empty();
 
-        userNode = Optional.ofNullable(session.queryForObject(UserNode.class, "match (u) where  u.token='"+token+"' return u",Collections.EMPTY_MAP));
+        userNode = Optional.ofNullable(session.queryForObject(UserNode.class, "match (u) where  u.token='" + token + "' return u", Collections.EMPTY_MAP));
 
         return userNode;
     }
-
 }

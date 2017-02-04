@@ -115,7 +115,7 @@ public class UserNodeServiceImpl implements IUser {
 		logger.debug(e.getMessage());
 
 		}
-		return entity;
+		return findbyId(entity.getId());
 	}
 
 
