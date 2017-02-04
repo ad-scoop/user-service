@@ -50,7 +50,7 @@ public class BinderModule extends AbstractModule{
         bind(TokenService.class).asEagerSingleton();
         bind(CreateCompanyHandler.class).asEagerSingleton();
 
-<<<<<<< HEAD
+
 		bind(DeleteUserHandler.class).asEagerSingleton();
 
 		bind(DeleteCompanyHandler.class).asEagerSingleton();
@@ -65,29 +65,5 @@ public class BinderModule extends AbstractModule{
 		bind(AccountChainHandler.class).asEagerSingleton();
 		bind(CORSHandler.class).asEagerSingleton();
 	}
-=======
-        bind(CreateAccountInformationHandler.class).asEagerSingleton();
-        bind(CreditCardValidatorUtil.class).asEagerSingleton();
-        bind(GetAccountInformationHandler.class).asEagerSingleton();
-        bind(AuthHandler.class).asEagerSingleton();
-        bind(LoginHandler.class).asEagerSingleton();
-        bind(DeleteAddressHandler.class).asEagerSingleton();
-        bind(DeleteCreditCardHandler.class).asEagerSingleton();
-
-        bind(DeleteUserHandler.class).asEagerSingleton();
-        bind(CreateUserHandler.class).asEagerSingleton();
-        bind(DeleteCompanyHandler.class).asEagerSingleton();
-        bind(UpdateCompanyHandler.class).asEagerSingleton();
-        bind(GetCompanyHandler.class).asEagerSingleton();
-        bind(DeleteAccountInformation.class).asEagerSingleton();
-        bind(UpdateAccountInformationHandler.class).asEagerSingleton();
-        bind(CreditChainHandler.class).asEagerSingleton();
-        bind(AddressChainHandler.class).asEagerSingleton();
-        bind(UserChainHandler.class).asEagerSingleton();
-        bind(CompanyChainHandler.class).asEagerSingleton();
-        bind(AccountChainHandler.class).asEagerSingleton();
-        bind(CORSHandler.class).asEagerSingleton();
-    }
->>>>>>> 8af435eac0f427f5f69bcc4cd8e3fca697d7aad1
 
 }
