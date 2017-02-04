@@ -27,7 +27,7 @@ public class AuthorazationService {
     public Optional<UserNode> login(String username, String password) {
         String res = null;
 
-        UserNode userNode = session.queryForObject(UserNode.class, " match (u) where u.email='" + username + "' and  u.password='" + password + "'   return u", Collections.EMPTY_MAP);
+        UserNode userNode = session.queryForObject(UserNode.class, " match (u) where u.email='" + username + "' and  u.password='" + password + "'   return u", Collections.emptyMap());
         return Optional.ofNullable(userNode);
 
     }
@@ -36,7 +36,7 @@ public class AuthorazationService {
     public Optional<UserNode> tokenExist(String token) {
         Optional<UserNode> userNode = Optional.empty();
 
-        userNode = Optional.ofNullable(session.queryForObject(UserNode.class, "match (u) where  u.token='"+token+"' return u",Collections.EMPTY_MAP));
+        userNode = Optional.ofNullable(session.queryForObject(UserNode.class, "match (u) where  u.token='"+token+"' return u",Collections.emptyMap()));
 
         return userNode;
     }
