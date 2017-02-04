@@ -59,7 +59,7 @@ public class BinderModule extends AbstractModule {
 		bind(DeleteCreditCardHandler.class).asEagerSingleton();
 
 		bind(DeleteUserHandler.class).asEagerSingleton();
-		bind(CreateUserHandler.class).asEagerSingleton();
+
 		bind(DeleteCompanyHandler.class).asEagerSingleton();
 		bind(UpdateCompanyHandler.class).asEagerSingleton();
 		bind(GetCompanyHandler.class).asEagerSingleton();

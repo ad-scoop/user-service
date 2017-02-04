@@ -19,7 +19,7 @@ public class ConnectionSource {
 
 @Inject
     public ConnectionSource(Config config) throws  IOException {
-    sessionFactory = new SessionFactory(configuration(config),"com.adscoop.entiites");
+    sessionFactory = new SessionFactory(configuration(config),"com.adscoop.userservice.entites");
         configuration(config);
     }
 

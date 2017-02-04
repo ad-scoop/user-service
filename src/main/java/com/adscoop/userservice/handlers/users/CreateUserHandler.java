@@ -36,7 +36,7 @@ public class CreateUserHandler implements Handler {
         if (ctx.getRequest().getMethod().isPost()) {
             ctx.parse(fromJson(UserNode.class)).then(as -> {
                 if (userNodeService.doesUserExist(as.getEmail())) {
-                    ctx.getResponse().send("application/json", "{\"exist\":\"user with email already exist \"}");
+                    ctx.render( "{\"exist\":\"user with email already exist \"}");
                 }
                  UserNode userNode = new UserNode();
 
@@ -58,8 +58,6 @@ public class CreateUserHandler implements Handler {
 
             });
 
-        } else {
-            ctx.next();
         }
 
     }
