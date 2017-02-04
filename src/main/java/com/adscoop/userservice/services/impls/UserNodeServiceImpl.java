@@ -107,13 +107,12 @@ public class UserNodeServiceImpl implements IUser {
 
 	@Override
 	public UserNode saveOrUpdate(UserNode entity) throws IOException {
-		// logger.debug(session.session().getTransaction().status().name());
+
 		try {
 			session.save(entity, DEPTH_ENTITY);
 
 		} catch (Exception e) {
-			e.printStackTrace();
-			System.err.print(e);
+		logger.debug(e.getMessage());
 
 		}
 		return entity;
@@ -125,7 +124,7 @@ public class UserNodeServiceImpl implements IUser {
 	@Override
 	public boolean doesUserExist(String email) {
 
-		Optional<UserNode> node = Optional.ofNullable(session.queryForObject(UserNode.class, "match (u {email: '"+email+"' } )return u  ", Collections.EMPTY_MAP));
+		Optional<UserNode> node = Optional.ofNullable(session.queryForObject(UserNode.class, "match (u)  where u.email='"+email+"' return u limit 1 ", Collections.EMPTY_MAP));
 		if(node.isPresent()){
 			return true;
 		}
