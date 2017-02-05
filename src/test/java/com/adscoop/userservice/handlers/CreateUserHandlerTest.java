@@ -1,10 +1,12 @@
 package com.adscoop.userservice.handlers;
 
+import com.adscoop.userservice.congfig.AEService;
 import com.adscoop.userservice.congfig.TokenService;
 import com.adscoop.userservice.entites.UserNode;
 import com.adscoop.userservice.handlers.users.CreateUserHandler;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 
+import com.sun.tools.example.debug.expr.ASCII_UCodeESC_CharStream;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -26,6 +28,8 @@ public class CreateUserHandlerTest {
     TokenService tokenService;
 
 
+    @Mock
+    AEService aeService;
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
@@ -36,7 +40,7 @@ public class CreateUserHandlerTest {
     public void initialtest() throws Exception {
         when(userNodeService.saveOrUpdate(any(UserNode.class))).thenReturn(userNode());
         when(tokenService.generateToken()).thenReturn("9997cb0a-cb75-476b-9155-437599d9ce08");
-        HandlingResult handlingResult = RequestFixture.handle(new CreateUserHandler(userNodeService, tokenService), fix -> {
+        HandlingResult handlingResult = RequestFixture.handle(new CreateUserHandler(userNodeService, tokenService, aeService), fix -> {
             fix.method("POST").header("content-type", "application/json").uri("user/create");
 
         });
