@@ -6,7 +6,7 @@ import com.adscoop.userservice.entites.UserNode;
 import com.adscoop.userservice.handlers.users.CreateUserHandler;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 
-import com.sun.tools.example.debug.expr.ASCII_UCodeESC_CharStream;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
