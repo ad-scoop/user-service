@@ -1,5 +1,6 @@
 package com.adscoop.userservice.congfig;
 
+import com.adscoop.userservice.exceptions.UserServiceClientExceptionHandler;
 import com.adscoop.userservice.chains.*;
 import com.adscoop.userservice.handlers.CORSHandler;
 import com.adscoop.userservice.handlers.accountInformationHandler.CreateAccountInformationHandler;
@@ -94,6 +95,8 @@ public class BinderModule extends AbstractModule{
         bind(CORSHandler.class).asEagerSingleton();
 
 
+        //ExceptiomHandler
+        bind(UserServiceClientExceptionHandler.class).asEagerSingleton();
 
 	}
 

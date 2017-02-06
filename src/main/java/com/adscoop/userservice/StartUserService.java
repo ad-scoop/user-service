@@ -6,6 +6,7 @@ package com.adscoop.userservice;
 
 import com.adscoop.userservice.chains.*;
 import com.adscoop.userservice.congfig.BinderModule;
+import com.adscoop.userservice.exceptions.UserServiceClientExceptionHandler;
 import com.adscoop.userservice.handlers.CORSHandler;
 import com.adscoop.userservice.handlers.auth.LoginHandler;
 import com.adscoop.userservice.handlers.users.CreateUserHandler;
@@ -36,8 +37,8 @@ public class StartUserService {
                         .yaml("ratpack.yaml")
                         .require("/db", Config.class)
                         .props("ratpack.properties").sysProps()
-                        .env().onError(Action.throwException())
-                        .development(true)
+                        .env()
+                        .development(false)
                         .build())
                 .registry(Guice.registry(bindingsSpec -> bindingsSpec.module(BinderModule.class)
                 		.module(ServiceCommonConfigModule.class)
@@ -47,7 +48,7 @@ public class StartUserService {
                             d.getGraphite();
                             d.getJmx();
 
-                })))
+                }).bind(UserServiceClientExceptionHandler.class)))
                 .handlers(chain -> 
                 	chain
                 		.all(CORSHandler.class)
