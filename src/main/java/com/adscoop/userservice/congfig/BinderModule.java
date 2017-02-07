@@ -1,5 +1,6 @@
 package com.adscoop.userservice.congfig;
 
+import com.adscoop.userservice.exceptions.UserServiceClientExceptionHandler;
 import com.adscoop.userservice.chains.*;
 import com.adscoop.userservice.handlers.CORSHandler;
 import com.adscoop.userservice.handlers.accountInformationHandler.CreateAccountInformationHandler;
@@ -35,41 +36,68 @@ public class BinderModule extends AbstractModule{
     @Override
     protected void configure() {
 
+        //Services
+
         bind(IUser.class).to(UserNodeServiceImpl.class).asEagerSingleton();
         bind(AddressUserService.class).to(AddressUserServiceImpl.class).asEagerSingleton();
         bind(CreditInfoService.class).to(CreditInfoServiceImpl.class).asEagerSingleton();
+        bind(TokenService.class).asEagerSingleton();
+        bind(AEService.class).asEagerSingleton();
+        bind(IAuthorazationService.class).to(AuthorazationService.class).asEagerSingleton();
+        //UserHandler
+
         bind(CreateUserHandler.class).asEagerSingleton();
         bind(UpdateUserHandler.class).asEagerSingleton();
         bind(GetUserHandler.class).asEagerSingleton();
+        bind(DeleteUserHandler.class).asEagerSingleton();
+        //AddressHandler
+
         bind(CreateAddressHandler.class).asEagerSingleton();
         bind(GetAdderessHandler.class).asEagerSingleton();
+        bind(DeleteAddressHandler.class).asEagerSingleton();
         bind(UpdateAddressHandler.class).asEagerSingleton();
+
+        //CompanyHandlser
+        bind(DeleteCompanyHandler.class).asEagerSingleton();
+        bind(UpdateCompanyHandler.class).asEagerSingleton();
+        bind(GetCompanyHandler.class).asEagerSingleton();
+        bind(CreateCompanyHandler.class).asEagerSingleton();
+
+        //AccountInformationHandlers
+        bind(UpdateAccountInformationHandler.class).asEagerSingleton();
+        bind(DeleteAccountInformation.class).asEagerSingleton();
+        bind(CreateAccountInformationHandler.class).asEagerSingleton();
+        bind(GetAccountInformationHandler.class).asEagerSingleton();
+
+
+        //CreditHandlers
+
         bind(CreateCreditHandler.class).asEagerSingleton();
         bind(GetCreditHandler.class).asEagerSingleton();
         bind(UpdateCreditHandler.class).asEagerSingleton();
-        bind(TokenService.class).asEagerSingleton();
-        bind(CreateCompanyHandler.class).asEagerSingleton();
+        bind(DeleteCreditCardHandler.class).asEagerSingleton();
 
 
-		bind(DeleteUserHandler.class).asEagerSingleton();
+        //Chains
 
-		bind(DeleteCompanyHandler.class).asEagerSingleton();
-		bind(UpdateCompanyHandler.class).asEagerSingleton();
-		bind(GetCompanyHandler.class).asEagerSingleton();
-		bind(DeleteAccountInformation.class).asEagerSingleton();
-		bind(UpdateAccountInformationHandler.class).asEagerSingleton();
-		bind(CreditChainHandler.class).asEagerSingleton();
-		bind(AddressChainHandler.class).asEagerSingleton();
-		bind(UserChainHandler.class).asEagerSingleton();
-		bind(CompanyChainHandler.class).asEagerSingleton();
-		bind(AccountChainHandler.class).asEagerSingleton();
-		bind(CORSHandler.class).asEagerSingleton();
-		bind(AuthHandler.class).asEagerSingleton();
-		bind(DeleteAddressHandler.class).asEagerSingleton();
-		bind(CreateAccountInformationHandler.class).asEagerSingleton();
-		bind(GetAccountInformationHandler.class).asEagerSingleton();
-		bind(DeleteCreditCardHandler.class).asEagerSingleton();
-		bind(LoginHandler.class).asEagerSingleton();
+        bind(AddressChainHandler.class).asEagerSingleton();
+        bind(CreditChainHandler.class).asEagerSingleton();
+        bind(AddressChainHandler.class).asEagerSingleton();
+        bind(UserChainHandler.class).asEagerSingleton();
+        bind(CompanyChainHandler.class).asEagerSingleton();
+        bind(AccountChainHandler.class).asEagerSingleton();
+
+        //AuthHandlers
+        bind(LoginHandler.class).asEagerSingleton();
+        bind(AuthHandler.class).asEagerSingleton();
+
+        //CorsHandler
+        bind(CORSHandler.class).asEagerSingleton();
+
+
+        //ExceptiomHandler
+        bind(UserServiceClientExceptionHandler.class).asEagerSingleton();
+
 	}
 
 }

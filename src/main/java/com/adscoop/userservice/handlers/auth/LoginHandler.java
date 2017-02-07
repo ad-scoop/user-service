@@ -8,7 +8,7 @@ import java.util.Optional;
 
 import com.adscoop.userservice.congfig.UserModel;
 import com.adscoop.userservice.entites.UserNode;
-import com.adscoop.userservice.modules.AuthorazationService;
+import com.adscoop.userservice.services.impls.IAuthorazationService;
 import com.google.inject.Inject;
 
 import ratpack.handling.Context;
@@ -19,10 +19,10 @@ import ratpack.handling.Handler;
  */
 public class LoginHandler implements Handler {
 
-    private AuthorazationService authorazationService;
+    private IAuthorazationService authorazationService;
 
     @Inject
-    public LoginHandler(AuthorazationService authorazationService) {
+    public LoginHandler(IAuthorazationService authorazationService) {
 
         this.authorazationService = authorazationService;
     }
