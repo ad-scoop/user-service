@@ -11,7 +11,6 @@ import com.google.inject.Inject;
 
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
-import ratpack.rx.RxRatpack;
 
 public class CreateUserHandler implements Handler {
 
@@ -43,6 +42,7 @@ public class CreateUserHandler implements Handler {
 
 	private UserNode mapUserModel(UserNode as) {
 		UserNode userNode = new UserNode();
+		userNode.setActivated(false);
 		userNode.setFirstname(as.getFirstname());
 		userNode.setLastname(as.getLastname());
 		userNode.setToken(generateToken.generateToken());

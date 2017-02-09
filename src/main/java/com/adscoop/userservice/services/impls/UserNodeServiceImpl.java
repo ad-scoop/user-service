@@ -41,8 +41,8 @@ public class UserNodeServiceImpl implements IUser {
 	@Override
 	public Optional<UserNode> findByUserNameAndPassword(String username, String password) throws IOException {
 		try {
-			return Optional.of(session.queryForObject(UserNode.class, "match (a:UserNode) where a.username='"
-					+ username + "' and  a.password='" + password + "' return a", Collections.EMPTY_MAP));
+			return Optional.of(session.queryForObject(UserNode.class, "match (a:UserNode) where a.username='" + username
+					+ "' and  a.password='" + password + "' return a", Collections.emptyMap()));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -53,8 +53,8 @@ public class UserNodeServiceImpl implements IUser {
 	@Override
 	public Observable<Map<String, Object>> findByCypher(String cypherQuery) throws IOException {
 		try {
-			return Observable.from(session.query(cypherQuery, Collections.EMPTY_MAP)).create(as -> {
-
+			return Observable.from(session.query(cypherQuery, Collections.emptyMap()))
+					.create(as -> {
 			});
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -97,7 +97,7 @@ public class UserNodeServiceImpl implements IUser {
 	@Override
 	public void delete(UserNode entity) throws IOException {
 		try {
-			if(session.detachNodeEntity(entity.getId())) {
+			if (session.detachNodeEntity(entity.getId())) {
 				this.session.delete(entity);
 			}
 		} catch (Exception e) {
@@ -107,33 +107,25 @@ public class UserNodeServiceImpl implements IUser {
 
 	@Override
 	public UserNode saveOrUpdate(UserNode entity) throws IOException {
-
 		try {
 			session.save(entity, DEPTH_ENTITY);
-
 		} catch (Exception e) {
-		logger.debug(e.getMessage());
-
+			logger.debug(e.getMessage());
 		}
 		return findbyId(entity.getId());
 	}
 
-
-
-
 	@Override
 	public boolean doesUserExist(String email) {
-
-		Optional<UserNode> node = Optional.ofNullable(session.queryForObject(UserNode.class, "match (u)  where u.email='"+email+"' return u limit 1 ", Collections.EMPTY_MAP));
-		if(node.isPresent()){
-			return true;
-		}
-		return false;
-
+		return Optional.ofNullable(session.queryForObject(UserNode.class,
+				"match (u)  where u.email='" + email + "' return u limit 1 ", Collections.emptyMap()))
+				.isPresent();
 	}
 
 	@Override
 	public Optional<UserNode> findByUserToken(String token) {
-		return Optional.ofNullable(session.queryForObject(UserNode.class, "match (u) where u.token='"+token+ "' return u",Collections.EMPTY_MAP));
+		return Optional.ofNullable(session.queryForObject(UserNode.class,
+				"match (u) where u.token='" + token + "' return u", Collections.emptyMap()));
 	}
+
 }

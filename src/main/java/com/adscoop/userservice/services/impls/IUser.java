@@ -1,6 +1,5 @@
 package com.adscoop.userservice.services.impls;
 
-
 import java.io.IOException;
 import java.util.Collection;
 import java.util.Map;
@@ -15,26 +14,24 @@ import rx.Observable;
  */
 public interface IUser {
 
-   Iterable<Map<String ,Object>> getUsersByDomainName(String s) throws IOException;
+	Iterable<Map<String, Object>> getUsersByDomainName(String s) throws IOException;
 
+	Optional<UserNode> findByUserNameAndPassword(String username, String password) throws IOException;
 
-   Optional<UserNode> findByUserNameAndPassword(String username, String password) throws  IOException;
+	Observable<UserNode> getAllUsersNodes() throws IOException;
 
-   Observable<UserNode> getAllUsersNodes() throws  IOException;
+	Observable<Map<String, Object>> findByCypher(String cypherQuery) throws IOException;
 
-    Observable<Map<String, Object>> findByCypher(String cypherQuery) throws IOException;
+	Collection<UserNode> findAll() throws IOException;
 
-   Collection<UserNode> findAll() throws  IOException;
+	UserNode findbyId(Long id) throws IOException;
 
-   UserNode findbyId(Long id) throws  IOException;
+	void delete(UserNode entity) throws IOException;
 
-   void delete(UserNode entity) throws  IOException;
+	UserNode saveOrUpdate(UserNode entity) throws IOException;
 
-   UserNode saveOrUpdate(UserNode entity) throws  IOException;
+	boolean doesUserExist(String email);
 
-
-   boolean doesUserExist(String email);
-
-  Optional<UserNode> findByUserToken(String token);
+	Optional<UserNode> findByUserToken(String token);
 
 }
