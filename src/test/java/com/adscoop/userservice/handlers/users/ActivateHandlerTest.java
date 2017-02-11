@@ -7,9 +7,7 @@ import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
-import java.io.IOException;
 import java.util.Optional;
 
 import org.junit.Before;
@@ -18,12 +16,12 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import com.adscoop.userservice.congfig.UserModel;
 import com.adscoop.userservice.entites.UserNode;
 import com.adscoop.userservice.handlers.utils.ContextBuilder;
 import com.adscoop.userservice.services.impls.IUser;
 
 import ratpack.handling.Context;
+import ratpack.http.TypedData;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ActivateHandlerTest {
@@ -47,11 +45,28 @@ public class ActivateHandlerTest {
 			.findByUserToken(anyString());
 		
 		// when
-		activateHandler.verifyActivation(ContextBuilder.aBuilder().build()).toConsumer().accept("");
+		activateHandler.verifyActivation(ContextBuilder.aBuilder().build()).toConsumer().accept(mock(TypedData.class));
 		
 		// when
 		assertThat("user was not activated", userNode.isActivated(), is(Boolean.TRUE));
 		verify(userService).saveOrUpdate(eq(userNode));
 	}
+	
+	@Test
+	public void verifyThatIfNoUserActivationExistAnErrorIsReturnd() throws Exception {
+		// given
+		doReturn(Optional.empty())
+			.when(userService)
+			.findByUserToken(anyString());
+		
+		Context ctx = ContextBuilder.aBuilder().build();
+
+		// when
+		activateHandler.verifyActivation(ctx).toConsumer().accept(mock(TypedData.class));
+		
+		// when
+		verify(ctx).clientError(eq(410));
+	}
+	
 	
 }

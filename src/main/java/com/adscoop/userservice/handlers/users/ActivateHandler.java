@@ -1,12 +1,7 @@
 package com.adscoop.userservice.handlers.users;
 
-import java.nio.file.attribute.UserPrincipalNotFoundException;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.util.Date;
 import java.util.Optional;
 
-import com.adscoop.userservice.congfig.TokenService;
 import com.adscoop.userservice.entites.UserNode;
 import com.adscoop.userservice.services.impls.IUser;
 import com.google.inject.Inject;
@@ -14,6 +9,7 @@ import com.google.inject.Inject;
 import ratpack.func.Action;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
+import ratpack.http.TypedData;
 
 public class ActivateHandler implements Handler {
 
@@ -27,17 +23,17 @@ public class ActivateHandler implements Handler {
 	@Override
 	public void handle(Context ctx) throws Exception {
 		if (ctx.getRequest().getMethod().isPost()) {
-			ctx
-				.parse(String.class)
+			ctx.getRequest()
+				.getBody()
 				.then(verifyActivation(ctx));
 		} else {
 			ctx.clientError(405);
 		}
 	}
 
-	protected Action<? super String> verifyActivation(Context ctx) {
-		return activation  -> {
-			Optional<UserNode> optional = userService.findByUserToken(activation);
+	protected Action<? super TypedData> verifyActivation(Context ctx) {
+		return data -> {
+			Optional<UserNode> optional = userService.findByUserToken(data.getText());
 			if (optional.isPresent()) {
 				userService.saveOrUpdate(optional.get().activated());
 			} else {
