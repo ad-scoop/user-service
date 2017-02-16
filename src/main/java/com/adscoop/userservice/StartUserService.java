@@ -60,7 +60,8 @@ public class StartUserService {
                         	chain1.all(CORSHandler.class)
                         		.post("create", CreateUserHandler.class)
                         		.post("login",	LoginHandler.class)
-                        		.post("activate", ActivateHandler.class)).prefix("",chain1 -> chain1.get("",ctx -> ctx.render("User Health check")).get("health",HealthCheckHandler.class))));
+                        		.post("activate", ActivateHandler.class))
+							.prefix("checks",chain1 -> chain1.get("ok",ctx -> ctx.render("User Health check")).get("health",HealthCheckHandler.class))));
 
     }	
     
