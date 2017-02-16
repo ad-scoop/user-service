@@ -11,17 +11,13 @@ import com.google.inject.Inject;
 
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
-import ratpack.rx.RxRatpack;
 
-
-/**
- * Created by thokle on 10/09/2016.
- */
 public class CreateUserHandler implements Handler {
 
     private UserNodeServiceImpl userNodeService;
-  private TokenService generateToken;
-  private AEService aeService;
+    private TokenService generateToken;
+  	private AEService aeService;
+    
     @Inject
     public CreateUserHandler(UserNodeServiceImpl userNodeService, TokenService generateToken,AEService aeService) {
         this.userNodeService = userNodeService;
@@ -29,43 +25,36 @@ public class CreateUserHandler implements Handler {
         this.aeService = aeService;
     }
 
-
-
-
     @Override
     public void handle(Context ctx) throws Exception {
-
-
         if (ctx.getRequest().getMethod().isPost()) {
             ctx.parse(fromJson(UserNode.class)).then(as -> {
                 if (userNodeService.doesUserExist(as.getEmail())) {
-                    ctx.render( "{\"exist\":\"user with email already exist \"}");
+                    ctx.clientError(409);
+                } else {
+	                UserNode saved = userNodeService.saveOrUpdate(mapUserModel(as));
+	                ctx.getResponse().getHeaders().add("token", saved.getToken());
+	                ctx.render(json(saved, UserNode.class));
                 }
-                 UserNode userNode = new UserNode();
-                userNode.setActivated(false);
-                userNode.setFirstname(as.getFirstname());
-                userNode.setLastname(as.getLastname());
-                userNode.setToken(generateToken.generateToken());
-                userNode.setMiddlename(as.getMiddlename());
-                userNode.setUsername(as.getUsername());
-                userNode.setPassword(aeService.encrypt(as.getPassword()));
-                userNode.setEmail(as.getEmail());
-                as.getLabels().stream().forEach(la -> {
-                    userNode.getLabels().add(la);
-                });
-
-                UserNode saved = userNodeService.saveOrUpdate(userNode);
-                ctx.getResponse().getHeaders().add("token", saved.getToken());
-
-                ctx.render(json(saved, UserNode.class));
 
             });
-
         }
-
     }
 
-
-
+	private UserNode mapUserModel(UserNode as) {
+		UserNode userNode = new UserNode();
+		userNode.setActivated(false);
+		userNode.setFirstname(as.getFirstname());
+		userNode.setLastname(as.getLastname());
+		userNode.setToken(generateToken.generateToken());
+		userNode.setMiddlename(as.getMiddlename());
+		userNode.setUsername(as.getUsername());
+		userNode.setPassword(aeService.encrypt(as.getPassword()));
+		userNode.setEmail(as.getEmail());
+		as.getLabels().stream().forEach(la -> {
+		    userNode.getLabels().add(la);
+		});
+		return userNode;
+	}
 
 }

@@ -9,209 +9,199 @@ import org.neo4j.ogm.annotation.NodeEntity;
 import org.neo4j.ogm.annotation.Relationship;
 import org.neo4j.ogm.annotations.Labels;
 
-
-
 /**
  * Created by thokle on 24/08/2016.
  */
 @NodeEntity
 public class UserNode extends Entity {
 
+	private String firstname;
+
+	private String middlename;
 
 
     private boolean isActivated;
 
-    private String firstname;
+	private String lastname;
 
+	private String username;
 
-    private String middlename;
+	private String email;
 
+	private String password;
 
-    private String lastname;
+	private String token;
 
+	@Labels
+	private List<String> labels = new ArrayList<>();
 
-    private String username;
+	@Relationship(direction = Relationship.OUTGOING, type = "USER_HAS_CREDITINFO")
+	private Set<CreditInfo> creditInfos = new HashSet<>();
 
+	@Relationship(direction = Relationship.OUTGOING, type = "USER_HAS_COMPANY")
+	private Set<Company> companyNodes = new HashSet<>();
 
-    private String email;
+	@Relationship(direction = Relationship.OUTGOING, type = "USER_HAS_ADDRESS")
+	private Set<AddressNode> addressNodes = new HashSet<>();
 
+	@Relationship(direction = Relationship.OUTGOING, type = "HAS_ACCOUNT_INFORMATION")
+	private Set<AccountInformation> accountInformations = new HashSet<>();
 
-    private  String password;
+	@Relationship(direction = Relationship.OUTGOING, type = "HAS_BANNER_NODES")
+	private Set<BannerNode> bannerNodes = new HashSet<>();
 
-    private String token;
+	private boolean activated;
 
-    @Labels
-    private List<String> labels = new ArrayList<>();
+	public boolean isActivated() {
+		return activated;
+	}
 
+	public void setActivated(boolean activated) {
+		this.activated = activated;
+	}
 
+	public String getFirstname() {
+		return firstname;
+	}
 
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
 
-    @Relationship(direction = Relationship.OUTGOING, type =  "USER_HAS_CREDITINFO")
-    private Set<CreditInfo> creditInfos = new HashSet<>();
+	public String getMiddlename() {
+		return middlename;
+	}
 
+	public void setMiddlename(String middlename) {
+		this.middlename = middlename;
+	}
 
-    @Relationship(direction = Relationship.OUTGOING ,type = "USER_HAS_COMPANY")
-    private Set<Company> companyNodes = new HashSet<>();
+	public String getLastname() {
+		return lastname;
+	}
 
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
 
-    @Relationship(direction = Relationship.OUTGOING , type = "USER_HAS_ADDRESS")
-    private Set<AddressNode> addressNodes = new HashSet<>();
+	public String getUsername() {
+		return username;
+	}
 
-    @Relationship(direction = Relationship.OUTGOING, type = "HAS_ACCOUNT_INFORMATION")
-    private Set<AccountInformation> accountInformations = new HashSet<>();
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-    @Relationship(direction = Relationship.OUTGOING, type =  "HAS_BANNER_NODES")
-    private Set<BannerNode> bannerNodes = new HashSet<>();
+	public String getEmail() {
+		return email;
+	}
 
-    public String getFirstname() {
-        return firstname;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    public String getMiddlename() {
-        return middlename;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    public void setMiddlename(String middlename) {
-        this.middlename = middlename;
-    }
+	public Set<AddressNode> getAddressNodes() {
+		return addressNodes;
+	}
 
-    public String getLastname() {
-        return lastname;
-    }
+	public void setAddressNodes(Set<AddressNode> addressNodes) {
+		this.addressNodes = addressNodes;
+	}
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
+	public Set<BannerNode> getBannerNodes() {
+		return bannerNodes;
+	}
 
-    public String getUsername() {
-        return username;
-    }
+	public void setBannerNodes(Set<BannerNode> bannerNodes) {
+		this.bannerNodes = bannerNodes;
+	}
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+	public void addCreditInfo(CreditInfo creditInfo) {
+		this.creditInfos.add(creditInfo);
+		creditInfo.getUserNodeSet().add(this);
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public void setAccountInformation(AccountInformation accountInformation) {
+		this.accountInformations.add(accountInformation);
+		accountInformation.getUserNodeSet().add(this);
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public String getToken() {
+		return token;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public void setToken(String token) {
+		this.token = token;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public List<String> getLabels() {
+		return labels;
+	}
 
+	public void setLabels(List<String> labels) {
+		this.labels = labels;
+	}
 
-    public Set<AddressNode> getAddressNodes() {
-        return addressNodes;
-    }
+	public void setLabel(String s) {
+		this.labels.add(s);
+	}
 
-    public void setAddressNodes(Set<AddressNode> addressNodes) {
-        this.addressNodes = addressNodes;
-    }
+	public void setCompanyNode(Company companyNode) {
+		this.getCompanyNodes().add(companyNode);
+		companyNode.getUserNodes().add(this);
+	}
 
-    public Set<BannerNode> getBannerNodes() {
-        return bannerNodes;
-    }
+	public Set<Company> getCompanyNodes() {
+		return companyNodes;
+	}
 
+	public void setCompanyNodes(Set<Company> companyNodes) {
+		this.companyNodes = companyNodes;
+	}
 
+	public Set<CreditInfo> getCreditInfos() {
+		return creditInfos;
+	}
 
-    public void setBannerNodes(Set<BannerNode> bannerNodes) {
-        this.bannerNodes = bannerNodes;
-    }
+	public void setCreditInfos(Set<CreditInfo> creditInfos) {
+		this.creditInfos = creditInfos;
+	}
 
-    public void addCreditInfo(CreditInfo creditInfo){
-       this.creditInfos.add(creditInfo);
-        creditInfo.getUserNodeSet().add(this);
+	public Set<AccountInformation> getAccountInformations() {
+		return accountInformations;
+	}
 
-    }
+	public void setAccountInformations(Set<AccountInformation> accountInformations) {
+		this.accountInformations = accountInformations;
+	}
 
-    public  void setAccountInformation(AccountInformation accountInformation){
-        this.accountInformations.add(accountInformation);
-        accountInformation.getUserNodeSet().add(this);
+	public void addBanner(BannerNode bannerNode) {
+		bannerNodes.add(bannerNode);
+		bannerNode.getUserNodes().add(this);
+	}
 
-    }
+	public void addAddress(AddressNode addressNode) {
+		addressNodes.add(addressNode);
+		addressNode.getUserNodes().add(this);
+	}
 
-    public String getToken() {
-        return token;
-    }
+	public UserNode activated() {
+		this.activated = true;
+		return this;
+	}
 
-    public void setToken(String token) {
-        this.token = token;
-    }
 
-    public List<String> getLabels() {
-        return labels;
-    }
 
-    public void setLabels(List<String> labels) {
-        this.labels = labels;
-    }
 
-    public  void setLabel(String s){
-        this.labels.add(s);
-    }
 
 
-    public boolean isActivated() {
-        return isActivated;
-    }
 
-    public void setActivated(boolean activated) {
-        isActivated = activated;
-    }
-
-    public void setCompanyNode(Company companyNode)
-    {
-       this.getCompanyNodes().add(companyNode);
-        companyNode.getUserNodes().add(this);
-
-    }
-
-    public Set<Company> getCompanyNodes() {
-        return companyNodes;
-    }
-
-    public void setCompanyNodes(Set<Company> companyNodes) {
-        this.companyNodes = companyNodes;
-    }
-
-    public Set<CreditInfo> getCreditInfos() {
-        return creditInfos;
-    }
-
-    public void setCreditInfos(Set<CreditInfo> creditInfos) {
-        this.creditInfos = creditInfos;
-    }
-
-    public Set<AccountInformation> getAccountInformations() {
-        return accountInformations;
-    }
-
-    public void setAccountInformations(Set<AccountInformation> accountInformations) {
-        this.accountInformations = accountInformations;
-    }
-
-
-    public void addBanner(BannerNode bannerNode){
-        bannerNodes.add(bannerNode);
-        bannerNode.getUserNodes().add(this);
-    }
-
-    public void addAddress(AddressNode addressNode){
-
-        addressNodes.add(addressNode);
-        addressNode.getUserNodes().add(this);
-    }
 }
-

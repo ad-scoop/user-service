@@ -13,32 +13,24 @@ import ratpack.handling.Handler;
 
 public class GetUserHandler implements Handler {
 
+	private UserNodeServiceImpl userNodeService;
 
-    private UserNodeServiceImpl userNodeService;
+	@Inject
+	public GetUserHandler(UserNodeServiceImpl userNodeService) {
+		this.userNodeService = userNodeService;
+	}
 
-
-    @Inject
-    public GetUserHandler(UserNodeServiceImpl userNodeService) {
-        this.userNodeService = userNodeService;
-
-
-    }
-
-    @Override
-    public void handle(Context ctx) throws Exception {
-
-
-        if (ctx.getRequest().getMethod().isGet()) {
-            String path = ctx.getRequest().getHeaders().get("token");
-            if (!path.isEmpty()) {
-                Optional<UserNode> node = userNodeService.findByUserToken(path);
-                if (node.isPresent()) {
-                    ctx.render(json(node.get()));
-                }
-
-            }
-        }
-
-    }
+	@Override
+	public void handle(Context ctx) throws Exception {
+		if (ctx.getRequest().getMethod().isGet()) {
+			String path = ctx.getRequest().getHeaders().get("token");
+			if (!path.isEmpty()) {
+				Optional<UserNode> node = userNodeService.findByUserToken(path);
+				if (node.isPresent()) {
+					ctx.render(json(node.get()));
+				}
+			}
+		}
+	}
 
 }

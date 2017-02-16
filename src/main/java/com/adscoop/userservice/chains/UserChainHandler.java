@@ -16,6 +16,10 @@ public class UserChainHandler implements Action<Chain> {
 
     @Override
     public void execute(Chain chain) throws Exception {
-       chain.all(AuthHandler.class).delete(DeleteUserHandler.class).put(UpdateUserHandler.class).get(GetUserHandler.class);
+       chain
+       		.all(AuthHandler.class)
+       		.delete(DeleteUserHandler.class)
+       		.put(UpdateUserHandler.class)
+       		.get(GetUserHandler.class);
     }
 }

@@ -14,37 +14,33 @@ import ratpack.handling.Handler;
  */
 public class UpdateUserHandler implements Handler {
 
-    private UserNodeServiceImpl userNodeService;
+	private UserNodeServiceImpl userNodeService;
 
-    @Inject
-    public UpdateUserHandler(UserNodeServiceImpl userNodeService) {
-        this.userNodeService = userNodeService;
-    }
+	@Inject
+	public UpdateUserHandler(UserNodeServiceImpl userNodeService) {
+		this.userNodeService = userNodeService;
+	}
 
-    @Override
-    public void handle(Context ctx) throws Exception {
+	@Override
+	public void handle(Context ctx) throws Exception {
 
-if(ctx.getRequest().getMethod().isPut()){
-            ctx.parse(Form.class).then(as -> {
-                ObjectMapper objectMapper = ctx.get(ObjectMapper.class);
+		if (ctx.getRequest().getMethod().isPut()) {
+			ctx.parse(Form.class).then(as -> {
+				ObjectMapper objectMapper = ctx.get(ObjectMapper.class);
 
+				Long id = Long.valueOf(ctx.getRequest().getHeaders().get("userid"));
 
-                Long id = Long.valueOf(ctx.getRequest().getHeaders().get("userid"));
+				UserNode userNode = userNodeService.findbyId(id);
+				userNode.setFirstname(as.get("first_name"));
+				userNode.setLastname(as.get("last_name"));
+				userNode.setEmail(as.get("email"));
+				userNode.setPassword(as.get("password"));
 
-                UserNode userNode = userNodeService.findbyId(id);
-                userNode.setFirstname(as.get("first_name"));
-                userNode.setLastname(as.get("last_name"));
-                userNode.setEmail(as.get("email"));
-                userNode.setPassword(as.get("password"));
+				userNodeService.saveOrUpdate(userNode);
+			});
 
-                userNodeService.saveOrUpdate(userNode);
-            });
-
-
-
-
-    }
-    ctx.next();
-    }
+		}
+		ctx.next();
+	}
 
 }

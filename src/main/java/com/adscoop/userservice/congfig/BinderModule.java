@@ -21,6 +21,7 @@ import com.adscoop.userservice.handlers.credit.CreateCreditHandler;
 import com.adscoop.userservice.handlers.credit.DeleteCreditCardHandler;
 import com.adscoop.userservice.handlers.credit.GetCreditHandler;
 import com.adscoop.userservice.handlers.credit.UpdateCreditHandler;
+import com.adscoop.userservice.handlers.users.ActivateHandler;
 import com.adscoop.userservice.handlers.users.CreateUserHandler;
 import com.adscoop.userservice.handlers.users.DeleteUserHandler;
 import com.adscoop.userservice.handlers.users.GetUserHandler;
@@ -90,14 +91,15 @@ public class BinderModule extends AbstractModule{
         //AuthHandlers
         bind(LoginHandler.class).asEagerSingleton();
         bind(AuthHandler.class).asEagerSingleton();
-
+        bind(ActivateHandler.class).asEagerSingleton();
+        
         //CorsHandler
         bind(CORSHandler.class).asEagerSingleton();
 
 
         //ExceptiomHandler
         bind(UserServiceClientExceptionHandler.class).asEagerSingleton();
-
+        
 	}
 
 }

@@ -11,8 +11,13 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import ratpack.server.BaseDir;
 import ratpack.test.handling.HandlingResult;
 import ratpack.test.handling.RequestFixture;
+
+import java.io.FileOutputStream;
+import java.nio.file.FileSystem;
+import java.nio.file.Path;
 
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.any;
@@ -44,8 +49,6 @@ public class CreateUserHandlerTest {
             fix.method("POST").header("content-type", "application/json").uri("user/create");
 
         });
-
-       assertTrue(handlingResult.getStatus().getCode() == 200);
 
     }
 

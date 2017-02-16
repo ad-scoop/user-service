@@ -13,21 +13,16 @@ import com.google.inject.Singleton;
 @Singleton
 public class TokenService {
 
-    public String generateToken(){
-        return UUID.randomUUID().toString();
+	public String generateToken() {
+		return UUID.randomUUID().toString();
+	}
 
+	public String encryptPassword(byte[] password) throws NoSuchAlgorithmException {
+		return Base64.getEncoder().encodeToString(password);
+	}
 
-    }
+	public byte[] decode(byte[] password) {
+		return Base64.getDecoder().decode(password);
+	}
 
-    public String encryptPassword(byte[] password) throws NoSuchAlgorithmException {
-      return Base64.getEncoder().encodeToString(password);
-
-    }
-
-
-    public byte[] decode(byte[] password){
-       return  Base64.getDecoder().decode(password);
-
-        
-    }
 }
