@@ -33,7 +33,7 @@ public class StartUserService {
         RatpackServer.start(ratpackServerSpec -> ratpackServerSpec
                 .serverConfig(serverConfigBuilder -> serverConfigBuilder.baseDir(BaseDir.find())
                         .yaml("ratpack.yaml")
-                        .require("/db", Config.class).require("/metrics", DropwizardMetricsConfig.class)
+                        .require("/db", Config.class)
                         .props("ratpack.properties").sysProps()
                         .env()
                         .development(true)
@@ -60,8 +60,7 @@ public class StartUserService {
                         	chain1.all(CORSHandler.class)
                         		.post("create", CreateUserHandler.class)
                         		.post("login",	LoginHandler.class)
-                        		.post("activate", ActivateHandler.class))
-							.prefix("checks",chain1 -> chain1.get("ok",ctx -> ctx.render("User Health check")).get("health",HealthCheckHandler.class))));
+                        		.post("activate", ActivateHandler.class))));
 
     }	
     
