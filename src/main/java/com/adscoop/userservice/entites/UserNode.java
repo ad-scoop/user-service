@@ -19,6 +19,7 @@ public class UserNode extends Entity {
 
 
 
+    private boolean isActivated;
 
     private String firstname;
 
@@ -159,6 +160,15 @@ public class UserNode extends Entity {
 
     public  void setLabel(String s){
         this.labels.add(s);
+    }
+
+
+    public boolean isActivated() {
+        return isActivated;
+    }
+
+    public void setActivated(boolean activated) {
+        isActivated = activated;
     }
 
     public void setCompanyNode(Company companyNode)

@@ -42,7 +42,7 @@ public class CreateUserHandler implements Handler {
                     ctx.render( "{\"exist\":\"user with email already exist \"}");
                 }
                  UserNode userNode = new UserNode();
-
+                userNode.setActivated(false);
                 userNode.setFirstname(as.getFirstname());
                 userNode.setLastname(as.getLastname());
                 userNode.setToken(generateToken.generateToken());
