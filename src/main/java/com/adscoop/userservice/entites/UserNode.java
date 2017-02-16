@@ -19,6 +19,9 @@ public class UserNode extends Entity {
 
 	private String middlename;
 
+
+    private boolean isActivated;
+
 	private String lastname;
 
 	private String username;
@@ -194,5 +197,11 @@ public class UserNode extends Entity {
 		this.activated = true;
 		return this;
 	}
+
+
+
+
+
+
 
 }

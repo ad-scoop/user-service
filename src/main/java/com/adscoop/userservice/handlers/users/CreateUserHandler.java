@@ -36,6 +36,7 @@ public class CreateUserHandler implements Handler {
 	                ctx.getResponse().getHeaders().add("token", saved.getToken());
 	                ctx.render(json(saved, UserNode.class));
                 }
+
             });
         }
     }
