@@ -1,5 +1,6 @@
 package com.adscoop.userservice.congfig;
 
+import com.adscoop.userservice.exceptions.UserServiceClientErrorHandler;
 import com.adscoop.userservice.exceptions.UserServiceClientExceptionHandler;
 import com.adscoop.userservice.chains.*;
 import com.adscoop.userservice.handlers.CORSHandler;
@@ -28,6 +29,9 @@ import com.adscoop.userservice.handlers.users.GetUserHandler;
 import com.adscoop.userservice.handlers.users.UpdateUserHandler;
 import com.adscoop.userservice.services.impls.*;
 import com.google.inject.AbstractModule;
+import ratpack.error.ClientErrorHandler;
+import ratpack.health.HealthCheck;
+import ratpack.health.HealthCheckHandler;
 
 /**
  * Created by thokle on 29/08/2016.
@@ -99,7 +103,10 @@ public class BinderModule extends AbstractModule{
 
         //ExceptiomHandler
         bind(UserServiceClientExceptionHandler.class).asEagerSingleton();
-        
+
+
+        //Health
+        bind(HealthCheckHandler.class).asEagerSingleton();
 	}
 
 }

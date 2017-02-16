@@ -14,8 +14,10 @@ import com.adscoop.userservice.handlers.users.CreateUserHandler;
 import com.adscoop.userservice.modules.Config;
 import com.adscoop.userservice.modules.ServiceCommonConfigModule;
 
+import ratpack.dropwizard.metrics.DropwizardMetricsConfig;
 import ratpack.dropwizard.metrics.DropwizardMetricsModule;
 import ratpack.guice.Guice;
+import ratpack.health.HealthCheckHandler;
 import ratpack.rx.RxRatpack;
 import ratpack.server.BaseDir;
 import ratpack.server.RatpackServer;
@@ -31,10 +33,10 @@ public class StartUserService {
         RatpackServer.start(ratpackServerSpec -> ratpackServerSpec
                 .serverConfig(serverConfigBuilder -> serverConfigBuilder.baseDir(BaseDir.find())
                         .yaml("ratpack.yaml")
-                        .require("/db", Config.class)
+                        .require("/db", Config.class).require("/metrics", DropwizardMetricsConfig.class)
                         .props("ratpack.properties").sysProps()
                         .env()
-                        .development(false)
+                        .development(true)
                         .build())
                 .registry(Guice.registry(bindingsSpec -> bindingsSpec.module(BinderModule.class)
                 		.module(ServiceCommonConfigModule.class)
@@ -43,6 +45,7 @@ public class StartUserService {
                             d.getSlf4j();
                             d.getGraphite();
                             d.getJmx();
+
 
                 }).bind(UserServiceClientExceptionHandler.class)))
                 .handlers(chain -> 
@@ -57,8 +60,8 @@ public class StartUserService {
                         	chain1.all(CORSHandler.class)
                         		.post("create", CreateUserHandler.class)
                         		.post("login",	LoginHandler.class)
-                        		.post("activate", ActivateHandler.class))
-                        		.get("", ctx -> ctx.render("welcome to index"))));
+                        		.post("activate", ActivateHandler.class)).prefix("",chain1 -> chain1.get("",ctx -> ctx.render("User Health check")).get("health",HealthCheckHandler.class))));
+
     }	
     
 }
