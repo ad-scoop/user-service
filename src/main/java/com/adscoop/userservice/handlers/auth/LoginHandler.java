@@ -34,12 +34,10 @@ public class LoginHandler implements Handler {
 
     @Override
     public void handle(Context ctx) throws Exception {
-    	LOGGER.debug("Logging in");
         ctx.parse(fromJson(UserModel.class)).then(userModel -> {
         	LOGGER.debug("Logging in with " + userModel.getEmail());
             Optional<UserNode> st = authorazationService.login(userModel.getEmail(), userModel.getPassword());
             if (st.isPresent()) {
-            	LOGGER.debug("Logging in with " + json(st.get()));
                 ctx.getResponse().getHeaders().add("usertoken", st.get().getToken());
                 ctx.render(json(st.get()));
             } else {
