@@ -4,7 +4,8 @@ import ratpack.handling.Context;
 import ratpack.handling.Handler;
 import ratpack.http.MutableHeaders;
 
-public class CORSHandler implements Handler {
+public class
+CORSHandler implements Handler {
 
 	public static final String ACCESS_CONTROL_ALLOW_HEADERS_VALUE = "x-requested-with, origin, content-type, accept";
 	public static final String ACCESS_CONTROL_ALLOW_HEADERS = "Access-Control-Allow-Headers";
