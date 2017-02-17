@@ -55,9 +55,8 @@ public class StartUserService {
                 		.prefix("address", AddressChainHandler.class)
                 		.prefix("company", CompanyChainHandler.class)
                 		.prefix("account", AccountChainHandler.class)
-                        .prefix("credit", CreditChainHandler.class)
-                        .prefix("user",chain1 ->
-                        	chain1.all(CORSHandler.class)
+                        .prefix("credit", CreditChainHandler.class)).handlers(chai ->  chai.prefix("user", ca ->
+                        	ca.all(CORSHandler.class)
                         		.post("create", CreateUserHandler.class)
                         		.post("login",	LoginHandler.class)
                         		.post("activate", ActivateHandler.class))));
