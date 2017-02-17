@@ -1,9 +1,8 @@
-FROM java:8-jdk-alpine
+FROM java:8-jdk
 
 COPY build/distributions/user-service.zip /usr/lib/adscoop/user-service.zip
 
-RUN apk update && apk upgrade
-RUN apk add bash && apk add screen
+RUN apt-get update 
 
 RUN cd /usr/lib/adscoop/ && unzip user-service.zip
 RUN rm /usr/lib/adscoop/user-service.zip
