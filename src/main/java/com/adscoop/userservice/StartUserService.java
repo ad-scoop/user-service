@@ -51,7 +51,7 @@ public class StartUserService {
                 }))).handlers(chain -> chain.prefix("user", userchain -> userchain.all(CORSHandler.class)
 						.post("create", CreateUserHandler.class)
 						.post("login",	LoginHandler.class)
-						.post("activate", ActivateHandler.class)).prefix("health", health -> health.get("", ctx -> ctx.render("user-service is running")))));
+						.post("activate", ActivateHandler.class).get("health",ctx -> ctx.render("service is running")))));
 
 
     }	
