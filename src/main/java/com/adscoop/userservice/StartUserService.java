@@ -17,6 +17,7 @@ import com.adscoop.userservice.modules.ServiceCommonConfigModule;
 import ratpack.dropwizard.metrics.DropwizardMetricsConfig;
 import ratpack.dropwizard.metrics.DropwizardMetricsModule;
 import ratpack.guice.Guice;
+import ratpack.handling.Context;
 import ratpack.health.HealthCheckHandler;
 import ratpack.rx.RxRatpack;
 import ratpack.server.BaseDir;
@@ -47,19 +48,11 @@ public class StartUserService {
                             d.getJmx();
 
 
-                }).bind(UserServiceClientExceptionHandler.class)))
-                .handlers(chain -> 
-                	chain
-                		.all(CORSHandler.class)
-                		.prefix("useradmin", UserChainHandler.class)
-                		.prefix("address", AddressChainHandler.class)
-                		.prefix("company", CompanyChainHandler.class)
-                		.prefix("account", AccountChainHandler.class)
-                        .prefix("credit", CreditChainHandler.class)).handlers(chai ->  chai.prefix("user", ca ->
-                        	ca.all(CORSHandler.class)
-                        		.post("create", CreateUserHandler.class)
-                        		.post("login",	LoginHandler.class)
-                        		.post("activate", ActivateHandler.class))));
+                }))).handlers(chain -> chain.prefix("user", userchain -> userchain.all(CORSHandler.class)
+						.post("create", CreateUserHandler.class)
+						.post("login",	LoginHandler.class)
+						.post("activate", ActivateHandler.class)).prefix("health", health -> health.get("", ctx -> ctx.render("user-service is running")))));
+
 
     }	
     
