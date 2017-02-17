@@ -17,6 +17,7 @@ import com.adscoop.userservice.modules.ServiceCommonConfigModule;
 import ratpack.dropwizard.metrics.DropwizardMetricsConfig;
 import ratpack.dropwizard.metrics.DropwizardMetricsModule;
 import ratpack.guice.Guice;
+import ratpack.handling.Context;
 import ratpack.health.HealthCheckHandler;
 import ratpack.rx.RxRatpack;
 import ratpack.server.BaseDir;
@@ -33,7 +34,7 @@ public class StartUserService {
         RatpackServer.start(ratpackServerSpec -> ratpackServerSpec
                 .serverConfig(serverConfigBuilder -> serverConfigBuilder.baseDir(BaseDir.find())
                         .yaml("ratpack.yaml")
-                        .require("/db", Config.class).require("/metrics", DropwizardMetricsConfig.class)
+                        .require("/db", Config.class)
                         .props("ratpack.properties").sysProps()
                         .env()
                         .development(true)
@@ -47,20 +48,12 @@ public class StartUserService {
                             d.getJmx();
 
 
-                }).bind(UserServiceClientExceptionHandler.class)))
-                .handlers(chain -> 
-                	chain
-                		.all(CORSHandler.class)
-                		.prefix("useradmin", UserChainHandler.class)
-                		.prefix("address", AddressChainHandler.class)
-                		.prefix("company", CompanyChainHandler.class)
-                		.prefix("account", AccountChainHandler.class)
-                        .prefix("credit", CreditChainHandler.class)
-                        .prefix("user",chain1 ->
-                        	chain1.all(CORSHandler.class)
-                        		.post("create", CreateUserHandler.class)
-                        		.post("login",	LoginHandler.class)
-                        		.post("activate", ActivateHandler.class)).prefix("",chain1 -> chain1.get("",ctx -> ctx.render("User Health check")).get("health",HealthCheckHandler.class))));
+                }))).handlers(chain ->  chain.prefix("user" ,
+                            userchain -> userchain.all(CORSHandler.class)
+						.post("create", CreateUserHandler.class)
+						.post("login",	LoginHandler.class)
+						.post("activate", ActivateHandler.class))));
+
 
     }	
     

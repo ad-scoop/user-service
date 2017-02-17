@@ -20,6 +20,6 @@ public class UserChainHandler implements Action<Chain> {
        		.all(AuthHandler.class)
        		.delete(DeleteUserHandler.class)
        		.put(UpdateUserHandler.class)
-       		.get(GetUserHandler.class);
+       		.get(":token",GetUserHandler.class);
     }
 }
