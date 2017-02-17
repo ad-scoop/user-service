@@ -1,5 +1,5 @@
 db:
-  neo4Url: bolt://localhost:7687
+  neo4Url: bolt://ad-scoop.com:7687
   username: neo4j
   password : 1Adscoop*
 
