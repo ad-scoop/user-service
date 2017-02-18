@@ -12,8 +12,6 @@ CORSHandler implements Handler {
 	public static final String ACCESS_CONTROL_ALLOW_ORIGIN_VALUE = "*";
 	public static final String ACCESS_CONTROL_ALLOW_ORIGIN = "Access-Control-Allow-Origin";
 
-
-
 	@Override
 	public void handle(Context ctx) throws Exception {
 		MutableHeaders headers = ctx.getResponse().getHeaders();
