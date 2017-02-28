@@ -7,7 +7,7 @@ import ratpack.http.MutableHeaders;
 public class
 CORSHandler implements Handler {
 
-	public static final String ACCESS_CONTROL_ALLOW_HEADERS_VALUE = "x-requested-with, origin, content-type, accept";
+	public static final String ACCESS_CONTROL_ALLOW_HEADERS_VALUE = "x-requested-with, origin, content-type, accept, token";
 	public static final String ACCESS_CONTROL_ALLOW_HEADERS = "Access-Control-Allow-Headers";
 	public static final String ACCESS_CONTROL_ALLOW_ORIGIN_VALUE = "*";
 	public static final String ACCESS_CONTROL_ALLOW_ORIGIN = "Access-Control-Allow-Origin";

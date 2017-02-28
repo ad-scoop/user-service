@@ -48,13 +48,12 @@ public class StartUserService {
                             d.getJmx();
 
 
-                }))).handlers(chain ->  chain.prefix("user" ,
-                            userchain -> userchain.all(CORSHandler.class)
-						.post("create", CreateUserHandler.class)
-						.post("login",	LoginHandler.class)
-						.post("activate", ActivateHandler.class))));
-
-
+                }))).handlers(chain ->  
+                		chain.prefix("user", userchain -> 
+	                		userchain.all(CORSHandler.class)
+							.post("create", CreateUserHandler.class)
+							.post("login",	LoginHandler.class)
+							.post("activate", ActivateHandler.class))));
     }	
     
 }
