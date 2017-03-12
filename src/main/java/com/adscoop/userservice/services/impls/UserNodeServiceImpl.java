@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import com.adscoop.userservice.entites.UserNode;
 import com.google.inject.Inject;
 
+import ratpack.exec.Promise;
 import rx.Observable;
 
 /**
@@ -116,16 +117,18 @@ public class UserNodeServiceImpl implements IUser {
 	}
 
 	@Override
-	public boolean doesUserExist(String email) {
-		return Optional.ofNullable(session.queryForObject(UserNode.class,
-				"match (u)  where u.email='" + email + "' return u limit 1 ", Collections.emptyMap()))
-				.isPresent();
+		public boolean doesUserExist(String email) throws Exception {
+			 UserNode u =  session.queryForObject(UserNode.class,
+				"match (u)  where u.email='" + email + "' return u limit 1 ", Collections.emptyMap());
+				if(u==null) {
+					return false;
+				}
+						return true;
 	}
 
 	@Override
-	public Optional<UserNode> findByUserToken(String token) {
-		return Optional.ofNullable(session.queryForObject(UserNode.class,
-				"match (u) where u.token='" + token + "' return u", Collections.emptyMap()));
+	public Promise<UserNode> findByUserToken(String token) {
+			return Promise.value(session.queryForObject(UserNode.class,"match (u) where u.token='" + token + "' return u", Collections.emptyMap()));
 	}
 
 }

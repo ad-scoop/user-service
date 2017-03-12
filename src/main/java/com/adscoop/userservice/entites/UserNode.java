@@ -50,6 +50,9 @@ public class UserNode extends Entity {
 	@Relationship(direction = Relationship.OUTGOING, type = "HAS_BANNER_NODES")
 	private Set<BannerNode> bannerNodes = new HashSet<>();
 
+
+	@Relationship(direction = Relationship.OUTGOING, type = "USER_HAS_WEBSITE")
+	private Set<WebSiteNode> webSiteNodes = new HashSet<>();
 	private boolean activated;
 
 	public boolean isActivated() {
@@ -196,6 +199,11 @@ public class UserNode extends Entity {
 	public UserNode activated() {
 		this.activated = true;
 		return this;
+	}
+
+	public void addWebSite(WebSiteNode webSiteNode){
+		webSiteNodes.add(webSiteNode);
+		webSiteNode.getUserNodes().add(this);
 	}
 
 

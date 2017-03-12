@@ -10,6 +10,7 @@ import com.google.inject.Inject;
 
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
+import ratpack.rx.RxRatpack;
 
 /**
  * Created by thokle on 13/11/2016.
@@ -29,10 +30,10 @@ public class GetAccountInformationHandler implements Handler {
         if (ctx.getRequest().getMethod().isGet()) {
             String id = ctx.getRequest().getHeaders().get("token");
             if (id != null) {
-                Optional<UserNode> userNode = userNodeService.findByUserToken(id);
-                if (userNode.isPresent()) {
-                    ctx.render(json(userNode.get().getAccountInformations()));
-                }
+                RxRatpack.observe(userNodeService.findByUserToken(id)).forEach(userNode -> {
+                    ctx.render(userNode.getAccountInformations());
+
+                });
             }
 
         } else {

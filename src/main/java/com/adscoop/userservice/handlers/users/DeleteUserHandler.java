@@ -29,16 +29,10 @@ public class DeleteUserHandler implements Handler
 if(ctx.getRequest().getMethod().isDelete()){
         String token = ctx.getRequest().getHeaders().get("token");
 
-        Optional<UserNode> userNode = userNodeService.findByUserToken(token);
+         userNodeService.findByUserToken(token).then(userNode -> {
+             userNodeService.delete(userNode);
+         } );
 
-        if(userNode.isPresent()){
-
-            try {
-                userNodeService.delete(userNode.get());
-            } catch (Exception e){
-
-            }
-        }
     }
     ctx.next();
     }

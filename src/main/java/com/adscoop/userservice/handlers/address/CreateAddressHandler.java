@@ -12,6 +12,7 @@ import com.adscoop.userservice.services.impls.CompanyServiceImpl;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 import com.google.inject.Inject;
 
+import ratpack.exec.Promise;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
 
@@ -65,8 +66,8 @@ public class CreateAddressHandler implements Handler {
 
             } else
             {
-                Optional<UserNode> userNode = userNodeService.findByUserToken(ctx.getRequest().getHeaders().get("token"));
-                if(userNode.isPresent()){
+                Promise<UserNode> userNode = userNodeService.findByUserToken(ctx.getRequest().getHeaders().get("token"));
+                userNode.then( userNode1 -> {
                     AddressNode addressNode = new AddressNode();
                     addressNode.setCountry(adr.getCountry());
                     addressNode.setCity(adr.getCity());
@@ -85,11 +86,11 @@ public class CreateAddressHandler implements Handler {
 
 
 
-                   userNode.get().addAddress(addressNode);
+                   userNode1.addAddress(addressNode);
                     ctx.render(json(addressNode));
 
 
-                }
+                });
 
             }
 

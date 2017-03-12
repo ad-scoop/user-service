@@ -29,6 +29,7 @@ public class CreateUserHandler implements Handler {
     public void handle(Context ctx) throws Exception {
         if (ctx.getRequest().getMethod().isPost()) {
             ctx.parse(fromJson(UserNode.class)).then(as -> {
+
                 if (userNodeService.doesUserExist(as.getEmail())) {
                     ctx.clientError(409);
                 } else {

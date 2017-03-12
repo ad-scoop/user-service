@@ -10,6 +10,7 @@ import com.google.inject.Inject;
 
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
+import ratpack.rx.RxRatpack;
 
 public class GetUserHandler implements Handler {
 
@@ -25,10 +26,13 @@ public class GetUserHandler implements Handler {
 		if (ctx.getRequest().getMethod().isGet()) {
 			String path = ctx.getRequest().getHeaders().get("token");
 			if (!path.isEmpty()) {
-				Optional<UserNode> node = userNodeService.findByUserToken(path);
-				if (node.isPresent()) {
-					ctx.render(json(node.get()));
-				}
+				RxRatpack.observe(userNodeService.findByUserToken(path)).toList().forEach( userNodes -> {
+
+					ctx.render(userNodes);
+
+				});
+
+
 			}
 		}
 	}

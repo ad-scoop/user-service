@@ -23,8 +23,8 @@ public class WebSiteNode extends Entity {
     private Set<BannerSpace> bannerSpaceSet = new HashSet<>();
 
 
-    @Relationship(type ="COMPANY_HAS_WEBSITE ", direction = Relationship.INCOMING)
-    private  Set<Company> companyNodes = new HashSet<>();
+    @Relationship(type ="USER_HAS_WEBSITE ", direction = Relationship.INCOMING)
+    private  Set<UserNode> userNodes = new HashSet<>();
 
 
     public int getPort() {
@@ -60,12 +60,12 @@ public class WebSiteNode extends Entity {
     }
 
     @JsonIgnore
-    public Set<Company> getCompanyNodes() {
-        return companyNodes;
+    public Set<UserNode> getUserNodes() {
+        return userNodes;
     }
 
-    public void setCompanyNodes(Set<Company> companyNodes) {
-        this.companyNodes = companyNodes;
+    public void setUserNodes(Set<UserNode> userNodes) {
+        this.userNodes = userNodes;
     }
 
     public void addBannerSpace(BannerSpace bannerSpace){

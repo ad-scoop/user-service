@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import com.adscoop.userservice.entites.UserNode;
 
+import ratpack.exec.Promise;
 import rx.Observable;
 
 /**
@@ -30,8 +31,8 @@ public interface IUser {
 
 	UserNode saveOrUpdate(UserNode entity) throws IOException;
 
-	boolean doesUserExist(String email);
+	boolean doesUserExist(String email) throws Exception;
 
-	Optional<UserNode> findByUserToken(String token);
+	Promise<UserNode> findByUserToken(String token);
 
 }

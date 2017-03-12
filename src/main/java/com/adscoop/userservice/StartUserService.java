@@ -6,6 +6,7 @@ import com.adscoop.userservice.chains.CompanyChainHandler;
 import com.adscoop.userservice.chains.CreditChainHandler;
 import com.adscoop.userservice.chains.UserChainHandler;
 import com.adscoop.userservice.congfig.BinderModule;
+import com.adscoop.userservice.exceptions.UserServiceClientErrorHandler;
 import com.adscoop.userservice.exceptions.UserServiceClientExceptionHandler;
 import com.adscoop.userservice.handlers.CORSHandler;
 import com.adscoop.userservice.handlers.auth.LoginHandler;
@@ -36,8 +37,7 @@ public class StartUserService {
                         .yaml("ratpack.yaml")
                         .require("/db", Config.class)
                         .props("ratpack.properties").sysProps()
-                        .env()
-                        .development(true)
+                        .env().development(true)
                         .build())
                 .registry(Guice.registry(bindingsSpec -> bindingsSpec.module(BinderModule.class)
                 		.module(ServiceCommonConfigModule.class)

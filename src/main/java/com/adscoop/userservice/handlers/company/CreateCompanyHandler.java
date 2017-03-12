@@ -10,6 +10,7 @@ import com.adscoop.userservice.entites.UserNode;
 import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
 import com.google.inject.Inject;
 
+import ratpack.exec.Promise;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
 
@@ -30,7 +31,8 @@ public class CreateCompanyHandler implements Handler {
         String token = String.valueOf(ctx.getRequest().getHeaders().get("token"));
         if(token !=null) {
             ctx.parse(fromJson(Company.class)).then(companyNode -> {
-                Optional<UserNode> userNode = userNodeService.findByUserToken(token);
+                Promise<UserNode> userNode = userNodeService.findByUserToken(token);
+                userNode.then( userNode1 -> {
                 Company companyNode1 = new Company();
                 companyNode1.setCompanyname(companyNode.getCompanyname());
                 companyNode1.setCompanytype(companyNode.getCompanytype());
@@ -41,12 +43,14 @@ public class CreateCompanyHandler implements Handler {
 
                 });
 
-                userNode.get().setCompanyNode(companyNode1);
-                userNodeService.saveOrUpdate(userNode.get());
+                userNode1.setCompanyNode(companyNode1);
+                userNodeService.saveOrUpdate(userNode1);
                 ctx.render(json(companyNode1));
             });
 
-        }
+
+        });
 
     }
+}
 }

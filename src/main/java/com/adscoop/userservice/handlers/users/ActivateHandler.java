@@ -6,6 +6,7 @@ import com.adscoop.userservice.entites.UserNode;
 import com.adscoop.userservice.services.impls.IUser;
 import com.google.inject.Inject;
 
+import ratpack.exec.Promise;
 import ratpack.func.Action;
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
@@ -33,12 +34,17 @@ public class ActivateHandler implements Handler {
 
 	protected Action<? super TypedData> verifyActivation(Context ctx) {
 		return data -> {
-			Optional<UserNode> optional = userService.findByUserToken(data.getText());
-			if (optional.isPresent()) {
-				userService.saveOrUpdate(optional.get().activated());
-			} else {
-				ctx.clientError(410);
-			}
+			Promise<UserNode> optional = userService.findByUserToken(data.getText());
+			optional.then( userNode -> {
+				if (userNode.getEmail() !=null) {
+					userService.saveOrUpdate(userNode);
+				} else {
+					ctx.clientError(410);
+				}
+
+
+			});
+
 		};
 	}
 
