@@ -6,10 +6,11 @@
 		</Console>
 	</Appenders>
 	<Loggers>
-		<Root level="error">
-			<AppenderRef ref="Console" />
-		</Root>
-
-		<logger name="Ratpack" level="debug" />
+        <Logger level="INFO">
+            <AppenderRef ref="Console"/>
+        </Logger>
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+        </Root>
 	</Loggers>
 </Configuration>
