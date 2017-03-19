@@ -15,7 +15,7 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath "io.ratpack:ratpack-gradle:1.4.3"
+        classpath "io.ratpack:ratpack-gradle:1.4.5"
     }
 }
 
@@ -35,8 +35,8 @@ dependencies {
 	
 	
 
-    compile group: 'io.ratpack', name: 'ratpack-guice', version: '1.4.3'
-    compile group: 'io.ratpack', name: 'ratpack-rx', version: '1.4.3'
+    compile group: 'io.ratpack', name: 'ratpack-guice', version: '1.4.5'
+    compile group: 'io.ratpack', name: 'ratpack-rx', version: '1.4.5'
 
     compile group: 'com.google.code.gson', name: 'gson', version: '2.6.2'
 
