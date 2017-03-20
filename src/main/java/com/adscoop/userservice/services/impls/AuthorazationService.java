@@ -31,7 +31,7 @@ public class AuthorazationService implements IAuthorazationService {
 	@Override
 	public Optional<UserNode> login(String username, String password) {
 		Optional<UserNode> userNode = Optional.ofNullable(session.queryForObject(UserNode.class,
-				" match (u) where u.email='" + username + "'  return u", Collections.emptyMap()));
+				" match (u) where u.email='" + username + "'  return u limit 1", Collections.emptyMap()));
 		LOGGER.debug("Log in " + username);
 		if (userNode.isPresent()) {
 			String encrypt = aeService.decrypt(userNode.get().getPassword());
