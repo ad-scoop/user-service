@@ -120,7 +120,7 @@ public class UserNodeServiceImpl implements IUser {
 	@Override
 		public boolean doesUserExist(String email) throws Exception {
 			 UserNode u =  session.queryForObject(UserNode.class,
-				"match (u:UserNode)  where u.email='" + email + "' return u limit 1 ", Collections.emptyMap());
+				"match (u:UserNode , {email:'"+email+"'}) return u limit 1 ", Collections.emptyMap());
 				if(u==null) {
 					return false;
 				}
@@ -129,12 +129,12 @@ public class UserNodeServiceImpl implements IUser {
 
 	@Override
 	public Promise<UserNode> findByUserToken(String token) {
-			return Promise.value(session.queryForObject(UserNode.class,"match (u) where u.token='" + token + "' return u", Collections.emptyMap()));
+			return Promise.value(session.queryForObject(UserNode.class,"match (u:UserNode, {token:'"+ token +"'}) return u", Collections.emptyMap()));
 	}
 
 	@Override
 	public boolean userNotExistByEmailAndType(String email, String type) throws Exception {
-		UserNode userNode = session.queryForObject(UserNode.class,"match (u:UserNode:"+type +") where  u.email='"+email+"' return u limit 1 " ,Collections.emptyMap());
+		UserNode userNode = session.queryForObject(UserNode.class,"match (u:UserNode:"+type+"  {email:'"+email+"'}) return u limit 1 " ,Collections.emptyMap());
 		if(userNode!=null){
 			return  true;
 		}
