@@ -11,6 +11,7 @@ public class UserServiceClientExceptionHandler implements ServerErrorHandler {
     public void error(Context context, Throwable throwable) throws Exception {
         context.getResponse().status(500);
         context.render(context.file("files/500.html"));
-
+        throwable.printStackTrace();
     }
+    
 }
