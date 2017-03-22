@@ -35,8 +35,6 @@ public interface IUser {
 
 	Promise<UserNode> findByUserToken(String token);
 
-
-	boolean userNotExistByEmailAndType(String email, String type) throws Exception;
-
+	boolean userNotExistByEmail(String email) throws Exception;
 
 }

@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.Optional;
 
-
+import org.apache.commons.collections.MapUtils;
 import org.neo4j.ogm.session.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -55,8 +55,7 @@ public class UserNodeServiceImpl implements IUser {
 	@Override
 	public Observable<Map<String, Object>> findByCypher(String cypherQuery) throws IOException {
 		try {
-			return Observable.from(session.query(cypherQuery, Collections.emptyMap()))
-					.create(as -> {
+			return Observable.from(session.query(cypherQuery, Collections.emptyMap())).create(as -> {
 			});
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -118,28 +117,29 @@ public class UserNodeServiceImpl implements IUser {
 	}
 
 	@Override
-		public boolean doesUserExist(String email) throws Exception {
-			 UserNode u =  session.queryForObject(UserNode.class,
+	public boolean doesUserExist(String email) throws Exception {
+		UserNode u = session.queryForObject(UserNode.class,
 				"match (u:UserNode)  where u.email='" + email + "' return u limit 1 ", Collections.emptyMap());
-				if(u==null) {
-					return false;
-				}
-						return true;
+		if (u == null) {
+			return false;
+		}
+		return true;
 	}
 
 	@Override
 	public Promise<UserNode> findByUserToken(String token) {
-			return Promise.value(session.queryForObject(UserNode.class,"match (u) where u.token='" + token + "' return u", Collections.emptyMap()));
+		return Promise.value(session.queryForObject(UserNode.class, "match (u) where u.token='" + token + "' return u",
+				Collections.emptyMap()));
 	}
 
 	@Override
-	public boolean userNotExistByEmailAndType(String email, String type) throws Exception {
-		UserNode userNode = session.queryForObject(UserNode.class,"match (u:UserNode:"+type +") where  u.email='"+email+"' return u limit 1 " ,Collections.emptyMap());
-		if(userNode!=null){
-			return  true;
+	public boolean userNotExistByEmail(String email) throws Exception {
+		UserNode userNode = session.queryForObject(UserNode.class,
+				"match (u:UserNode) where u.email={email} return u limit 1 ", Collections.singletonMap("email", email));
+		if (userNode != null) {
+			return true;
 		}
 		return false;
 	}
-
 
 }

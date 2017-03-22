@@ -28,7 +28,6 @@ public class LoginHandler implements Handler {
 
     @Inject
     public LoginHandler(IAuthorazationService authorazationService) {
-
         this.authorazationService = authorazationService;
     }
 
