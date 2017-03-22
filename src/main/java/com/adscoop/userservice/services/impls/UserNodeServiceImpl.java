@@ -49,20 +49,6 @@ public class UserNodeServiceImpl implements IUser {
 			e.printStackTrace();
 		}
 		return null;
-
-	}
-
-	@Override
-	public Observable<Map<String, Object>> findByCypher(String cypherQuery) throws IOException {
-		try {
-			return Observable.from(session.query(cypherQuery, Collections.emptyMap())).create(as -> {
-			});
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		return null;
-
 	}
 
 	@Override
@@ -128,14 +114,16 @@ public class UserNodeServiceImpl implements IUser {
 
 	@Override
 	public Promise<UserNode> findByUserToken(String token) {
-			return Promise.value(session.queryForObject(UserNode.class,"match (u:UserNode, {token:'"+ token +"'}) return u", Collections.emptyMap()));
+		return Promise.value(session.queryForObject(UserNode.class,
+				"match (u:UserNode, {token:'" + token + "'}) return u", Collections.emptyMap()));
 	}
 
 	@Override
-	public boolean userNotExistByEmail(String email) throws Exception {
-		UserNode userNode = session.queryForObject(UserNode.class,"match (u:UserNode {email:'"+email+"'}) return u limit 1 " ,Collections.emptyMap());
-		if(userNode!=null){
-			return  true;
+	public boolean userNotExistByEmail(String email) {
+		UserNode userNode = session.queryForObject(UserNode.class,
+				"match (u:UserNode {email:'" + email + "'}) return u limit 1 ", Collections.emptyMap());
+		if (userNode != null) {
+			return true;
 		}
 		return false;
 	}

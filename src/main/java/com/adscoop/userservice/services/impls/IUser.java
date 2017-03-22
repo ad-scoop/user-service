@@ -21,8 +21,6 @@ public interface IUser {
 
 	Observable<UserNode> getAllUsersNodes() throws IOException;
 
-	Observable<Map<String, Object>> findByCypher(String cypherQuery) throws IOException;
-
 	Collection<UserNode> findAll() throws IOException;
 
 	UserNode findbyId(Long id) throws IOException;
@@ -35,6 +33,6 @@ public interface IUser {
 
 	Promise<UserNode> findByUserToken(String token);
 
-	boolean userNotExistByEmail(String email) throws Exception;
+	boolean userNotExistByEmail(String email);
 
 }
