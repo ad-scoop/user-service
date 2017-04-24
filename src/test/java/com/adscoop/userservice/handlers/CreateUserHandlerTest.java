@@ -53,11 +53,7 @@ public class CreateUserHandlerTest {
     }
 
     private UserNode userNode() {
-        UserNode userNode = new UserNode();
-        userNode.setUsername("tho");
-        userNode.setPassword("pass");
-        userNode.setFirstname("Thomas");
-        userNode.setLastname("Kleist");
-        return userNode;
-    }
+       return UserNode.builder().firstname("test").lastname("test").build();
+
+           }
 }

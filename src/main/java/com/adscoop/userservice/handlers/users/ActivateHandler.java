@@ -38,6 +38,7 @@ public class ActivateHandler implements Handler {
 			optional.then( userNode -> {
 				if (userNode.getEmail() !=null) {
 					userService.saveOrUpdate(userNode);
+					ctx.render("User " + userNode.getFirstname() + "  "+userNode.getLastname() + " isActivated");
 				} else {
 					ctx.clientError(410);
 				}

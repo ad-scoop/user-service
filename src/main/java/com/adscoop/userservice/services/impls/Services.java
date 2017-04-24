@@ -4,6 +4,7 @@ package com.adscoop.userservice.services.impls;
 import java.util.List;
 import java.util.Map;
 
+import ratpack.exec.Promise;
 import rx.Observable;
 
 /**
@@ -19,7 +20,7 @@ public interface Services<T> {
 
     T saveOrUpdate(T entity);
 
-    Iterable<Map<String,Object>> findByCypher(String cypherQuery);
+    Promise<Iterable<Map<String,Object>>> findByCypher(String cypherQuery);
 
 
 

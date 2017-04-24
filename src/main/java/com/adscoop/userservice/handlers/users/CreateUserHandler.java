@@ -42,19 +42,16 @@ public class CreateUserHandler implements Handler {
     }
 
 	private UserNode mapUserModel(UserNode as) {
-		UserNode userNode = new UserNode();
-		userNode.setActivated(false);
-		userNode.setFirstname(as.getFirstname());
-		userNode.setLastname(as.getLastname());
-		userNode.setToken(generateToken.generateToken());
-		userNode.setMiddlename(as.getMiddlename());
-		userNode.setUsername(as.getUsername());
-		userNode.setPassword(aeService.encrypt(as.getPassword()));
-		userNode.setEmail(as.getEmail());
-		as.getLabels().stream().forEach(la -> {
-		    userNode.getLabels().add(la);
-		});
-		return userNode;
+		return  UserNode.builder().
+                isActivated(false).
+                firstname(as.getFirstname()).
+                lastname(as.getLastname()).
+                token(generateToken.generateToken()).
+                middlename(as.getMiddlename()).
+                username(as.getUsername()).
+                password(as.getPassword()).
+                email(as.getEmail()).labels(as.getLabels()).build();
+
 	}
 
 }

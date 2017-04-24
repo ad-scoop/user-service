@@ -43,7 +43,7 @@ public class CreateCompanyHandler implements Handler {
 
                 });
 
-                userNode1.setCompanyNode(companyNode1);
+                userNode1.getCompanyNodes().add(companyNode1);
                 userNodeService.saveOrUpdate(userNode1);
                 ctx.render(json(companyNode1));
             });

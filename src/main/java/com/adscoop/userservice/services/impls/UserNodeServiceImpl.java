@@ -36,14 +36,14 @@ public class UserNodeServiceImpl implements IUser {
 	}
 
 	@Override
-	public Iterable<Map<String, Object>> getUsersByDomainName(String s) {
+	public Promise<Iterable<Map<String, Object>>> getUsersByDomainName(String s) {
 		return null;
 	}
 
 	@Override
-	public Optional<UserNode> findByUserNameAndPassword(String username, String password) throws IOException {
+	public Promise<UserNode> findByUserNameAndPassword(String username, String password) throws IOException {
 		try {
-			return Optional.of(session.queryForObject(UserNode.class, "match (a:UserNode) where a.username='" + username
+			return Promise.value(session.queryForObject(UserNode.class, "match (a:UserNode) where a.username='" + username
 					+ "' and  a.password='" + password + "' return a", Collections.emptyMap()));
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -62,9 +62,9 @@ public class UserNodeServiceImpl implements IUser {
 	}
 
 	@Override
-	public Observable<UserNode> getAllUsersNodes() throws IOException {
+	public Promise<Collection<UserNode>> getAllUsersNodes() throws IOException {
 		try {
-			return Observable.from(session.loadAll(UserNode.class, DEPTH_LIST));
+			return Promise.value(session.loadAll(UserNode.class, DEPTH_LIST));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -15,11 +15,11 @@ import rx.Observable;
  */
 public interface IUser {
 
-	Iterable<Map<String, Object>> getUsersByDomainName(String s) throws IOException;
+	Promise<Iterable<Map<String, Object>>> getUsersByDomainName(String s) throws IOException;
 
-	Optional<UserNode> findByUserNameAndPassword(String username, String password) throws IOException;
+	Promise<UserNode> findByUserNameAndPassword(String username, String password) throws IOException;
 
-	Observable<UserNode> getAllUsersNodes() throws IOException;
+	Promise<Collection<UserNode>>  	getAllUsersNodes() throws IOException;
 
 	Collection<UserNode> findAll() throws IOException;
 
