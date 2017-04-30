@@ -66,6 +66,7 @@ public class UserNode extends Entity {
     @Setter
     @Getter
     @Labels
+    @Builder.Default
     private List<String> labels = new ArrayList<>();
 
     @Setter
