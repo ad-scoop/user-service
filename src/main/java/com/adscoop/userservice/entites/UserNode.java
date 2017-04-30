@@ -3,9 +3,15 @@ package com.adscoop.userservice.entites;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonAppend;
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import org.apache.logging.log4j.core.config.plugins.PluginBuilderAttribute;
 import org.neo4j.ogm.annotation.Labels;
 import org.neo4j.ogm.annotation.NodeEntity;
 import org.neo4j.ogm.annotation.Relationship;
@@ -20,6 +26,8 @@ import java.util.Set;
  */
 @NodeEntity
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @JsonIgnoreProperties( ignoreUnknown = true)
 public class UserNode extends Entity {
 
@@ -64,41 +72,41 @@ public class UserNode extends Entity {
     @Getter
 
     @Relationship(direction = Relationship.OUTGOING, type = "USER_HAS_CREDITINFO")
+    @Builder.Default
     private Set<CreditInfo> creditInfos = new HashSet<>();
 
     @Setter
     @Getter
-
     @Relationship(direction = Relationship.OUTGOING, type = "USER_HAS_COMPANY")
+    @Builder.Default
     private Set<Company> companyNodes = new HashSet<>();
 
     @Setter
     @Getter
-
     @Relationship(direction = Relationship.OUTGOING, type = "USER_HAS_ADDRESS")
+    @Builder.Default
     private Set<AddressNode> addressNodes = new HashSet<>();
 
     @Setter
     @Getter
-
     @Relationship(direction = Relationship.OUTGOING, type = "HAS_ACCOUNT_INFORMATION")
-
+    @Builder.Default
     private Set<AccountInformation> accountInformations = new HashSet<>();
+
     @Setter
     @Getter
     @Relationship(direction = Relationship.OUTGOING, type = "HAS_BANNER_NODES")
+    @Builder.Default
     private Set<BannerNode> bannerNodes = new HashSet<>();
 
 
     @Relationship(direction = Relationship.OUTGOING, type = "USER_HAS_WEBSITE")
+    @Builder.Default
     private Set<WebSiteNode> webSiteNodes = new HashSet<>();
-
 
     @Getter
     @Setter
     private boolean activated;
-
-
 
     public void addCreditInfo(CreditInfo creditInfo) {
         this.creditInfos.add(creditInfo);
