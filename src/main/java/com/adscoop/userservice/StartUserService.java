@@ -6,8 +6,7 @@ import com.adscoop.userservice.chains.CompanyChainHandler;
 import com.adscoop.userservice.chains.CreditChainHandler;
 import com.adscoop.userservice.chains.UserChainHandler;
 import com.adscoop.userservice.congfig.BinderModule;
-import com.adscoop.userservice.exceptions.UserServiceClientErrorHandler;
-import com.adscoop.userservice.exceptions.UserServiceClientExceptionHandler;
+
 import com.adscoop.userservice.handlers.CORSHandler;
 import com.adscoop.userservice.handlers.auth.LoginHandler;
 import com.adscoop.userservice.handlers.users.ActivateHandler;
@@ -15,11 +14,9 @@ import com.adscoop.userservice.handlers.users.CreateUserHandler;
 import com.adscoop.userservice.modules.Config;
 import com.adscoop.userservice.modules.ServiceCommonConfigModule;
 
-import ratpack.dropwizard.metrics.DropwizardMetricsConfig;
 import ratpack.dropwizard.metrics.DropwizardMetricsModule;
 import ratpack.guice.Guice;
-import ratpack.handling.Context;
-import ratpack.health.HealthCheckHandler;
+
 import ratpack.rx.RxRatpack;
 import ratpack.server.BaseDir;
 import ratpack.server.RatpackServer;

@@ -32,10 +32,12 @@ public class UserNodeServiceImplTest {
     public void verifyfiFndByUserTokenReturnsUser() throws Exception {
 
         try (ExecHarness execHarness = ExecHarness.harness()) {
-            when(session.queryForObject(eq(UserNode.class), anyString(), anyMapOf(String.class, String.class))).thenReturn(userNode());
+          UserNode userNode =   UserNode.builder().firstname("test").lastname("last").email("email@email.dk").build();
+            when(session.queryForObject(eq(UserNode.class), anyString(), anyMapOf(String.class, String.class))).thenReturn(userNode);
 
 
-            ExecResult<UserNode> result = execHarness.yield(execution -> userNodeService.findByUserToken(anyString()));
+            userNodeService = new UserNodeServiceImpl(session);
+            ExecResult<UserNode> result = execHarness.yield(execution -> userNodeService.findByUserToken(""));
 
 
             assertEquals("test", result.getValue().getFirstname());
@@ -49,9 +51,4 @@ public class UserNodeServiceImplTest {
     }
 
 
-    private UserNode userNode() {
-        return UserNode.builder().firstname("test").lastname("last").email("email@email.dk").build();
-
-
-    }
 }
