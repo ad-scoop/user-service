@@ -65,7 +65,6 @@ public class ActivateHandlerTest {
 
        when(userService.findByUserToken(anyString())).thenReturn(Promise.value(userNode));
 
-
        HandlingResult handlingResult =  RequestFixture.handle(new ActivateHandler(userService), requestFixture -> {
            requestFixture.method("POST").header("content-type", "application/json").header("token","232323effmdvæmv21e1").uri("user/activate");
 
@@ -73,7 +72,7 @@ public class ActivateHandlerTest {
 
 
 
-        assertEquals(DefaultStatus,handlingResult.getStatus());
+        assertEquals(Status.of(410,"Gone"),handlingResult.getStatus());
 
     }
 

@@ -115,13 +115,13 @@ public class UserNodeServiceImpl implements IUser {
 	@Override
 	public Promise<UserNode> findByUserToken(String token) {
 		return Promise.value(session.queryForObject(UserNode.class,
-				"match (u:UserNode, {token:'" + token + "'}) return u", Collections.emptyMap()));
+				"match (u:UserNode, {token:'{token}'}) return u", Collections.singletonMap("token",token)));
 	}
 
 	@Override
 	public boolean userNotExistByEmail(String email) {
 		UserNode userNode = session.queryForObject(UserNode.class,
-				"match (u:UserNode {email:'" + email + "'}) return u limit 1 ", Collections.emptyMap());
+				"match (u:UserNode {email:'{email}'}) return u limit 1 ", Collections.singletonMap("email",email));
 		if (userNode != null) {
 			return true;
 		}

@@ -49,7 +49,7 @@ public class CreateUserHandler implements Handler {
                 token(generateToken.generateToken()).
                 middlename(as.getMiddlename()).
                 username(as.getUsername()).
-                password(as.getPassword()).
+                password(aeService.encrypt(as.getPassword())).
                 email(as.getEmail()).labels(as.getLabels()).build();
 
 	}
