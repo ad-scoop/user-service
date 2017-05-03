@@ -42,7 +42,7 @@ public class UserNodeServiceImplTest {
 
         try (ExecHarness execHarness = ExecHarness.harness()) {
 
-          UserNode userNode =   UserNode.builder().firstname("test").lastname("last").email("email@email.dk").build();
+          UserNode userNode =   UserNode.builder().firstname("fname").lastname("lname").email("email@email.dk").build();
             when(session.queryForObject(eq(UserNode.class), anyString(), anyMapOf(String.class, String.class))).thenReturn(userNode);
 
 
@@ -52,7 +52,7 @@ public class UserNodeServiceImplTest {
 
             assertEquals("fname", result.getValue().getFirstname());
             assertEquals("lname", result.getValue().getLastname());
-            assertEquals("email",result.getValue().getEmail());
+            assertEquals("email@email.dk",result.getValue().getEmail());
             verify(session, times(1)).queryForObject(eq(UserNode.class), anyString(), anyMapOf(String.class, String.class));
 
         }
