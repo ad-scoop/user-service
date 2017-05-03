@@ -42,10 +42,11 @@ public class UserNodeServiceImplTest {
 
         try (ExecHarness execHarness = ExecHarness.harness()) {
 
+          UserNode userNode =   UserNode.builder().firstname("test").lastname("last").email("email@email.dk").build();
+            when(session.queryForObject(eq(UserNode.class), anyString(), anyMapOf(String.class, String.class))).thenReturn(userNode);
 
-            when(session.queryForObject(eq(UserNode.class), anyString(), anyMapOf(String.class, String.class))).thenReturn(UserNode.builder().email("email").firstname("fname").lastname("lname").build());
 
-
+            userNodeService = new UserNodeServiceImpl(session);
             ExecResult<UserNode> result = execHarness.yield(execution -> userNodeService.findByUserToken(""));
 
 
@@ -59,9 +60,4 @@ public class UserNodeServiceImplTest {
     }
 
 
-    private UserNode userNode() {
-        return UserNode.builder().firstname("test").lastname("last").email("email@email.dk").build();
-
-
-    }
 }

@@ -72,6 +72,7 @@ public class ActivateHandlerTest {
 
 
 
+
         assertEquals(Status.of(410,"Gone"),handlingResult.getStatus());
 
     }

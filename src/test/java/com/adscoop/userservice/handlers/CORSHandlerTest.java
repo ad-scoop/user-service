@@ -56,7 +56,7 @@ public class CORSHandlerTest {
 			requestFixture.method("POST").uri("*/**");
 
 		});
-		assertEquals(ACCESS_CONTROL_ALLOW_HEADERS_VALUE,handlingResult.getHeaders().get(ACCESS_CONTROL_ALLOW_ORIGIN));
+		assertEquals("*",handlingResult.getHeaders().get(ACCESS_CONTROL_ALLOW_ORIGIN));
 	// given when
 	//	corsHandler.handle(context);
 		
