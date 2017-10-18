@@ -2,8 +2,9 @@ package com.adscoop.userservice.modules;
 
 
 import com.adscoop.userservice.congfig.AEService;
-import com.adscoop.userservice.services.impls.AuthorazationService;
-import com.adscoop.userservice.services.impls.IAuthorazationService;
+import com.adscoop.userservice.services.AuthorazationService;
+import com.adscoop.userservice.services.IAuthorazationService;
+
 import org.neo4j.ogm.session.Session;
 
 import com.google.inject.AbstractModule;

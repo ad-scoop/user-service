@@ -1,12 +1,10 @@
-package com.adscoop.userservice.services.impls;
+package com.adscoop.userservice.services;
 
 import java.io.IOException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
-import java.util.Optional;
 
-import org.apache.commons.collections.MapUtils;
 import org.neo4j.ogm.session.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +13,6 @@ import com.adscoop.userservice.entites.UserNode;
 import com.google.inject.Inject;
 
 import ratpack.exec.Promise;
-import rx.Observable;
 
 /**
  * Created by thokle on 03/09/2016.

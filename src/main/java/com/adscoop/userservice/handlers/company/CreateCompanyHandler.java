@@ -3,11 +3,9 @@ package com.adscoop.userservice.handlers.company;
 import static ratpack.jackson.Jackson.fromJson;
 import static ratpack.jackson.Jackson.json;
 
-import java.util.Optional;
-
 import com.adscoop.userservice.entites.Company;
 import com.adscoop.userservice.entites.UserNode;
-import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
+import com.adscoop.userservice.services.UserNodeServiceImpl;
 import com.google.inject.Inject;
 
 import ratpack.exec.Promise;

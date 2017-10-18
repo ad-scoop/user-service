@@ -1,4 +1,4 @@
-package com.adscoop.userservice.services.impls;
+package com.adscoop.userservice.services;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -17,7 +17,6 @@ import rx.Observable;
  */
 public class AddressUserServiceImpl implements AddressUserService {
 	
-	private static final int DEPTH_LIST = 0;
 	private static final int DEPTH_ENTITY = 1;
 	private Session session;
 
@@ -30,7 +29,7 @@ public class AddressUserServiceImpl implements AddressUserService {
 	public Observable<Map<String, Object>> findByCypher(String cypherQuery) throws IOException {
 
 		try {
-			return Observable.from(session.query(cypherQuery, Collections.EMPTY_MAP));
+			return Observable.from(session.query(cypherQuery, Collections.emptyMap()));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -87,7 +86,7 @@ public class AddressUserServiceImpl implements AddressUserService {
 			return Optional.of(session.queryForObject(AddressNode.class,
 					"match (a)-[:ADDRESS_BELONGS_TO_COMPANY]->(c)-[:COMPANY_BELONGS_TO_USER]->(u) where u.id='" + cypher
 							+ "' return a as AddressNode",
-					Collections.EMPTY_MAP));
+					Collections.emptyMap()));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

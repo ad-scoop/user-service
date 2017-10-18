@@ -1,9 +1,8 @@
-package com.adscoop.userservice.services.impls;
+package com.adscoop.userservice.services;
+
+import java.util.Optional;
 
 import com.adscoop.userservice.entites.UserNode;
-
-import java.util.Collections;
-import java.util.Optional;
 
 /**
  * Created by thokle on 04/02/2017.

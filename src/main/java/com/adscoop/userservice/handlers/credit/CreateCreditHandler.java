@@ -7,7 +7,7 @@ import org.apache.commons.validator.routines.CreditCardValidator;
 
 import com.adscoop.userservice.entites.CreditInfo;
 import com.adscoop.userservice.entites.UserNode;
-import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
+import com.adscoop.userservice.services.UserNodeServiceImpl;
 import com.google.inject.Inject;
 
 import ratpack.exec.ExecutionException;

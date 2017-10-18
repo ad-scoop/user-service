@@ -1,4 +1,4 @@
-package com.adscoop.userservice.services.impls;
+package com.adscoop.userservice.services;
 
 import java.util.Optional;
 
