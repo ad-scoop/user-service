@@ -1,8 +1,7 @@
 package com.adscoop.userservice.handlers.users;
 
 import com.adscoop.userservice.entites.UserNode;
-import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.adscoop.userservice.services.UserNodeServiceImpl;
 import com.google.inject.Inject;
 
 import ratpack.form.Form;
@@ -26,8 +25,6 @@ public class UpdateUserHandler implements Handler {
 
 		if (ctx.getRequest().getMethod().isPut()) {
 			ctx.parse(Form.class).then(as -> {
-				ObjectMapper objectMapper = ctx.get(ObjectMapper.class);
-
 				Long id = Long.valueOf(ctx.getRequest().getHeaders().get("userid"));
 
 				UserNode userNode = userNodeService.findbyId(id);

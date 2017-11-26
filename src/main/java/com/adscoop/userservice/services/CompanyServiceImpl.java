@@ -1,4 +1,4 @@
-package com.adscoop.userservice.services.impls;
+package com.adscoop.userservice.services;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -35,7 +35,7 @@ Session connectionSource;
 
 
         try {
-            return connectionSource.queryForObject(Company.class,"match (u:UserNode)-[:USER_HAS_COMPANY]->(c:Company ) where c.companyname='"+ companyname  +"' and u.token='" + id  + "'  return c", Collections.EMPTY_MAP);
+            return connectionSource.queryForObject(Company.class,"match (u:UserNode)-[:USER_HAS_COMPANY]->(c:Company ) where c.companyname='"+ companyname  +"' and u.token='" + id  + "'  return c", Collections.emptyMap());
         } catch (Exception e) {
             e.printStackTrace();
         }

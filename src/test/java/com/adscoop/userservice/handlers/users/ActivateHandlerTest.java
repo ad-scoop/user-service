@@ -1,8 +1,8 @@
 package com.adscoop.userservice.handlers.users;
 
 import com.adscoop.userservice.entites.UserNode;
+import com.adscoop.userservice.services.IUser;
 
-import com.adscoop.userservice.services.impls.IUser;
 import io.netty.handler.codec.http.HttpResponseStatus;
 import org.junit.Before;
 import org.junit.Test;

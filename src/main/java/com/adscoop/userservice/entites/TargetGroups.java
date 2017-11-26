@@ -1,9 +1,14 @@
 package com.adscoop.userservice.entites;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import org.neo4j.ogm.annotation.Relationship;
-import org.neo4j.ogm.annotations.Labels;
+import org.neo4j.ogm.annotation.Labels;
 
 /**
  * Created by thokle on 25/08/2016.

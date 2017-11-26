@@ -17,7 +17,7 @@ import com.adscoop.userservice.handlers.utils.ContextBuilder;
 import com.adscoop.userservice.handlers.utils.MethodBuilder;
 import com.adscoop.userservice.handlers.utils.RequestBuilder;
 import com.adscoop.userservice.handlers.utils.ResponseBuilder;
-import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
+import com.adscoop.userservice.services.UserNodeServiceImpl;
 
 import ratpack.handling.Context;
 

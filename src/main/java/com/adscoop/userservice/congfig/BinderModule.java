@@ -1,8 +1,11 @@
 package com.adscoop.userservice.congfig;
 
-import com.adscoop.userservice.exceptions.UserServiceClientErrorHandler;
+import com.adscoop.userservice.chains.AccountChainHandler;
+import com.adscoop.userservice.chains.AddressChainHandler;
+import com.adscoop.userservice.chains.CompanyChainHandler;
+import com.adscoop.userservice.chains.CreditChainHandler;
+import com.adscoop.userservice.chains.UserChainHandler;
 import com.adscoop.userservice.exceptions.UserServiceClientExceptionHandler;
-import com.adscoop.userservice.chains.*;
 import com.adscoop.userservice.handlers.CORSHandler;
 import com.adscoop.userservice.handlers.accountInformationHandler.CreateAccountInformationHandler;
 import com.adscoop.userservice.handlers.accountInformationHandler.DeleteAccountInformation;
@@ -27,10 +30,16 @@ import com.adscoop.userservice.handlers.users.CreateUserHandler;
 import com.adscoop.userservice.handlers.users.DeleteUserHandler;
 import com.adscoop.userservice.handlers.users.GetUserHandler;
 import com.adscoop.userservice.handlers.users.UpdateUserHandler;
-import com.adscoop.userservice.services.impls.*;
+import com.adscoop.userservice.services.AddressUserService;
+import com.adscoop.userservice.services.AddressUserServiceImpl;
+import com.adscoop.userservice.services.AuthorazationService;
+import com.adscoop.userservice.services.CreditInfoService;
+import com.adscoop.userservice.services.CreditInfoServiceImpl;
+import com.adscoop.userservice.services.IAuthorazationService;
+import com.adscoop.userservice.services.IUser;
+import com.adscoop.userservice.services.UserNodeServiceImpl;
 import com.google.inject.AbstractModule;
-import ratpack.error.ClientErrorHandler;
-import ratpack.health.HealthCheck;
+
 import ratpack.health.HealthCheckHandler;
 
 /**

@@ -3,7 +3,7 @@ package com.adscoop.userservice.handlers.credit;
 import static ratpack.jackson.Jackson.fromJson;
 
 import com.adscoop.userservice.entites.CreditInfo;
-import com.adscoop.userservice.services.impls.CreditInfoServiceImpl;
+import com.adscoop.userservice.services.CreditInfoServiceImpl;
 import com.google.inject.Inject;
 
 import ratpack.exec.ExecutionException;

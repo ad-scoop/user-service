@@ -1,14 +1,12 @@
-package com.adscoop.userservice.services.impls;
+package com.adscoop.userservice.services;
 
 import java.io.IOException;
 import java.util.Collection;
 import java.util.Map;
-import java.util.Optional;
 
 import com.adscoop.userservice.entites.UserNode;
 
 import ratpack.exec.Promise;
-import rx.Observable;
 
 /**
  * Created by thokle on 01/09/2016.
