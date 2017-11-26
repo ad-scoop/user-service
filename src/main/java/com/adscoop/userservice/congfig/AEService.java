@@ -1,18 +1,12 @@
 package com.adscoop.userservice.congfig;
 
 
-import com.google.inject.Singleton;
+import java.util.Base64;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
-import java.io.UnsupportedEncodingException;
-
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
-import java.util.Base64;
+import com.google.inject.Singleton;
 
 /**
  * Created by thokle on 03/02/2017.

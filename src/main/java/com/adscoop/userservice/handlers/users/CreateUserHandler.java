@@ -6,7 +6,7 @@ import static ratpack.jackson.Jackson.json;
 import com.adscoop.userservice.congfig.AEService;
 import com.adscoop.userservice.congfig.TokenService;
 import com.adscoop.userservice.entites.UserNode;
-import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
+import com.adscoop.userservice.services.UserNodeServiceImpl;
 import com.google.inject.Inject;
 
 import ratpack.handling.Context;

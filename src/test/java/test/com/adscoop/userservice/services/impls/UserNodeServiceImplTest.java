@@ -1,7 +1,8 @@
 package test.com.adscoop.userservice.services.impls;
 
 import com.adscoop.userservice.entites.UserNode;
-import com.adscoop.userservice.services.impls.UserNodeServiceImpl;
+import com.adscoop.userservice.services.UserNodeServiceImpl;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 
 import com.adscoop.userservice.congfig.UserModel;
 import com.adscoop.userservice.entites.UserNode;
-import com.adscoop.userservice.services.impls.IAuthorazationService;
+import com.adscoop.userservice.services.IAuthorazationService;
 import com.google.inject.Inject;
 
 import ratpack.handling.Context;

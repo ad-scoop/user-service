@@ -3,7 +3,7 @@ package com.adscoop.userservice.handlers.address;
 import java.util.Optional;
 
 import com.adscoop.userservice.entites.AddressNode;
-import com.adscoop.userservice.services.impls.AddressUserServiceImpl;
+import com.adscoop.userservice.services.AddressUserServiceImpl;
 import com.google.inject.Inject;
 
 import ratpack.form.Form;

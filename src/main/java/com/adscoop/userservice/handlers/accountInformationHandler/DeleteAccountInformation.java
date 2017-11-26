@@ -3,7 +3,7 @@ package com.adscoop.userservice.handlers.accountInformationHandler;
 import java.util.Optional;
 
 import com.adscoop.userservice.entites.AccountInformation;
-import com.adscoop.userservice.services.impls.AccountInformationServiceImpl;
+import com.adscoop.userservice.services.AccountInformationServiceImpl;
 import com.google.inject.Inject;
 
 import ratpack.handling.Context;

@@ -1,4 +1,4 @@
-package com.adscoop.userservice.services.impls;
+package com.adscoop.userservice.services;
 
 import java.util.Collections;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public class AccountInformationServiceImpl implements AccountInformationService 
 
 		try {
 			return Optional.ofNullable(session.queryForObject(AccountInformation.class,
-					"match (a)<-[:HAS_ACCOUNT_INFORMATION]-(u) where u.token='"+token+"' return  a", Collections.EMPTY_MAP));
+					"match (a)<-[:HAS_ACCOUNT_INFORMATION]-(u) where u.token='"+token+"' return  a", Collections.emptyMap()));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -1,9 +1,7 @@
 package com.adscoop.userservice.handlers.users;
 
-import java.util.Optional;
-
 import com.adscoop.userservice.entites.UserNode;
-import com.adscoop.userservice.services.impls.IUser;
+import com.adscoop.userservice.services.IUser;
 import com.google.inject.Inject;
 
 import ratpack.exec.Promise;
